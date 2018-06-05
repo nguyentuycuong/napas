@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="Resources" Url="UserControls">
+    <File Path="Resources\UserControls\Views\News\NewsCategory.ascx" Url="Views/News/NewsCategory.ascx" />
+    <File Path="Resources\UserControls\Views\News\NewsDetails.ascx" Url="Views/News/NewsDetails.ascx" />
+    <File Path="Resources\UserControls\Views\News\NewsHome.ascx" Url="Views/News/NewsHome.ascx" />
+    <File Path="Resources\UserControls\Views\News\NewsLeftMenu.ascx" Url="Views/News/NewsLeftMenu.ascx" />
+    <File Path="Resources\UserControls\Views\Global\Home.ascx" Url="Views/Global/Home.ascx" />
+    <File Path="Resources\UserControls\Views\Global\Admin.ascx" Url="Views/Global/Admin.ascx" />
+    <File Path="Resources\UserControls\Views\ShareholderMeeting\ShareHolderMeeting.ascx" Url="Views/ShareholderMeeting/ShareHolderMeeting.ascx" />
+    <File Path="Resources\UserControls\Views\ShareholderMeeting\ShareHolderMeetingdetails.ascx" Url="Views/ShareholderMeeting/ShareHolderMeetingdetails.ascx" />
+    <File Path="Resources\UserControls\Views\DocumentPartner\DocumentPartner.ascx" Url="Views/DocumentPartner/DocumentPartner.ascx" />
+    <File Path="Resources\UserControls\Views\Documents\OtherDocuments.ascx" Url="Views/Documents/OtherDocuments.ascx" />
+    <File Path="Resources\UserControls\Views\Documents\LegalDocuments.ascx" Url="Views/Documents/LegalDocuments.ascx" />
+    <File Path="Resources\UserControls\Views\About\About.ascx" Url="Views/About/About.ascx" />
+    <File Path="Resources\UserControls\Views\About\OrganizationalStructure.ascx" Url="Views/About/OrganizationalStructure.ascx" />
+    <File Path="Resources\UserControls\Views\Global\App.js" Url="Resources/UserControls/Views/Global/App.js" />
+    <File Path="Resources\UserControls\Views\TermOfUse\TermOfUse.ascx" Url="Views/TermOfUse/TermOfUse.ascx" />
+    <File Path="Resources\UserControls\Views\Recruitment\ContactInfor.ascx" Url="Views/Recruitment/ContactInfor.ascx" />
+    <File Path="Resources\UserControls\Views\Recruitment\HumanResource.ascx" Url="Views/Recruitment/HumanResource.ascx" />
+    <File Path="Resources\UserControls\Views\Recruitment\Career.ascx" Url="Views/Recruitment/Career.ascx" />
+    <File Path="Resources\UserControls\Views\Recruitment\CareerResult.ascx" Url="Views/Recruitment/CareerResult.ascx" />
+    <File Path="Resources\UserControls\Views\Recruitment\CVDocument.ascx" Url="Views/Recruitment/CVDocument.ascx" />
+    <File Path="Resources\UserControls\Views\Contacts\ContactGeneral.ascx" Url="Views/Contacts/ContactGeneral.ascx" />
+    <File Path="Resources\UserControls\Views\About\OrganizationChart.ascx" Url="Views/About/OrganizationChart.ascx" />
+    <File Path="Resources\UserControls\Views\About\OrganizationBoardAssembly.ascx" Url="Views/About/OrganizationBoardAssembly.ascx" />
+    <File Path="Resources\UserControls\Views\About\OrganizationBoardCommittee.ascx" Url="Views/About/OrganizationBoardCommittee.ascx" />
+    <File Path="Resources\UserControls\Views\About\OrganizationBoardExecutive.ascx" Url="Views/About/OrganizationBoardExecutive.ascx" />
+    <File Path="Resources\UserControls\Views\About\Milestones.ascx" Url="Views/About/Milestones.ascx" />
+    <File Path="Resources\UserControls\Views\Global\Search.ascx" Url="Views/Global/Search.ascx" />
+    <File Path="Resources\UserControls\Views\ProductsServices\ProductsServicesHomeX.ascx" Url="Views/ProductsServices/ProductsServicesHomeX.ascx" />
+  </Module>
+</Elements>

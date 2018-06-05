@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Assemblies>
+    <Assembly Location="Napas.Portal.dll" DeploymentTarget="GlobalAssemblyCache">
+      <SafeControls>
+        <SafeControl Assembly="Napas.Portal" Namespace="Napas.Portal.Core.WebParts" TypeName="*" />
+        <SafeControl Assembly="$SharePoint.Project.AssemblyFullName$" Namespace="Napas.Portal.Core.WebParts" TypeName="*" />
+        <SafeControl Assembly="$SharePoint.Project.AssemblyFullName$" Namespace="Napas.Portal.Core.WebControls" TypeName="*" />
+        <SafeControl Assembly="$SharePoint.Project.AssemblyFullName$" Namespace="Napas.Portal.DelegateControl" TypeName="*" />
+        <SafeControl Assembly="$SharePoint.Project.AssemblyFullName$" Namespace="NAPAS.Portal.Common.Framework.Core.WebParts" TypeName="*" />       
+      </SafeControls>
+    </Assembly>
+  </Assemblies>
+  
+</Solution>

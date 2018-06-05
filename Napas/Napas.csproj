@@ -1,0 +1,414 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4605BD91-BF8A-45FB-8EC6-BB20CD710CA2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Napas</RootNamespace>
+    <AssemblyName>Napas</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CONTROLTEMPLATES\CustomePermissionControl.ascx.cs">
+      <DependentUpon>CustomePermissionControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CONTROLTEMPLATES\CustomePermissionControl.ascx.designer.cs">
+      <DependentUpon>CustomePermissionControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CONTROLTEMPLATES\ImageUploadFieldEditor.ascx.cs">
+      <DependentUpon>ImageUploadFieldEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CONTROLTEMPLATES\ImageUploadFieldEditor.ascx.designer.cs">
+      <DependentUpon>ImageUploadFieldEditor.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\Napas.SharePoint\UploadImage.aspx.cs">
+      <DependentUpon>UploadImage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\Napas.SharePoint\UploadImage.aspx.designer.cs">
+      <DependentUpon>UploadImage.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Business\DialogAwareLayoutsPageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Business\ImageUploadFieldControl.cs" />
+    <Compile Include="Business\ImageUploadFieldType.cs" />
+    <Compile Include="Business\ImageUploadFieldTypeCustomPropertyNames.cs" />
+    <Compile Include="Business\ModalDialogResult.cs" />
+    <Compile Include="Features\napas.theme\napas.EventReceiver.cs">
+      <DependentUpon>napas.theme.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CONTROLTEMPLATES\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{bc3fd384-ee64-40e9-a5de-212e6bc15f8b}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\napas.theme\napas.theme.feature">
+      <FeatureId>{d3828e49-d291-427c-9855-71b037fb56c9}</FeatureId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Layouts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{8a5d0444-beeb-4380-a06c-b4dbc70f0ff3}</SharePointProjectItemId>
+    </None>
+    <None Include="napas_theme\cdms_mp.master" />
+    <None Include="napas_theme\css\font-awesome.css.map" />
+    <None Include="napas_theme\css\main.css.map" />
+    <None Include="napas_theme\css\main.scss" />
+    <None Include="napas_theme\css\scss\_mixins.scss" />
+    <None Include="napas_theme\css\scss\_variables.scss" />
+    <None Include="napas_theme\css\thanh.css.map" />
+    <None Include="napas_theme\css\thanh.scss" />
+    <None Include="napas_theme\fonts\Akzidenz-GroteskBQ-Bold.eot" />
+    <None Include="napas_theme\fonts\Akzidenz-GroteskBQ-Bold.ttf" />
+    <None Include="napas_theme\fonts\Akzidenz-GroteskBQ-Bold.woff" />
+    <None Include="napas_theme\fonts\Akzidenz-GroteskBQ-BoldItalic.eot" />
+    <None Include="napas_theme\fonts\Akzidenz-GroteskBQ-BoldItalic.ttf" />
+    <None Include="napas_theme\fonts\Akzidenz-GroteskBQ-BoldItalic.woff" />
+    <None Include="napas_theme\fonts\Akzidenz-GroteskBQ-Italic.eot" />
+    <None Include="napas_theme\fonts\Akzidenz-GroteskBQ-Italic.ttf" />
+    <None Include="napas_theme\fonts\Akzidenz-GroteskBQ-Italic.woff" />
+    <None Include="napas_theme\fonts\Akzidenz-GroteskBQ.eot" />
+    <None Include="napas_theme\fonts\Akzidenz-GroteskBQ.ttf" />
+    <None Include="napas_theme\fonts\Akzidenz-GroteskBQ.woff" />
+    <None Include="napas_theme\fonts\AkzidenzGroteskBQRegular.eot" />
+    <None Include="napas_theme\fonts\AkzidenzGroteskBQRegular.otf" />
+    <None Include="napas_theme\fonts\AkzidenzGroteskBQRegular.ttf" />
+    <None Include="napas_theme\fonts\AkzidenzGroteskBQRegular.woff" />
+    <None Include="napas_theme\fonts\AkzidenzGroteskBQRegular.woff2" />
+    <None Include="napas_theme\fonts\fontawesome-webfont.eot" />
+    <None Include="napas_theme\fonts\fontawesome-webfont.ttf" />
+    <None Include="napas_theme\fonts\fontawesome-webfont.woff" />
+    <None Include="napas_theme\fonts\fontawesome-webfont.woff2" />
+    <None Include="napas_theme\fonts\FontAwesome.otf" />
+    <None Include="napas_theme\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="napas_theme\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="napas_theme\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="napas_theme\css\napas_content.scss" />
+    <None Include="napas_theme\napas.master" />
+    <None Include="napas_theme\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{1d8da273-4ec9-4cfa-9d85-f2a1d3f9e667}</SharePointProjectItemId>
+    </None>
+    <None Include="Package\Package.package">
+      <PackageId>{64cd9edf-5f25-47d8-abfd-db69e4678f72}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="XML\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{31001a1f-5e1f-4dec-8934-81595fbcd1e6}</SharePointProjectItemId>
+    </None>
+    <None Include="XSL\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{86db33aa-b202-44cc-b160-0cfd59b6ddcb}</SharePointProjectItemId>
+    </None>
+    <None Include="xxxxrt.snk" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="CONTROLTEMPLATES\CustomePermissionControl.ascx" />
+    <Content Include="CONTROLTEMPLATES\ImageUploadFieldControl.ascx" />
+    <Content Include="CONTROLTEMPLATES\ImageUploadFieldEditor.ascx" />
+    <Content Include="Layouts\Napas.SharePoint\ImageUploadField.js" />
+    <Content Include="Layouts\Napas.SharePoint\UploadImage.aspx" />
+    <Content Include="Features\napas.theme\napas.theme.Template.xml">
+      <DependentUpon>napas.theme.feature</DependentUpon>
+    </Content>
+    <Content Include="napas_theme\css\bootstrap.css" />
+    <Content Include="napas_theme\css\bootstrap.min.css" />
+    <Content Include="napas_theme\css\font-awesome.css" />
+    <Content Include="napas_theme\css\font-awesome.min.css" />
+    <Content Include="napas_theme\css\jquery.bxslider.css" />
+    <Content Include="napas_theme\css\jquery.fancybox.css" />
+    <Content Include="napas_theme\css\main.css" />
+    <Content Include="napas_theme\css\main.min.css" />
+    <Content Include="napas_theme\css\main_Admin.css" />
+    <Content Include="napas_theme\css\metisMenu.css" />
+    <Content Include="napas_theme\css\napas_content.css" />
+    <Content Include="napas_theme\css\normalize.css" />
+    <Content Include="napas_theme\css\normalize.min.css" />
+    <Content Include="napas_theme\css\owl.carousel.css" />
+    <Content Include="napas_theme\css\owl.carousel.min.css" />
+    <Content Include="napas_theme\css\thanh.css" />
+    <Content Include="napas_theme\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="napas_theme\fonts\Akzidenz-GroteskBQ-Bold.svg" />
+    <Content Include="napas_theme\fonts\Akzidenz-GroteskBQ-BoldItalic.svg" />
+    <Content Include="napas_theme\fonts\Akzidenz-GroteskBQ-Italic.svg" />
+    <Content Include="napas_theme\fonts\Akzidenz-GroteskBQ.svg" />
+    <Content Include="napas_theme\fonts\AkzidenzGroteskBQRegular.svg" />
+    <Content Include="napas_theme\fonts\fontawesome-webfont.svg" />
+    <Content Include="napas_theme\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="napas_theme\HTMLPage1.html" />
+    <Content Include="napas_theme\images\1.png" />
+    <Content Include="napas_theme\images\2.png" />
+    <Content Include="napas_theme\images\3.png" />
+    <Content Include="napas_theme\images\arr.png" />
+    <Content Include="napas_theme\images\avatar.png" />
+    <Content Include="napas_theme\images\b1.png" />
+    <Content Include="napas_theme\images\b10.png" />
+    <Content Include="napas_theme\images\b11.png" />
+    <Content Include="napas_theme\images\b12.png" />
+    <Content Include="napas_theme\images\b2.png" />
+    <Content Include="napas_theme\images\b3.png" />
+    <Content Include="napas_theme\images\b4.png" />
+    <Content Include="napas_theme\images\b5.png" />
+    <Content Include="napas_theme\images\b6.png" />
+    <Content Include="napas_theme\images\b7.png" />
+    <Content Include="napas_theme\images\b8.png" />
+    <Content Include="napas_theme\images\b9.png" />
+    <Content Include="napas_theme\images\backtotop.png" />
+    <Content Include="napas_theme\images\banner_iPad.jpg" />
+    <Content Include="napas_theme\images\bar_icon1.png" />
+    <Content Include="napas_theme\images\bar_icon2.png" />
+    <Content Include="napas_theme\images\bar_icon3.png" />
+    <Content Include="napas_theme\images\bar_icon4.png" />
+    <Content Include="napas_theme\images\bottom.png" />
+    <Content Include="napas_theme\images\cd-banner.png" />
+    <Content Include="napas_theme\images\cd-dhcd-ct-image.png" />
+    <Content Include="napas_theme\images\cd-dowload.png" />
+    <Content Include="napas_theme\images\cd-tl-icon.png" />
+    <Content Include="napas_theme\images\cd1.png" />
+    <Content Include="napas_theme\images\cd2.png" />
+    <Content Include="napas_theme\images\cd3.png" />
+    <Content Include="napas_theme\images\close.png" />
+    <Content Include="napas_theme\images\co-cau-to-chuc.png" />
+    <Content Include="napas_theme\images\cocau-icon1.png" />
+    <Content Include="napas_theme\images\cocau-icon2.png" />
+    <Content Include="napas_theme\images\cocau-icon3.png" />
+    <Content Include="napas_theme\images\cocau-icon4.png" />
+    <Content Include="napas_theme\images\date_icon.png" />
+    <Content Include="napas_theme\images\dk1.png" />
+    <Content Include="napas_theme\images\en.png" />
+    <Content Include="napas_theme\images\favicon.ico" />
+    <Content Include="napas_theme\images\favicon.jpg" />
+    <Content Include="napas_theme\images\favicon.png" />
+    <Content Include="napas_theme\images\footer_bg.png" />
+    <Content Include="napas_theme\images\gt_icon1.png" />
+    <Content Include="napas_theme\images\gt_icon10.png" />
+    <Content Include="napas_theme\images\gt_icon2.png" />
+    <Content Include="napas_theme\images\gt_icon3.png" />
+    <Content Include="napas_theme\images\gt_icon4.png" />
+    <Content Include="napas_theme\images\gt_icon5.png" />
+    <Content Include="napas_theme\images\gt_icon6.png" />
+    <Content Include="napas_theme\images\gt_icon7.png" />
+    <Content Include="napas_theme\images\gt_icon71.png" />
+    <Content Include="napas_theme\images\gt_icon8.png" />
+    <Content Include="napas_theme\images\gt_icon9.png" />
+    <Content Include="napas_theme\images\h1.png" />
+    <Content Include="napas_theme\images\h10.png" />
+    <Content Include="napas_theme\images\h11.png" />
+    <Content Include="napas_theme\images\h12.png" />
+    <Content Include="napas_theme\images\h13.png" />
+    <Content Include="napas_theme\images\h14.png" />
+    <Content Include="napas_theme\images\h2.png" />
+    <Content Include="napas_theme\images\h3.png" />
+    <Content Include="napas_theme\images\h4.png" />
+    <Content Include="napas_theme\images\h5.png" />
+    <Content Include="napas_theme\images\h6.png" />
+    <Content Include="napas_theme\images\h7.png" />
+    <Content Include="napas_theme\images\h8.png" />
+    <Content Include="napas_theme\images\h9.png" />
+    <Content Include="napas_theme\images\hotline_icon.png" />
+    <Content Include="napas_theme\images\information-contact-icon.png" />
+    <Content Include="napas_theme\images\information-recruitment-icon.png" />
+    <Content Include="napas_theme\images\intro_bg.png" />
+    <Content Include="napas_theme\images\intro_bg1.png" />
+    <Content Include="napas_theme\images\intro_bg2.png" />
+    <Content Include="napas_theme\images\intro_bg3.png" />
+    <Content Include="napas_theme\images\intro_bg4.png" />
+    <Content Include="napas_theme\images\intro_bg5.png" />
+    <Content Include="napas_theme\images\kh-ct-ct-image-01.png" />
+    <Content Include="napas_theme\images\kh-ct-image-01.png" />
+    <Content Include="napas_theme\images\kh-ct-image-02.png" />
+    <Content Include="napas_theme\images\kh-ct-image-03.png" />
+    <Content Include="napas_theme\images\kh-ct-tnd-silde.png" />
+    <Content Include="napas_theme\images\lh-banner.jpg" />
+    <Content Include="napas_theme\images\logo.png" />
+    <Content Include="napas_theme\images\logo_white.png" />
+    <Content Include="napas_theme\images\middle_bg.png" />
+    <Content Include="napas_theme\images\middle_bg1.png" />
+    <Content Include="napas_theme\images\minus.png" />
+    <Content Include="napas_theme\images\m_icon1.png" />
+    <Content Include="napas_theme\images\m_icon10.png" />
+    <Content Include="napas_theme\images\m_icon11.png" />
+    <Content Include="napas_theme\images\m_icon12.png" />
+    <Content Include="napas_theme\images\m_icon2.png" />
+    <Content Include="napas_theme\images\m_icon3.png" />
+    <Content Include="napas_theme\images\m_icon4.png" />
+    <Content Include="napas_theme\images\m_icon5.png" />
+    <Content Include="napas_theme\images\m_icon7.png" />
+    <Content Include="napas_theme\images\m_icon8.png" />
+    <Content Include="napas_theme\images\m_icon9.png" />
+    <Content Include="napas_theme\images\n1.png" />
+    <Content Include="napas_theme\images\n2.png" />
+    <Content Include="napas_theme\images\n3.png" />
+    <Content Include="napas_theme\images\n4.png" />
+    <Content Include="napas_theme\images\Nap tien vao tk dv tra truoc.png" />
+    <Content Include="napas_theme\images\ns1.png" />
+    <Content Include="napas_theme\images\ns2.png" />
+    <Content Include="napas_theme\images\plus.png" />
+    <Content Include="napas_theme\images\s1-atm-hdsd.png" />
+    <Content Include="napas_theme\images\s1-atm-ttsp-icon.png" />
+    <Content Include="napas_theme\images\s1-atm-ttsp.png" />
+    <Content Include="napas_theme\images\s1-pos-hdsd.png" />
+    <Content Include="napas_theme\images\s1-pos-ttsp-icon.png" />
+    <Content Include="napas_theme\images\s1.png" />
+    <Content Include="napas_theme\images\s10_icon.png" />
+    <Content Include="napas_theme\images\s11_icon.png" />
+    <Content Include="napas_theme\images\s12_icon.png" />
+    <Content Include="napas_theme\images\s13_icon.png" />
+    <Content Include="napas_theme\images\s1_icon.png" />
+    <Content Include="napas_theme\images\s2-tratruoc-ttsp-image1.png" />
+    <Content Include="napas_theme\images\s2-ttdt-ttsp-icon1.png" />
+    <Content Include="napas_theme\images\s2-ttdt-ttsp-icon2.png" />
+    <Content Include="napas_theme\images\s2-ttdt-ttsp-icon3.png" />
+    <Content Include="napas_theme\images\s21_icon.png" />
+    <Content Include="napas_theme\images\s22_icon.png" />
+    <Content Include="napas_theme\images\s23_icon.png" />
+    <Content Include="napas_theme\images\s24_icon.png" />
+    <Content Include="napas_theme\images\s25_icon.png" />
+    <Content Include="napas_theme\images\s2_gtgt_hdsdl-image1.png" />
+    <Content Include="napas_theme\images\s2_gtgt_hdsdl-image2.png" />
+    <Content Include="napas_theme\images\s2_gtgt_hdsdl-image3.png" />
+    <Content Include="napas_theme\images\s2_gtgt_icon.png" />
+    <Content Include="napas_theme\images\s2_gtgt_model-image1.png" />
+    <Content Include="napas_theme\images\s2_gtgt_model-image2.png" />
+    <Content Include="napas_theme\images\s2_icon.png" />
+    <Content Include="napas_theme\images\s2_thuho_icon1.png" />
+    <Content Include="napas_theme\images\s2_thuho_icon2.png" />
+    <Content Include="napas_theme\images\s2_thuho_icon3.png" />
+    <Content Include="napas_theme\images\s3_icon.png" />
+    <Content Include="napas_theme\images\s4-acq-image.png" />
+    <Content Include="napas_theme\images\s4-avatar.png" />
+    <Content Include="napas_theme\images\s4-laoviet-image.png" />
+    <Content Include="napas_theme\images\s4-tccm-image.png" />
+    <Content Include="napas_theme\images\s4-tct-image.png" />
+    <Content Include="napas_theme\images\s4_icon.png" />
+    <Content Include="napas_theme\images\s5_icon.png" />
+    <Content Include="napas_theme\images\s6_icon.png" />
+    <Content Include="napas_theme\images\s7_icon.png" />
+    <Content Include="napas_theme\images\s8_icon.png" />
+    <Content Include="napas_theme\images\s9_icon.png" />
+    <Content Include="napas_theme\images\sep.gif" />
+    <Content Include="napas_theme\images\shadow.png" />
+    <Content Include="napas_theme\images\sitemap.png" />
+    <Content Include="napas_theme\images\slider01.jpg" />
+    <Content Include="napas_theme\images\slider01.png" />
+    <Content Include="napas_theme\images\slider01_1024.jpg" />
+    <Content Include="napas_theme\images\slider01_1366.jpg" />
+    <Content Include="napas_theme\images\slider01_480.jpg" />
+    <Content Include="napas_theme\images\slider02.jpg" />
+    <Content Include="napas_theme\images\slider02.png" />
+    <Content Include="napas_theme\images\slider02_1024.jpg" />
+    <Content Include="napas_theme\images\slider02_1366.jpg" />
+    <Content Include="napas_theme\images\slider03.jpg" />
+    <Content Include="napas_theme\images\slider03.png" />
+    <Content Include="napas_theme\images\slider03_1024.jpg" />
+    <Content Include="napas_theme\images\slider03_1366.jpg" />
+    <Content Include="napas_theme\images\slider04.jpg" />
+    <Content Include="napas_theme\images\slider04.png" />
+    <Content Include="napas_theme\images\slider04_1024.jpg" />
+    <Content Include="napas_theme\images\slider04_1366.jpg" />
+    <Content Include="napas_theme\images\social-dowload.png" />
+    <Content Include="napas_theme\images\social-fb.png" />
+    <Content Include="napas_theme\images\social-in.png" />
+    <Content Include="napas_theme\images\social-ph.png" />
+    <Content Include="napas_theme\images\social-print.png" />
+    <Content Include="napas_theme\images\social-tw.png" />
+    <Content Include="napas_theme\images\sp1-atm-hdsd.png" />
+    <Content Include="napas_theme\images\sp1-atm-ttsp.png" />
+    <Content Include="napas_theme\images\sp1-icon.png" />
+    <Content Include="napas_theme\images\sp2-icon.png" />
+    <Content Include="napas_theme\images\sp2-tctqt-ttsp.png" />
+    <Content Include="napas_theme\images\sp3-icon.png" />
+    <Content Include="napas_theme\images\sp3-tratruoc-ttsp.png" />
+    <Content Include="napas_theme\images\sp3-tratuoc-ttsp.png" />
+    <Content Include="napas_theme\images\sp3-tt-ttsp.png" />
+    <Content Include="napas_theme\images\sp3-ttdt-ttsp.png" />
+    <Content Include="napas_theme\images\sp4-icon.png" />
+    <Content Include="napas_theme\images\thend-icon.png" />
+    <Content Include="napas_theme\images\tl-banner.png" />
+    <Content Include="napas_theme\images\tree_icon.png" />
+    <Content Include="napas_theme\images\tree_icon_diff.png" />
+    <Content Include="napas_theme\images\Vector Smart Object1.png" />
+    <Content Include="napas_theme\images\vn.jpg" />
+    <Content Include="napas_theme\index.html" />
+    <Content Include="napas_theme\js\bootstrap.js" />
+    <Content Include="napas_theme\js\jquery.bxslider.js" />
+    <Content Include="napas_theme\js\jquery.easing.1.3.js" />
+    <Content Include="napas_theme\js\jquery.fancybox.js" />
+    <Content Include="napas_theme\js\jquery.matchHeight.js" />
+    <Content Include="napas_theme\js\jquery.min.js" />
+    <Content Include="napas_theme\js\jquery.SPServices-2014.02.min.js" />
+    <Content Include="napas_theme\js\main.js" />
+    <Content Include="napas_theme\js\metisMenu.js" />
+    <Content Include="napas_theme\js\owl.carousel.min.js" />
+    <Content Include="napas_theme\js\paginga.jquery.js" />
+    <Content Include="napas_theme\tin-tuc.html" />
+    <Content Include="XML\fldtypes_ImageUploadField.xml" />
+    <Content Include="XSL\fldtypes_ImageUploadField.xsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="napas_theme\resources\napas.resource.en.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="napas_theme\resources\napas.resource.vi.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>

@@ -1,0 +1,1066 @@
+/* tuyen dung -- co hoi nghe nghiep -- thong tin tuyen dung */
+.information-recruitment{
+    .heading{
+        margin-top: 0;
+        font-size: 18px;
+        text-transform: uppercase;
+        color:#1b427e;
+        font-family: "Akzidenz-Bold", serif;
+        img{
+            margin-right: 15px;
+            border: 1px solid #a3cd39;
+            padding: 5px;
+        }
+    }
+    .top{
+        font-size: 16px;
+        padding-top: 10px;
+        .title{
+            margin: 10px 0px;
+            line-height: 22px;
+            font-size: 18px;
+            color: #0d9ad5;
+        }
+        p{
+            font-size:16px;
+            strong{
+                font-family: "Akzidenz-Bold", serif;
+                font-size: 18px;
+            }
+        }
+    }
+    .content{
+        padding-bottom: 30px;
+        h1,h2,h3,h4,h5,h6{
+            font-size: 18px;
+            font-family: "Akzidenz-Bold", serif;
+        }
+        ul{
+            /*padding-left: 15px;*/
+            li{
+                font-size:16px;
+                &:before {
+                    content: "\f0da";
+                    font-family: FontAwesome;
+                }   
+                ul{
+                    padding-left:15px;
+                    li{
+                        &:before {
+                            content: "\f105";
+                            font-family: FontAwesome;
+                            padding-right: 5px;
+                        } 
+                    }
+                }
+                p{
+                    padding-left: 10px;
+                    font-size:16px;
+                }
+            }
+
+        }
+    }
+    @media (max-width:768px){
+        padding-top:20px;
+    }
+}
+/* tuyen dung -- co hoi nghe nghiep -- thong tin tuyen dung */
+.middle-inner-information-contact{
+    min-height:350px !important;
+    .colright{
+        min-height:auto;
+        .information-contact{
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            img{
+                margin-right: 30px;
+                @media (max-width:480px){
+                    padding-bottom:20px;
+                    display:block;
+                    margin:0 auto;
+                }
+            }
+            .box{
+                max-width: 420px;
+                background-color: #fff;
+                padding: 25px;
+                width: 100%;
+                h1{
+                    color:#009bdb;
+                    font-size:18px;
+                }
+                p{
+                    font-size: 16px;
+                    &.title{
+                        font-size: 18px;
+                        text-transform: uppercase;
+                    }
+                    i{
+                        color:#a3cd39;
+                    }
+                    a{
+                        &:hover{
+                            color:#a3cd39;
+                        }
+                    }
+                }
+            }
+            @media (max-width:768px){
+                padding-top:20px;
+            }
+            @media (max-width:480px){
+                display:block;
+            }
+        }
+    }
+}
+/* danh cho khach hang -- chuong trinh khuyen mai */
+/*.news-item p{
+    text-align: justify;
+}
+.news-item h3{
+    text-align: justify;
+}*/
+.readmore{
+    width: 125px;
+    color:#fff;
+    height:33px;
+    background-color: #a3cd39;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    &:hover{
+        color:#fff;
+        opacity: 0.8;
+    }
+}
+/* danh cho khach hang -- chuong trinh khuyen mai chi tiet */
+.news-detail{
+    .top{
+        .text{
+            .excerpt{
+                text-align: justify;
+                font-family: "Akzidenz-Bold", serif;
+                font-size:14px;
+            }
+        }
+        .image{
+            img{
+                max-width:100%;
+            }
+        }
+    }
+    .content{
+        p{
+            text-align: justify;
+            strong,b{
+                font-family: "Akzidenz-Bold", serif;
+            }
+        }
+        strong,b{
+            font-family: "Akzidenz-Bold", serif;
+        }
+    }
+    .social{
+        ul{
+            font-size: 15px;
+            color:#606060;
+            font-family: "Akzidenz-Bold", serif;
+            li{
+                a{
+                    margin:0;
+                    &:hover{
+                        opacity: 0.5;
+                    }
+                }
+            }
+        }
+    }
+}
+/* danh cho khach hang -- the noi dia */
+.tnd{
+    .top{
+        .heading{
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            font-size:18px;
+            img{
+                padding-right: 15px;
+            }
+        }
+        .excerpt{
+            text-align: justify;
+            font-size:16px;
+        }
+    }
+    .owl-carousel-tnd{
+        padding:20px 0;
+        .owl-controls{
+            text-align:center;
+            .owl-nav{
+                display: inline-flex;
+                margin-top:20px;
+                .owl-prev{
+                    &:before {
+                        content: "\f104";
+                        font-family: FontAwesome;
+                        font-size: 18px;
+                    }
+                    width: 35px;
+                    height:35px;
+                    border-radius: 50%;
+                    color:#fff;
+                    background-color:#a1cc3a;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-right: 15px;
+                    &:hover{
+                        opacity: 0.8;
+                    }
+                }
+                .owl-next{
+                    &:before {
+                        content: "\f105";
+                        font-family: FontAwesome;
+                        font-size: 18px;
+                    }
+                    width: 35px;
+                    height:35px;
+                    border-radius: 50%;
+                    color:#fff;
+                    background-color:#a1cc3a;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    &:hover{
+                        opacity: 0.8;
+                    }
+                }
+            }
+        }
+    }
+    @media(max-width:768px){
+        padding-top:20px;
+    }
+}
+/* danh cho co dong -- dai hoi co dong chi tiet */
+.intro-banner-cd{
+    background-image: url('../images/cd-banner.png');
+}
+.intro-banner-tl{
+    background-image: url('../images/tl-banner.png');
+}
+.news-detail{
+    p{
+        strong,b{
+            font-family: "Akzidenz-Bold", serif;
+        }
+    }
+    strong,b{
+        font-family: "Akzidenz-Bold", serif;
+    }
+    img{
+        max-width: 100%;
+    }
+    @media(max-width:480px){
+        padding-top:20px;
+    }
+    .social-cd{
+        ul{
+            li{
+                a{
+                    &:hover{
+                        opacity: 0.8;
+                    }
+                }
+            }
+        }
+    }
+}
+/* danh cho co dong -- tai lieu danh cho co dong */
+.cd-tl{
+    &.cd-tl-old{
+        .list-item{
+            .item{
+                .bottom{
+                    padding-left: 0;
+                    padding-bottom: 5px;
+                }
+            }
+        }
+    }
+    .list-item{
+        .item{
+            padding-bottom:15px;
+            .heading{
+                margin-top: 0;
+                text-transform:uppercase;
+                font-size:18px;
+                color:#1b427e;
+                padding-bottom: 5px;
+                border-bottom:1px solid #b7c9d7;
+                img{
+                    padding-right:15px;
+                }
+                &:hover{
+                    opacity: 0.8;
+                    cursor: pointer;
+                }
+                font-family: "Akzidenz-Bold", serif;
+            }
+            .bottom{
+                padding-left: 40px;
+                display: flex;
+                padding-bottom:20px;
+                .image{
+                    padding-right: 15px;
+                    a{
+                        img{
+
+                        }
+                        &:hover{
+                            opacity: 0.8;
+                            cursor: pointer;
+                        }
+                    }
+                }
+                .text{
+                    width:100%;
+                    .time{
+                        margin-bottom: 0;
+                    }
+                    .title{
+                        font-size: 16px;
+                        margin:0;
+                        font-family: "Akzidenz-Bold", serif;
+                    }
+                }
+                @media (max-width:480px){
+                    padding-left: 20px;
+                }
+            }
+            &:last-child{
+                padding-bottom:0;
+            }
+        }
+    }
+    @media(max-width:768px){
+        padding-top:30px;
+    }
+}
+
+.middle-inner-dksd-sitemap{
+    @media (max-width:1024px){
+        min-height:350px !important;
+        .colright{
+            min-height: auto;
+            padding-bottom:30px;
+        }
+    }
+    @media (max-width:768px){
+        .colright{
+            padding-top:30px;
+            padding-bottom:20px;
+        }
+    }
+}
+
+/* Sửa rps trang chủ */
+.menu ul li:last-of-type > a{
+    margin-right: 0;
+}
+
+
+
+/* menu left */
+.menuleft{
+    .lv3{
+        li{
+            &.active{
+                a{
+                    color: #1d427e;
+                }
+            }
+        }
+    }
+}
+/* sản phẩm thẻ nội địa */
+.service247{
+    .service-caption{
+        margin:20px 0;
+    }
+    h2{
+        display: flex;
+        align-items: center;
+        padding:0;
+        padding-left: 90px;
+        background-size: contain;
+        text-transform: uppercase;
+        @media screen and (max-width: 991px){
+            background-image: url(../images/s1_icon.png);
+        }
+        @media(max-width:480px){
+            margin:15px 0;
+            background-size:70px auto;   
+            background-position: left center;
+        }
+        &.gtgt{
+            background-image: url(../images/s2_gtgt_icon.png);
+        }
+    }
+    p{
+        strong,b{
+            font-family: "Akzidenz-Bold", serif;
+        }
+    }
+    .image{
+        margin:30px 0;
+        text-align: right;
+        @media(max-width:480px){
+            margin:20px 0;
+        }
+        img{
+            max-width: 100%;
+        }
+    }
+    .s-image{
+        background-color:#fff;
+        margin:30px 0;
+        padding:30px 0;
+        @media(max-width:480px){
+            margin:20px 0;
+            padding:30px 10px;
+        }
+        text-align: center; img{
+            max-width: 100%;
+        }
+
+    }
+    .title{
+        font-size: 16px;
+        margin:20px 0;
+        &.title-ttdt{
+            padding-left: 90px;
+            color:#606060;
+        }
+        &.title-diff{
+            font-size: 18px;
+        }
+    }
+    &.title-diff{
+        font-size: 18px;
+    }
+    .system{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+        li{
+            width: 32%;
+            float:left;
+            background-color:#fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding:30px 15px 20px;
+            .image{
+                margin-bottom: 30px;
+                margin-top: 0;
+                max-height: 90px;
+                @media (max-width:480px){
+                    margin-bottom:20px;
+                }
+            }
+            .text{
+                text-align: center;
+                strong,b{
+                    font-family: "Akzidenz-Bold", serif;
+                    font-size: 15px;
+                }
+            }
+            @media (max-width:480px){
+                width: 100%;
+                margin-bottom:20px;
+            }
+            &:last-child{
+                @media (max-width:480px){
+                    margin-bottom:0;
+                }   
+            }
+        }
+        @media (max-width:480px){
+            display:inline-block;
+            padding:0;
+        }
+    }
+    .system-diff{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+        li{
+            width: 32%;
+            float:left;
+            background-color:#fff;
+            display: flex;
+            flex-direction: column;
+            padding:20px 15px;
+            .top{
+                min-height:55px;
+                position:relative;
+                margin-bottom: 10px;
+                text-align: center;
+                &.th-top{
+                    min-height: 210px;
+                    margin-bottom: 15px;
+                    img{
+                        margin: 15px 0;
+                        max-height: 115px;
+                    }
+                    @media(max-width:480px){
+                        min-height:auto;
+                    }
+                }
+                h4{
+                    font-size: 18px;
+                    margin-top: 0;
+
+                }
+                @media(max-width:480px){
+                    min-height:auto;
+                }
+                &:after{
+                    position: absolute;
+                    content: "";
+                    left: 50%;
+                    bottom:0;
+                    transform: translateX(-50%);
+                    width: 100px;
+                    height:2px;
+                    background-color: #414141;
+                }
+            }
+            .text{
+                p{
+                    display: flex;
+                    i{
+                        margin: 3px 5px 0px 0px;
+                    }
+                }
+                strong,b{
+                    font-family: "Akzidenz-Bold", serif;
+                    font-size: 15px;
+                }
+            }
+            @media (max-width:480px){
+                width: 100%;
+                margin-bottom:20px;
+            }
+            &:last-child{
+                @media (max-width:480px){
+                    margin-bottom:0;
+                }   
+            }
+        }
+        @media (max-width:480px){
+            display: inline-block;
+        }
+    }
+    /*san pham 2*/
+    ul{
+        li{
+            strong,b{
+                font-family: "Akzidenz-Bold", serif;
+                font-size: 15px;
+            }
+        }
+    }
+    i{
+        margin: 0px 5px 0px 0px;
+    }
+    .s2-benefit{
+        display:inline-block;
+        li{
+            display: flex;
+            width:48%;
+            float:left;
+            flex-direction: column;
+            margin-top:20px;
+            .title{
+                margin:0;
+                position:relative;
+                padding-bottom: 10px;
+                margin-bottom:10px;
+                &:after{
+                    position: absolute;
+                    content:"";
+                    width: 100%;
+                    height:1px;
+                    background-color:#414141;
+                    bottom: 0;
+                    left:0;
+                }
+            }
+            p{
+                display: flex;
+                i{
+                    margin: 3px 5px 0px 0px;
+                }
+            }
+            &:nth-of-type(1), &:nth-of-type(2){
+                margin-top: 0;
+            }
+            &:nth-of-type(2){
+                @media (max-width:480px){
+                    margin-top: 20px;
+                }
+            }
+            &:nth-of-type(2n+1){
+                margin-right: 4%;
+                @media(max-width:480px){
+                    margin-right:0;
+                }
+            }
+            @media (max-width:480px){
+                width:100%;
+            }
+        }
+    }
+    .s2-model{
+        display:inline-block;
+        margin-bottom:10px;
+        li{
+            display: flex;
+            background-color:#fff;
+            padding:30px 20px;
+            margin-top:20px;
+            .text{
+                float:left;
+                flex: 6;
+                order:1;
+                padding-right:20px;
+                .title{
+                    margin-top: 0;
+                    margin-bottom: 15px;
+                }
+                p{
+                    display: flex;
+                    i{
+                        margin: 3px 5px 0px 0px;
+                    }
+                }
+                @media (max-width:480px){
+                    order:2;
+                    padding-right:0;
+                }
+            }
+            .image{
+                float:right;
+                flex: 4;
+                margin:0;
+                order:2;
+                img{
+                    max-width: 100%;
+                }
+                @media (max-width:480px){
+                    order:1;
+                    margin-bottom:20px;
+                }
+            }
+            @media (max-width:480px){
+                flex-direction: column;
+            }
+        }
+    }
+    .step-use{
+        .step-item{
+            strong,b{
+                font-family: "Akzidenz-Bold", serif;
+                font-size: 15px;
+                padding-top: 15px;
+                display: block;
+            }
+        }
+    } 
+    .s2-hdsd{
+        padding:20px 30px;
+        background-color:#fff;
+        margin-top:20px;
+        p{
+            padding:5px 0 0 0;
+        }
+        img{
+            margin:20px 0;
+        }
+        @media (max-width:480px){
+            padding: 20px 15px;
+        }
+    }
+    .s2-tt-benefit{
+        li{
+            display: flex;
+            border-bottom: 1px solid #b2b2b2;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            .left{
+                flex:2;
+                h4{
+                    margin:0;
+                    font-size:18px;
+                    @media (max-width:480px){
+                        margin-bottom:15px;
+                        br{
+                            display: none;
+                        }
+                    }
+                }
+            }
+            .right{
+                flex:8;
+                p{
+                    display: flex;
+                    i{
+                        margin: 3px 5px 0px 0px;
+                    }
+                }
+            }
+            &:last-child{
+                border-bottom: none;
+            }
+            @media (max-width:480px){
+                flex-direction: column;
+            }
+        }
+    }
+    .sp2-table{
+        padding: 10px 0 30px;
+        /*border:none;*/
+        table{
+            border: 1px solid #414141;
+            thead{
+                tr{
+                    height:70px;
+                    border: 1px solid #414141;
+                    th{
+                        padding:10px;
+                        border: 1px solid #414141;
+                        font-size: 16px;
+                        font-family: "Akzidenz-Bold", serif;
+                        width: 20%;
+                        text-align: center;
+                        &:last-child{
+                            width: 16%;
+                        }
+                        &:nth-of-type(3){
+                            width: 23%;
+                        }
+                        &:nth-of-type(4){
+                            width: 21%;
+                        }
+                    }
+                }
+                background-color: #a1cc3a;
+            }
+            tbody{
+                tr{
+                    &.active{
+                        td{
+                            font-size: 16px;
+                            font-family: "Akzidenz-Bold", serif; 
+                            text-align: center;  
+                            color:#fff;
+                            padding:0;
+                        }
+                        background-color:#1b427e;
+                        height:35px;
+                    }
+                    td{
+                        font-size: 15px;
+                        padding:20px 10px;
+                        border: 1px solid #414141;
+                        strong,b{
+                            font-family: "Akzidenz-Bold", serif; 
+                        }
+                    }
+                }
+            }
+            @media(max-width:480px){
+                width:840px;
+            }
+        }
+    }
+    .slider-bank-diff{   
+        position: relative;
+        margin: 20px 0 0;
+        padding: 20px 0px 10px;
+        border-top: 1px solid #0d9ad5;
+    }
+    .bank-slide, .slider-bank-diff{
+        li{
+            &:nth-of-type(2n+1){clear: both;}
+        }
+    }
+    .s4-contact{
+        display: flex;
+        max-width:580px;
+        background-color:#a3cd39;
+        padding:30px 0;
+        margin:30px 0;
+        .left{
+            flex:3;
+            text-align: center;
+        }
+        .right{
+            flex:7;
+            h4,h5{
+                margin:0;
+            }
+            h4{
+                margin-bottom: 15px;
+                text-transform: uppercase;
+            }
+            p,h5{
+                margin-bottom: 5px;
+            }
+            h5{
+                font-size: 16px;
+            }
+            @media(max-width:480px){
+                padding: 15px 15px 0;
+            }
+        }
+        @media(max-width:480px){
+            flex-direction: column;
+        }
+    }
+    .mod-service{
+        li{
+            display: flex;
+            i{
+                margin: 3px 5px 0px 0px;
+            }
+            &:nth-of-type(2n+1){
+                clear:both;
+            }
+        }
+    }
+    .service-feature-item{
+        ul{
+            li{
+                display: flex;
+            }
+        }
+    }
+    .service-benefit{ 
+        .service-benefit-item{
+            ul{
+                li{
+                    display: flex;
+                    i{
+                        margin: 3px 5px 0px 0px;
+                    }
+                }
+            }
+        }
+    }
+}
+.service-item-intro{
+    padding:0px 0px 0px 55px;
+    align-items: center;
+    display:flex;
+    &:nth-of-type(1){
+        background-image: url(../images/sp1-icon.png);
+    }
+    &:nth-of-type(2){
+        background-image: url(../images/sp2-icon.png);
+    }
+    &:nth-of-type(3){
+        background-image: url(../images/sp3-icon.png);
+    }
+    &:nth-of-type(4){
+        background-image: url(../images/sp4-icon.png);
+    }
+}
+.my-modal-bank .modal-wrap{
+    border-bottom: 4px solid #a3cd39;
+}
+.backtotop{
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 99999;
+    display:none;
+    a{
+        display: block;
+        &:hover{
+            opacity: 0.8;
+        }
+    }
+}
+@media(max-width:1024px){
+    .service-feature-item.service-feature-item-center{
+        padding-left:90px;
+    }
+    .service-benefit{
+        .service-benefit-item{
+            &:nth-of-type(2n+1){
+                clear: both;
+            }
+        }
+    }
+}
+@media(max-width:768px){
+    .list-bank{
+        .bank-item{
+            &:nth-of-type(2n+1){
+                clear: both;
+            }
+        }
+    }
+    .service-benefit{
+        background-color:#fff;
+        padding-bottom: 20px;
+        .service-benefit-item{
+            min-height: auto;
+            justify-content: flex-start;
+            padding:20px 20px 0px 160px;
+        }
+    }
+}
+@media(max-width:768px) and (min-width:600px){
+    .header .header-right {
+        margin-right: 40px;
+        padding-top: 15px;
+    }
+    .menu-icon{
+        position: relative;
+        top: -30px;
+    }
+    .menu{
+        height:30px;
+    }
+    .header .logo{
+        max-width: 160px;
+    }
+}
+@media (max-width:480px){
+    /*    .menu{
+            height:50px;
+        }*/
+    .menu .menu-icon{ 
+        position: absolute;
+        top: -10px;
+        right: 10px;
+    }
+    .menu .menu-icon span{
+        display: none;
+    }
+    .header .header-right .language{
+        margin-top:15px;
+    }
+    .header .header-right .search{
+        margin-top: 15px;
+        margin-left: 30px;
+    }
+    .header .header-right{
+        float:none;
+        padding-left: 5px;
+    }
+    .menu-res-inner{
+        padding:30px 0 50px 0;
+    }
+    .menu-res-inner ul > li a{
+        font-weight: bold;
+        font-size: 16px;
+    }
+    .header .header-right .language span{
+        height:20px;
+    }
+    /*    .menu-res-inner ul > li > ul > li{
+            background-color:#1d427e;
+        }*/
+    .menu-res-inner ul > li > ul > li a{
+        font-weight: normal;
+        font-size: 14px;
+    }
+    .footer{
+        background-size: 250px 55px;
+    }
+    .logo-footer{
+        max-width: 150px;
+    }
+    .footer .nav-footer{
+        padding:10px 0;
+    }
+    .middle,.middle .middle-inner{
+        background-image: inherit;
+    }
+    .sitemap{
+        display: flex;
+        align-items: center;
+    }
+    .sitemap a{
+        display: none;
+    }
+    .sitemap span{
+        display: none;
+    }
+    .sitemap a:first-of-type,.sitemap a:last-of-type{
+        display: block;
+    }
+    .home-slider .slider-item1 .slider-caption p,.home-slider .slider-item2 .slider-caption p,.home-slider .slider-item3 .slider-caption p,.home-slider .slider-item4 .slider-caption p{
+        display: none;
+    }
+    .service-benefit{
+        .service-benefit-item{
+            flex-direction: column;
+            padding:20px;
+            background-color:#fff;
+            img{
+                max-width: 120px;
+                max-height: 120px;
+                height: auto;
+                width: auto;
+                display: inline-block;
+                margin: 0 auto;
+                margin-bottom: 15px;
+            }
+        }
+        padding-bottom: 0;
+    }
+    .menu-res-inner ul > li > ul li a{
+        padding:10px;
+        border-bottom: 1px solid #0d95ce;
+    }
+    .menu-res-inner ul > li > ul{
+        li{
+            &:first-child{
+                border-top: 1px solid #0d95ce;
+            }
+            &:last-of-type{
+                border-bottom: none;
+            }
+        }
+        padding:0;
+    }
+    .menu-res{
+        z-index: 10000;
+    }
+}
+@media (max-width:375px){
+    .header .header-right .search{
+        margin-left:15px;
+    }
+    .header .header-right .search{
+        margin:15px 12px 0 8px;
+    }
+}
+@media (max-width:320px){
+    .header .header-right .search{
+        margin:15px 12px 0 8px;
+        width:120px;
+    }
+}

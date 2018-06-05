@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.Module" DefaultFile="Elements.xml" SupportedTrustLevels="All" SupportedDeploymentScopes="Web, Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="Resources\" Type="ElementManifest" />
+    <ProjectItemFile Source="Napas.en.resx" Target="Napas.Portal\Resources\" Type="AppGlobalResource" />
+    <ProjectItemFile Source="Napas.vi.resx" Target="Napas.Portal\Resources\" Type="AppGlobalResource" />
+    <ProjectItemFile Source="UserControls\Views\News\NewsCategory.ascx" Target="Resources\UserControls\Views\News\" Type="ElementFile" />
+    <ProjectItemFile Source="UserControls\Views\News\NewsDetails.ascx" Target="Resources\UserControls\Views\News\" Type="ElementFile" />
+    <ProjectItemFile Source="UserControls\Views\News\NewsHome.ascx" Target="Resources\UserControls\Views\News\" Type="ElementFile" />
+    <ProjectItemFile Source="UserControls\Views\News\NewsLeftMenu.ascx" Target="Resources\UserControls\Views\News\" Type="ElementFile" />
+    <ProjectItemFile Source="UserControls\Views\Global\Home.ascx" Target="Resources\UserControls\Views\Global\" Type="ElementFile" />
+    <ProjectItemFile Source="UserControls\Views\Global\Admin.ascx" Target="Resources\UserControls\Views\Global\" Type="ElementFile" />
+    <ProjectItemFile Source="UserControls\Views\ShareholderMeeting\ShareHolderMeeting.ascx" Target="Resources\UserControls\Views\ShareholderMeeting\" Type="ElementFile" />
+    <ProjectItemFile Source="UserControls\Views\ShareholderMeeting\ShareHolderMeetingdetails.ascx" Target="Resources\UserControls\Views\ShareholderMeeting\" Type="ElementFile" />
+    <ProjectItemFile Source="UserControls\Views\DocumentPartner\DocumentPartner.ascx" Target="Resources\UserControls\Views\DocumentPartner\" Type="ElementFile" />
+    <ProjectItemFile Source="UserControls\Views\Documents\OtherDocuments.ascx" Target="Resources\UserControls\Views\Documents\" Type="ElementFile" />
+    <ProjectItemFile Source="UserControls\Views\Documents\LegalDocuments.ascx" Target="Resources\UserControls\Views\Documents\" Type="ElementFile" />
+    <ProjectItemFile Source="UserControls\Views\About\About.ascx" Target="Resources\UserControls\Views\About\" Type="ElementFile" />
+    <ProjectItemFile Source="UserControls\Views\About\OrganizationalStructure.ascx" Target="Resources\UserControls\Views\About\" Type="ElementFile" />
+    <ProjectItemFile Source="UserControls\Views\Global\App.js" Target="Resources\UserControls\Views\Global\" Type="ElementFile" />
+    <ProjectItemFile Source="UserControls\Views\TermOfUse\TermOfUse.ascx" Target="Resources\UserControls\Views\TermOfUse\" Type="ElementFile" />
+    <ProjectItemFile Source="UserControls\Views\Recruitment\ContactInfor.ascx" Target="Resources\UserControls\Views\Recruitment\" Type="ElementFile" />
+    <ProjectItemFile Source="UserControls\Views\Recruitment\HumanResource.ascx" Target="Resources\UserControls\Views\Recruitment\" Type="ElementFile" />
+    <ProjectItemFile Source="UserControls\Views\Recruitment\Career.ascx" Target="Resources\UserControls\Views\Recruitment\" Type="ElementFile" />
+    <ProjectItemFile Source="UserControls\Views\Recruitment\CareerResult.ascx" Target="Resources\UserControls\Views\Recruitment\" Type="ElementFile" />
+    <ProjectItemFile Source="UserControls\Views\Recruitment\CVDocument.ascx" Target="Resources\UserControls\Views\Recruitment\" Type="ElementFile" />
+    <ProjectItemFile Source="UserControls\Views\Contacts\ContactGeneral.ascx" Target="Resources\UserControls\Views\Contacts\" Type="ElementFile" />
+    <ProjectItemFile Source="UserControls\Views\About\OrganizationChart.ascx" Target="Resources\UserControls\Views\About\" Type="ElementFile" />
+    <ProjectItemFile Source="UserControls\Views\About\OrganizationBoardAssembly.ascx" Target="Resources\UserControls\Views\About\" Type="ElementFile" />
+    <ProjectItemFile Source="UserControls\Views\About\OrganizationBoardCommittee.ascx" Target="Resources\UserControls\Views\About\" Type="ElementFile" />
+    <ProjectItemFile Source="UserControls\Views\About\OrganizationBoardExecutive.ascx" Target="Resources\UserControls\Views\About\" Type="ElementFile" />
+    <ProjectItemFile Source="UserControls\Views\About\Milestones.ascx" Target="Resources\UserControls\Views\About\" Type="ElementFile" />
+    <ProjectItemFile Source="UserControls\Views\Global\Search.ascx" Target="Resources\UserControls\Views\Global\" Type="ElementFile" />
+    <ProjectItemFile Source="UserControls\Views\ProductsServices\ProductsServicesHomeX.ascx" Target="Resources\UserControls\Views\ProductsServices\" Type="ElementFile" />
+  </Files>
+</ProjectItem>

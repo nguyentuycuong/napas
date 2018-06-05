@@ -1,0 +1,479 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{098EED3C-A603-49FC-8BC0-A81BB8C7890D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Napas.Portal</RootNamespace>
+    <AssemblyName>Napas.Portal</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SandboxedSolution>False</SandboxedSolution>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.5.5631.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Server, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Server.Search, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SharePoint.WorkflowActions, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Web.CommandUI, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Workflow.Activities" />
+    <Reference Include="System.Workflow.ComponentModel" />
+    <Reference Include="System.Workflow.Runtime" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Business\BaseControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Business\EventReceiver\EventReceiver.cs" />
+    <Compile Include="Business\VendersBo.cs" />
+    <Compile Include="Business\SettingsBo.cs" />
+    <Compile Include="Business\SliderBo.cs" />
+    <Compile Include="Business\ContactBo.cs" />
+    <Compile Include="Business\Recruitment.cs" />
+    <Compile Include="Business\TemOfUseBo.cs" />
+    <Compile Include="Business\DocumentGroup.cs" />
+    <Compile Include="Business\DocumentsOther.cs" />
+    <Compile Include="Business\DocumentsLegal.cs" />
+    <Compile Include="Business\DocumentShareholder.cs" />
+    <Compile Include="Business\AboutBo.cs" />
+    <Compile Include="Business\Organization.cs" />
+    <Compile Include="Business\Shareholder.cs" />
+    <Compile Include="Business\Partners-Customers.cs" />
+    <Compile Include="Business\CategoryNews.cs" />
+    <Compile Include="Business\CreateLists.cs" />
+    <Compile Include="Business\News.cs" />
+    <Compile Include="Business\ProductionServicesGroup.cs" />
+    <Compile Include="Business\ProductService.cs" />
+    <Compile Include="Business\Utilities.cs" />
+    <Compile Include="Business\Video.cs" />
+    <Compile Include="Common\Constants.cs" />
+    <Compile Include="ControlTemplates\Napas.Portal\Footer.ascx.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlTemplates\Napas.Portal\Footer.ascx.designer.cs">
+      <DependentUpon>Footer.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlTemplates\Napas.Portal\MenuTop.ascx.cs">
+      <DependentUpon>MenuTop.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlTemplates\Napas.Portal\MenuTop.ascx.designer.cs">
+      <DependentUpon>MenuTop.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Framework\Helpers\FieldCreators\BaseFieldCreator.cs" />
+    <Compile Include="Core\Framework\Helpers\FieldCreators\BooleanFieldCreator.cs" />
+    <Compile Include="Core\Framework\Helpers\FieldCreators\CalculatedFieldCreator.cs" />
+    <Compile Include="Core\Framework\Helpers\FieldCreators\ChoiceFieldCreator.cs" />
+    <Compile Include="Core\Framework\Helpers\FieldCreators\CurrencyFieldCreator.cs" />
+    <Compile Include="Core\Framework\Helpers\FieldCreators\DateTimeFieldCreator.cs" />
+    <Compile Include="Core\Framework\Helpers\FieldCreators\DependentLookupFieldCreator.cs" />
+    <Compile Include="Core\Framework\Helpers\FieldCreators\LookupFieldCreator.cs" />
+    <Compile Include="Core\Framework\Helpers\FieldCreators\MultipleChoiceFieldCreator.cs" />
+    <Compile Include="Core\Framework\Helpers\FieldCreators\MultipleLinesTextFieldCreator.cs" />
+    <Compile Include="Core\Framework\Helpers\FieldCreators\NumberFieldCreator.cs" />
+    <Compile Include="Core\Framework\Helpers\FieldCreators\SingleLineTextFieldCreator.cs" />
+    <Compile Include="Core\Framework\Helpers\FieldCreators\UrlFieldCreator.cs" />
+    <Compile Include="Core\Framework\Helpers\FieldCreators\UserFieldCreator.cs" />
+    <Compile Include="Core\Framework\Helpers\FieldCreators\ViewCreator.cs" />
+    <Compile Include="Core\Framework\Helpers\HierarchicalDataSet.cs" />
+    <Compile Include="Core\Framework\Helpers\ListHelper.cs" />
+    <Compile Include="Core\Framework\Helpers\MailHelper.cs" />
+    <Compile Include="Core\Framework\Helpers\SecurityHelper.cs" />
+    <Compile Include="Core\Framework\Helpers\WebPageHelper.cs" />
+    <Compile Include="Core\Framework\Helpers\WebPartHelper.cs" />
+    <Compile Include="Core\Framework\WebControls\BaseUserControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Core\Framework\WebControls\CheckBoxChoiceField.cs" />
+    <Compile Include="Core\Framework\WebControls\ContainerPart.cs" />
+    <Compile Include="Core\Framework\WebControls\DateTimeControl.cs" />
+    <Compile Include="Core\Framework\WebControls\MultipleAttachments.cs" />
+    <Compile Include="Core\Framework\WebControls\RadioButtonChoiceField.cs" />
+    <Compile Include="Core\Framework\WebControls\RibbonControls\Commands\RibbonMethodPostBackEventArgs.cs" />
+    <Compile Include="Core\Framework\WebControls\RibbonControls\Commands\SPRibbonMethodPostBackCommand.cs" />
+    <Compile Include="Core\Framework\WebControls\RibbonControls\Comparers\RibbonCommandComparer.cs" />
+    <Compile Include="Core\Framework\WebControls\RibbonControls\Comparers\RibbonGroupTemplateComparer.cs" />
+    <Compile Include="Core\Framework\WebControls\RibbonControls\Enums\RibbonAlignment.cs" />
+    <Compile Include="Core\Framework\WebControls\RibbonControls\Enums\RibbonDisplayMode.cs" />
+    <Compile Include="Core\Framework\WebControls\RibbonControls\Enums\RibbonSectionType.cs" />
+    <Compile Include="Core\Framework\WebControls\RibbonControls\Enums\RibbonSize.cs" />
+    <Compile Include="Core\Framework\WebControls\RibbonControls\IRibbonControl.cs" />
+    <Compile Include="Core\Framework\WebControls\RibbonControls\RibbonButton.cs" />
+    <Compile Include="Core\Framework\WebControls\RibbonControls\RibbonContextualGroup.cs" />
+    <Compile Include="Core\Framework\WebControls\RibbonControls\RibbonControlRef.cs" />
+    <Compile Include="Core\Framework\WebControls\RibbonControls\RibbonControls.cs" />
+    <Compile Include="Core\Framework\WebControls\RibbonControls\RibbonDelegateControl.cs" />
+    <Compile Include="Core\Framework\WebControls\RibbonControls\RibbonGroup.cs" />
+    <Compile Include="Core\Framework\WebControls\RibbonControls\RibbonGroups.cs" />
+    <Compile Include="Core\Framework\WebControls\RibbonControls\RibbonGroupTemplate.cs" />
+    <Compile Include="Core\Framework\WebControls\RibbonControls\RibbonLabel.cs" />
+    <Compile Include="Core\Framework\WebControls\RibbonControls\RibbonLayout.cs" />
+    <Compile Include="Core\Framework\WebControls\RibbonControls\RibbonMaxSize.cs" />
+    <Compile Include="Core\Framework\WebControls\RibbonControls\RibbonRow.cs" />
+    <Compile Include="Core\Framework\WebControls\RibbonControls\RibbonScale.cs" />
+    <Compile Include="Core\Framework\WebControls\RibbonControls\RibbonSection.cs" />
+    <Compile Include="Core\Framework\WebControls\RibbonControls\RibbonSplitButton.cs" />
+    <Compile Include="Core\Framework\WebControls\RibbonControls\RibbonTab.cs" />
+    <Compile Include="Core\Framework\WebControls\RibbonControls\RibbonToggleButton.cs" />
+    <Compile Include="Core\Framework\WebControls\RibbonControls\Utils\UrlBuilder.cs" />
+    <Compile Include="Core\Framework\WebControls\ScriptLink.cs" />
+    <Compile Include="Core\Framework\WebControls\SectionPanel.cs" />
+    <Compile Include="Core\Framework\WebParts\ContainerWebPart.cs" />
+    <Compile Include="Resources\UserControls\Views\About\Milestones.ascx.cs">
+      <DependentUpon>Milestones.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Resources\UserControls\Views\About\Milestones.ascx.designer.cs">
+      <DependentUpon>Milestones.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\Views\About\OrganizationBoardExecutive.ascx.cs">
+      <DependentUpon>OrganizationBoardExecutive.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Resources\UserControls\Views\About\OrganizationBoardExecutive.ascx.designer.cs">
+      <DependentUpon>OrganizationBoardExecutive.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\Views\About\OrganizationBoardCommittee.ascx.cs">
+      <DependentUpon>OrganizationBoardCommittee.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Resources\UserControls\Views\About\OrganizationBoardCommittee.ascx.designer.cs">
+      <DependentUpon>OrganizationBoardCommittee.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\Views\About\OrganizationBoardAssembly.ascx.cs">
+      <DependentUpon>OrganizationBoardAssembly.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Resources\UserControls\Views\About\OrganizationBoardAssembly.ascx.designer.cs">
+      <DependentUpon>OrganizationBoardAssembly.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\Views\About\OrganizationChart.ascx.cs">
+      <DependentUpon>OrganizationChart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Resources\UserControls\Views\About\OrganizationChart.ascx.designer.cs">
+      <DependentUpon>OrganizationChart.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\Views\About\OrganizationalStructure.ascx.cs">
+      <DependentUpon>OrganizationalStructure.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Resources\UserControls\Views\About\OrganizationalStructure.ascx.designer.cs">
+      <DependentUpon>OrganizationalStructure.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\Views\About\About.ascx.cs">
+      <DependentUpon>About.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Resources\UserControls\Views\About\About.ascx.designer.cs">
+      <DependentUpon>About.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\Views\Contacts\ContactGeneral.ascx.cs">
+      <DependentUpon>ContactGeneral.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Resources\UserControls\Views\Contacts\ContactGeneral.ascx.designer.cs">
+      <DependentUpon>ContactGeneral.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\Views\DocumentPartner\DocumentPartner.ascx.cs">
+      <DependentUpon>DocumentPartner.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Resources\UserControls\Views\DocumentPartner\DocumentPartner.ascx.designer.cs">
+      <DependentUpon>DocumentPartner.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\Views\Documents\LegalDocuments.ascx.cs">
+      <DependentUpon>LegalDocuments.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Resources\UserControls\Views\Documents\LegalDocuments.ascx.designer.cs">
+      <DependentUpon>LegalDocuments.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\Views\Documents\OtherDocuments.ascx.cs">
+      <DependentUpon>OtherDocuments.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Resources\UserControls\Views\Documents\OtherDocuments.ascx.designer.cs">
+      <DependentUpon>OtherDocuments.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\Views\Global\Admin.ascx.cs">
+      <DependentUpon>Admin.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Resources\UserControls\Views\Global\Admin.ascx.designer.cs">
+      <DependentUpon>Admin.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\Views\Global\Search.ascx.cs">
+      <DependentUpon>Search.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Resources\UserControls\Views\Global\Search.ascx.designer.cs">
+      <DependentUpon>Search.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\Views\Global\Home.ascx.cs">
+      <DependentUpon>Home.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Resources\UserControls\Views\Global\Home.ascx.designer.cs">
+      <DependentUpon>Home.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\Views\News\NewsLeftMenu.ascx.cs">
+      <DependentUpon>NewsLeftMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Resources\UserControls\Views\News\NewsLeftMenu.ascx.designer.cs">
+      <DependentUpon>NewsLeftMenu.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\Views\News\NewsHome.ascx.cs">
+      <DependentUpon>NewsHome.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Resources\UserControls\Views\News\NewsHome.ascx.designer.cs">
+      <DependentUpon>NewsHome.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\Views\News\NewsDetails.ascx.cs">
+      <DependentUpon>NewsDetails.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Resources\UserControls\Views\News\NewsDetails.ascx.designer.cs">
+      <DependentUpon>NewsDetails.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\Views\News\NewsCategory.ascx.cs">
+      <DependentUpon>NewsCategory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Resources\UserControls\Views\News\NewsCategory.ascx.designer.cs">
+      <DependentUpon>NewsCategory.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Features\Napas.Portal\Napas.EventReceiver.cs">
+      <DependentUpon>Napas.Portal.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\UserControls\Views\ProductsServices\ProductsServicesHomeX.ascx.cs">
+      <DependentUpon>ProductsServicesHomeX.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Resources\UserControls\Views\ProductsServices\ProductsServicesHomeX.ascx.designer.cs">
+      <DependentUpon>ProductsServicesHomeX.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\Views\Recruitment\CVDocument.ascx.cs">
+      <DependentUpon>CVDocument.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Resources\UserControls\Views\Recruitment\CVDocument.ascx.designer.cs">
+      <DependentUpon>CVDocument.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\Views\Recruitment\CareerResult.ascx.cs">
+      <DependentUpon>CareerResult.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Resources\UserControls\Views\Recruitment\CareerResult.ascx.designer.cs">
+      <DependentUpon>CareerResult.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\Views\Recruitment\Career.ascx.cs">
+      <DependentUpon>Career.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Resources\UserControls\Views\Recruitment\Career.ascx.designer.cs">
+      <DependentUpon>Career.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\Views\Recruitment\HumanResource.ascx.cs">
+      <DependentUpon>HumanResource.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Resources\UserControls\Views\Recruitment\HumanResource.ascx.designer.cs">
+      <DependentUpon>HumanResource.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\Views\Recruitment\ContactInfor.ascx.cs">
+      <DependentUpon>ContactInfor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Resources\UserControls\Views\Recruitment\ContactInfor.ascx.designer.cs">
+      <DependentUpon>ContactInfor.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\Views\ShareholderMeeting\ShareHolderMeetingdetails.ascx.cs">
+      <DependentUpon>ShareHolderMeetingdetails.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Resources\UserControls\Views\ShareholderMeeting\ShareHolderMeetingdetails.ascx.designer.cs">
+      <DependentUpon>ShareHolderMeetingdetails.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\Views\ShareholderMeeting\ShareHolderMeeting.ascx.cs">
+      <DependentUpon>ShareHolderMeeting.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Resources\UserControls\Views\ShareholderMeeting\ShareHolderMeeting.ascx.designer.cs">
+      <DependentUpon>ShareHolderMeeting.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\Views\TermOfUse\TermOfUse.ascx.cs">
+      <DependentUpon>TermOfUse.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Resources\UserControls\Views\TermOfUse\TermOfUse.ascx.designer.cs">
+      <DependentUpon>TermOfUse.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\NAPAS_Workflow\NAPAS_Workflow.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Workflow\NAPAS_Workflow\NAPAS_Workflow.Designer.cs">
+      <DependentUpon>NAPAS_Workflow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\SPTaskActivity\SPTaskActivity.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Workflow\SPTaskActivity\SPTaskActivity.designer.cs">
+      <DependentUpon>SPTaskActivity.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Business\EventReceiver\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{14988019-0a6a-45db-8083-c86b1b6df800}</SharePointProjectItemId>
+    </None>
+    <None Include="cc.snk" />
+    <None Include="ControlTemplates\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{f09cea96-1111-4a16-8904-3a5e35f63c8e}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\NAPAS.Workflow\NAPAS.Workflow.feature">
+      <FeatureId>{744e667b-7d49-4bc2-ac11-d609af75acc1}</FeatureId>
+    </None>
+    <None Include="Features\Napas.Portal\Napas.Portal.feature">
+      <FeatureId>{52525835-0314-4114-9ae1-6e2ff0ba050f}</FeatureId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Package\Package.package">
+      <PackageId>{cac8fc6c-6a12-44a9-8019-c51fd774fd70}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="Resources\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{946b0219-8517-4787-9b3e-c02dec8d589c}</SharePointProjectItemId>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Workflow\NAPAS_Workflow\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{ae473786-5e89-4234-8174-3211650e32ee}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Workflow\SPTaskActivity\SPTaskActivity.rules">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Business\EventReceiver\Elements.xml" />
+    <Content Include="Common\branding_searchbox.css" />
+    <Content Include="Common\Custom_Item.html" />
+    <Content Include="Common\Custom_Results.html" />
+    <Content Include="Common\UrlRewrite.xml" />
+    <Content Include="ControlTemplates\Napas.Portal\Footer.ascx" />
+    <Content Include="ControlTemplates\Napas.Portal\MenuTop.ascx" />
+    <Content Include="Features\NAPAS.Workflow\NAPAS.Workflow.Template.xml">
+      <DependentUpon>NAPAS.Workflow.feature</DependentUpon>
+    </Content>
+    <Content Include="Resources\UserControls\Views\About\Milestones.ascx" />
+    <Content Include="Resources\UserControls\Views\About\OrganizationBoardExecutive.ascx" />
+    <Content Include="Resources\UserControls\Views\About\OrganizationBoardCommittee.ascx" />
+    <Content Include="Resources\UserControls\Views\About\OrganizationBoardAssembly.ascx" />
+    <Content Include="Resources\UserControls\Views\About\OrganizationChart.ascx" />
+    <Content Include="Resources\UserControls\Views\About\OrganizationalStructure.ascx" />
+    <Content Include="Resources\UserControls\Views\About\About.ascx" />
+    <Content Include="Resources\UserControls\Views\Contacts\ContactGeneral.ascx" />
+    <Content Include="Resources\UserControls\Views\DocumentPartner\DocumentPartner.ascx" />
+    <Content Include="Resources\UserControls\Views\Documents\LegalDocuments.ascx" />
+    <Content Include="Resources\UserControls\Views\Documents\OtherDocuments.ascx" />
+    <Content Include="Resources\UserControls\Views\Global\Admin.ascx" />
+    <Content Include="Resources\UserControls\Views\Global\App.js" />
+    <Content Include="Resources\UserControls\Views\Global\Search.ascx" />
+    <Content Include="Resources\UserControls\Views\Global\Home.ascx" />
+    <Content Include="Resources\UserControls\Views\News\NewsLeftMenu.ascx" />
+    <Content Include="Resources\UserControls\Views\News\NewsHome.ascx" />
+    <Content Include="Resources\UserControls\Views\News\NewsDetails.ascx" />
+    <Content Include="Resources\UserControls\Views\News\NewsCategory.ascx" />
+    <Content Include="Features\Napas.Portal\Napas.Portal.Template.xml">
+      <DependentUpon>Napas.Portal.feature</DependentUpon>
+    </Content>
+    <Content Include="Resources\Elements.xml" />
+    <Content Include="Resources\UserControls\Views\ProductsServices\ProductsServicesHomeX.ascx" />
+    <Content Include="Resources\UserControls\Views\Recruitment\CVDocument.ascx" />
+    <Content Include="Resources\UserControls\Views\Recruitment\CareerResult.ascx" />
+    <Content Include="Resources\UserControls\Views\Recruitment\Career.ascx" />
+    <Content Include="Resources\UserControls\Views\Recruitment\HumanResource.ascx" />
+    <Content Include="Resources\UserControls\Views\Recruitment\ContactInfor.ascx" />
+    <Content Include="Resources\UserControls\Views\ShareholderMeeting\ShareHolderMeetingdetails.ascx" />
+    <Content Include="Resources\UserControls\Views\ShareholderMeeting\ShareHolderMeeting.ascx" />
+    <Content Include="Resources\UserControls\Views\TermOfUse\TermOfUse.ascx" />
+    <Content Include="Workflow\NAPAS_Workflow\Elements.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Napas.en.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Napas.vi.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Camlex\Camlex.NET\Camlex.NET.csproj">
+      <Project>{99fc65cd-823c-47aa-9d68-0bb9f31cdc72}</Project>
+      <Name>Camlex.NET</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Napas\Napas.csproj">
+      <Project>{4605bd91-bf8a-45fb-8ec6-bb20cd710ca2}</Project>
+      <Name>Napas</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>

@@ -1,0 +1,438 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutUs" xml:space="preserve">
+    <value>About NAPAS</value>
+  </data>
+  <data name="Career" xml:space="preserve">
+    <value>Recruitment</value>
+  </data>
+  <data name="CompanyName" xml:space="preserve">
+    <value>National Payment Corpration of Vietnam.</value>
+  </data>
+  <data name="CompanyNameEnglish" xml:space="preserve">
+    <value>CÔNG TY CỔ PHẦN THANH TOÁN QUỐC GIA VIỆT NAM - NAPAS</value>
+  </data>
+  <data name="Documents" xml:space="preserve">
+    <value>Documentation</value>
+  </data>
+  <data name="Flag" xml:space="preserve">
+    <value>/_catalogs/masterpage/napas_theme/images/vn.jpg</value>
+  </data>
+  <data name="ForCustomers" xml:space="preserve">
+    <value>For Customers</value>
+  </data>
+  <data name="ForPartners" xml:space="preserve">
+    <value>For Shareholders</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Home </value>
+  </data>
+  <data name="Hotline" xml:space="preserve">
+    <value>Hotline 24/7</value>
+  </data>
+  <data name="HotNews" xml:space="preserve">
+    <value>News - Events</value>
+  </data>
+  <data name="NapasSologan" xml:space="preserve">
+    <value>NAPAS - The national payment brand, &lt;/br&gt;providing all modern, fast, &lt;/br&gt; secure and convenient solutions for your transactions.</value>
+  </data>
+  <data name="News" xml:space="preserve">
+    <value>News</value>
+  </data>
+  <data name="OneConnectAllPayment" xml:space="preserve">
+    <value>One connection. All payments</value>
+  </data>
+  <data name="Products_Services" xml:space="preserve">
+    <value>Products and services</value>
+  </data>
+  <data name="TermsAndConditionOfUse" xml:space="preserve">
+    <value>Terms of Use</value>
+  </data>
+  <data name="Url" xml:space="preserve">
+    <value>~site/</value>
+  </data>
+  <data name="UrlAbout" xml:space="preserve">
+    <value>~site/about.aspx</value>
+  </data>
+  <data name="UrlCustomers" xml:space="preserve">
+    <value>~site/customer-services.html</value>
+  </data>
+  <data name="UrlNews" xml:space="preserve">
+    <value>~site/news.html</value>
+  </data>
+  <data name="UrlPartners" xml:space="preserve">
+    <value>~site/shareholders-meeting.html</value>
+  </data>
+  <data name="UrlProducts-Services" xml:space="preserve">
+    <value>~site/products-services.htm</value>
+  </data>
+  <data name="viewmore" xml:space="preserve">
+    <value>See more</value>
+  </data>
+  <data name="NewsCategory" xml:space="preserve">
+    <value>News Catogory</value>
+  </data>
+  <data name="UrlCategoryNews" xml:space="preserve">
+    <value>~site/news/</value>
+  </data>
+  <data name="ListNews" xml:space="preserve">
+    <value>~site/Lists/News/AllItems.aspx</value>
+  </data>
+  <data name="ListNewsCategory" xml:space="preserve">
+    <value>~site/Lists/News%20Catogory/AllItems.aspx</value>
+  </data>
+  <data name="UrlHomeBackEnd" xml:space="preserve">
+    <value>~site/admin.aspx</value>
+  </data>
+  <data name="CustomerService" xml:space="preserve">
+    <value>Customer Service</value>
+  </data>
+  <data name="BankName" xml:space="preserve">
+    <value>Tên ngân hàng</value>
+  </data>
+  <data name="Customers-Partners" xml:space="preserve">
+    <value>Customers - Partners</value>
+  </data>
+  <data name="DocumentPartner" xml:space="preserve">
+    <value>Documents for partners</value>
+  </data>
+  <data name="OldRelate" xml:space="preserve">
+    <value>Old related</value>
+  </data>
+  <data name="ShareholdersMeeting" xml:space="preserve">
+    <value>Shareholders meeting</value>
+  </data>
+  <data name="UrlDocumentPartner" xml:space="preserve">
+    <value>~site/document-partner.html</value>
+  </data>
+  <data name="UrlShareholderMeeting" xml:space="preserve">
+    <value>~site/shareholders-meeting.html</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="Bank" xml:space="preserve">
+    <value>Bank</value>
+  </data>
+  <data name="OpenTime" xml:space="preserve">
+    <value>Time Open</value>
+  </data>
+  <data name="Order" xml:space="preserve">
+    <value>Order</value>
+  </data>
+  <data name="LegalDocuments" xml:space="preserve">
+    <value>Legal documents</value>
+  </data>
+  <data name="UrlDocumentLegal" xml:space="preserve">
+    <value>~site/documentation/legal normative documents.html</value>
+  </data>
+  <data name="DocumentsGroup" xml:space="preserve">
+    <value>Document group</value>
+  </data>
+  <data name="DocumentsOther" xml:space="preserve">
+    <value>Other Documents</value>
+  </data>
+  <data name="ListCustomer-Partner" xml:space="preserve">
+    <value>~site/Lists/Customer%20%20Partner/AllItems.aspx</value>
+  </data>
+  <data name="ListDocumentsGroup" xml:space="preserve">
+    <value>~site/Lists/Document%20group/AllItems.aspx</value>
+  </data>
+  <data name="ListDocumentsLegal" xml:space="preserve">
+    <value>~site/Legens%20documents/Forms/AllItems.aspx</value>
+  </data>
+  <data name="ListDocumentsOther" xml:space="preserve">
+    <value>~site/Documents%20other/Forms/AllItems.aspx</value>
+  </data>
+  <data name="ListDocumentsPartner" xml:space="preserve">
+    <value>~site/Partners%20documents/Forms/AllItems.aspx</value>
+  </data>
+  <data name="ListProductService" xml:space="preserve">
+    <value>~site/Lists/Production%20and%20Services/AllItems.aspx</value>
+  </data>
+  <data name="ListProductServiceGroup" xml:space="preserve">
+    <value>~site/Lists/Production%20and%20Services%20Group/AllItems.aspx</value>
+  </data>
+  <data name="ListShareholderMeeting" xml:space="preserve">
+    <value>~site/Lists/Shareholder%20meeting/AllItems.aspx</value>
+  </data>
+  <data name="ProductServiceGroup" xml:space="preserve">
+    <value>Product service group</value>
+  </data>
+  <data name="UrlTermsAndConditionOfUse" xml:space="preserve">
+    <value>~site/term-of-use.html</value>
+  </data>
+  <data name="ContactInfor" xml:space="preserve">
+    <value>Contact Infor</value>
+  </data>
+  <data name="HR" xml:space="preserve">
+    <value>Human resource</value>
+  </data>
+  <data name="UrlCareer" xml:space="preserve">
+    <value>~site/recruitment/career.html</value>
+  </data>
+  <data name="UrlContactInfor" xml:space="preserve">
+    <value>~site/recruitment/contactinfor.html</value>
+  </data>
+  <data name="UrlHR" xml:space="preserve">
+    <value>~site/recruitment/human-resource.html</value>
+  </data>
+  <data name="CareerInfor" xml:space="preserve">
+    <value>Application Information</value>
+  </data>
+  <data name="CareerResult" xml:space="preserve">
+    <value>Recruitment Results</value>
+  </data>
+  <data name="CVDocument" xml:space="preserve">
+    <value>Download Candidate Information Form</value>
+  </data>
+  <data name="UrlCareerInfor" xml:space="preserve">
+    <value>~site/recruitment/human-resource/application-information.html</value>
+  </data>
+  <data name="UrlCareerResult" xml:space="preserve">
+    <value>~site/recruitment/human-resource/recruitment-results.html</value>
+  </data>
+  <data name="UrlCVDocument" xml:space="preserve">
+    <value>~site/recruitment/human-resource/curriculum-document.html</value>
+  </data>
+  <data name="ExecutiveBoard" xml:space="preserve">
+    <value>Supervisory Board</value>
+  </data>
+  <data name="ExecutiveCommittee" xml:space="preserve">
+    <value>Executive Board</value>
+  </data>
+  <data name="GeneralAssembly" xml:space="preserve">
+    <value>Board of Directors</value>
+  </data>
+  <data name="Organization" xml:space="preserve">
+    <value>Organizational Structure</value>
+  </data>
+  <data name="OrganizationChart" xml:space="preserve">
+    <value>Organizational Chart</value>
+  </data>
+  <data name="UrlExecutiveBoard" xml:space="preserve">
+    <value>~site/organization/executive-board.html</value>
+  </data>
+  <data name="UrlExecutiveCommittee" xml:space="preserve">
+    <value>~site/organization/executive-committee.html</value>
+  </data>
+  <data name="UrlGeneralAssembly" xml:space="preserve">
+    <value>~site/organization/general-assembly.html</value>
+  </data>
+  <data name="UrlOrganizationChart" xml:space="preserve">
+    <value>~site/organization/organization-chart.html</value>
+  </data>
+  <data name="BankFinace" xml:space="preserve">
+    <value>Banks and Finance Companies</value>
+  </data>
+  <data name="BusinessesServiceProviders" xml:space="preserve">
+    <value>Enterprises and Service Providers</value>
+  </data>
+  <data name="IndividualCustomers" xml:space="preserve">
+    <value>Individual Customers</value>
+  </data>
+  <data name="IntermediaryPaymentCompany" xml:space="preserve">
+    <value>Third Party Processors</value>
+  </data>
+  <data name="UrlContact" xml:space="preserve">
+    <value>~site/contact.html</value>
+  </data>
+  <data name="UrlBankFinace" xml:space="preserve">
+    <value>~site/for customers/for-banks-and-finance-companies/domestic-atm-pos-switching-service-1-1.html</value>
+  </data>
+  <data name="UrlBusinessesServiceProviders" xml:space="preserve">
+    <value>~site/for%20customers/for-enterprises-and-service-providers/online-ecommerce-payment-gateway-2-16.html</value>
+  </data>
+  <data name="UrlIndividualCustomers" xml:space="preserve">
+    <value>~site/for%20customers/for-individual-customers-/services-provided-on-atm-pos--3-11.html</value>
+  </data>
+  <data name="UrlIntermediaryPaymentCompany" xml:space="preserve">
+    <value>~site/for%20customers/for-third-party-processors/for-third-party-processors--4-3.html</value>
+  </data>
+  <data name="LanguageUrl" xml:space="preserve">
+    <value>/</value>
+  </data>
+  <data name="MilestonesAchievements" xml:space="preserve">
+    <value>Milestones, Achievements</value>
+  </data>
+  <data name="CareerPage" xml:space="preserve">
+    <value>Career Opportunities</value>
+  </data>
+  <data name="DownloadCandidateInformation Form" xml:space="preserve">
+    <value>Download Candidate Information Form</value>
+  </data>
+  <data name="OtherNews" xml:space="preserve">
+    <value>Other News</value>
+  </data>
+  <data name="RecruitmentInformation" xml:space="preserve">
+    <value>Recruitment Information</value>
+  </data>
+  <data name="RecruitmentResults" xml:space="preserve">
+    <value>Recruitment Results</value>
+  </data>
+  <data name="CustomersAndPartners" xml:space="preserve">
+    <value>Customers and Partners</value>
+  </data>
+  <data name="ListAbountUS" xml:space="preserve">
+    <value>~site/Lists/Introduction/AllItems.aspx</value>
+  </data>
+  <data name="Contact" xml:space="preserve">
+    <value>Contact</value>
+  </data>
+  <data name="Content" xml:space="preserve">
+    <value>Content</value>
+  </data>
+  <data name="FullName" xml:space="preserve">
+    <value>Full name</value>
+  </data>
+  <data name="Mobile" xml:space="preserve">
+    <value>Mobile</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="Another" xml:space="preserve">
+    <value>ENTERTAINMENT - TRAVEL - CONSUMER - OTHER</value>
+  </data>
+  <data name="Communication" xml:space="preserve">
+    <value>TELECOMMUNICATION</value>
+  </data>
+  <data name="Digital" xml:space="preserve">
+    <value>CONTENT DIGITAL</value>
+  </data>
+  <data name="ElectronicWallet" xml:space="preserve">
+    <value>ELECTRONIC WALLET</value>
+  </data>
+  <data name="Ensurance" xml:space="preserve">
+    <value>INSURRANCE</value>
+  </data>
+  <data name="Game" xml:space="preserve">
+    <value>GAME</value>
+  </data>
+  <data name="Retail" xml:space="preserve">
+    <value>RETAIL</value>
+  </data>
+  <data name="Tranformer" xml:space="preserve">
+    <value>AIR TRANSPORT</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+</root>

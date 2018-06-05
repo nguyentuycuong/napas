@@ -1,0 +1,444 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutUs" xml:space="preserve">
+    <value>Về Napas</value>
+  </data>
+  <data name="Career" xml:space="preserve">
+    <value>Tuyển dụng</value>
+  </data>
+  <data name="CompanyName" xml:space="preserve">
+    <value>CÔNG TY CỔ PHẦN THANH TOÁN QUỐC GIA VIỆT NAM - NAPAS</value>
+  </data>
+  <data name="CompanyNameEnglish" xml:space="preserve">
+    <value>National Payment Corpration of Vietnam</value>
+  </data>
+  <data name="Documents" xml:space="preserve">
+    <value>Tài liệu</value>
+  </data>
+  <data name="Flag" xml:space="preserve">
+    <value>/_catalogs/masterpage/napas_theme/images/en.png</value>
+  </data>
+  <data name="ForCustomers" xml:space="preserve">
+    <value>Dành cho khách hàng</value>
+  </data>
+  <data name="ForPartners" xml:space="preserve">
+    <value>Dành cho cổ đông</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Trang chủ</value>
+  </data>
+  <data name="Hotline" xml:space="preserve">
+    <value>Hotline 24/7</value>
+  </data>
+  <data name="HotNews" xml:space="preserve">
+    <value>TIN TỨC - SỰ KIỆN</value>
+  </data>
+  <data name="NapasSologan" xml:space="preserve">
+    <value>NAPAS - Thương hiệu thanh toán quốc gia, &lt;/br&gt;cung cấp mọi giải pháp hiện đại, nhanh chóng, &lt;/br&gt;an toàn và thuận tiện nhất cho giao dịch của bạn.</value>
+  </data>
+  <data name="News" xml:space="preserve">
+    <value>Tin tức</value>
+  </data>
+  <data name="OneConnectAllPayment" xml:space="preserve">
+    <value>Một kết nối. Mọi thanh toán</value>
+  </data>
+  <data name="Products_Services" xml:space="preserve">
+    <value>Sản phẩm dịch vụ</value>
+  </data>
+  <data name="TermsAndConditionOfUse" xml:space="preserve">
+    <value>Điều khoản sử dụng</value>
+  </data>
+  <data name="Url" xml:space="preserve">
+    <value>~site/</value>
+  </data>
+  <data name="UrlAbout" xml:space="preserve">
+    <value>~site/gioi-thieu.html</value>
+  </data>
+  <data name="UrlCustomers" xml:space="preserve">
+    <value>~site/dich-vu-khach-hang.html</value>
+  </data>
+  <data name="UrlNews" xml:space="preserve">
+    <value>/tin-tuc.html</value>
+  </data>
+  <data name="UrlPartners" xml:space="preserve">
+    <value>~site/dai-hoi-co-dong.html</value>
+  </data>
+  <data name="UrlProducts-Services" xml:space="preserve">
+    <value>~site/san-pham-dich-vu.htm</value>
+  </data>
+  <data name="viewmore" xml:space="preserve">
+    <value>Xem thêm</value>
+  </data>
+  <data name="NewsCategory" xml:space="preserve">
+    <value>Nhóm tin tức</value>
+  </data>
+  <data name="UrlCategoryNews" xml:space="preserve">
+    <value>tin-tuc/</value>
+  </data>
+  <data name="ListNews" xml:space="preserve">
+    <value>../../Lists/Tin%20tc/AllItems.aspx</value>
+  </data>
+  <data name="ListNewsCategory" xml:space="preserve">
+    <value>../../Lists/Nhm%20tin%20tc/AllItems.aspx</value>
+  </data>
+  <data name="UrlHomeBackEnd" xml:space="preserve">
+    <value>../../admin.aspx</value>
+  </data>
+  <data name="CustomerService" xml:space="preserve">
+    <value>Dịch vụ khách hàng</value>
+  </data>
+  <data name="BankName" xml:space="preserve">
+    <value>Tên ngân hàng</value>
+  </data>
+  <data name="Customers-Partners" xml:space="preserve">
+    <value>KHÁCH HÀNG - ĐỐI TÁC</value>
+  </data>
+  <data name="MoHinhNhan_LoaiTheChoPhep" xml:space="preserve">
+    <value>Mô hình nhận loại thẻ cho phép nhận</value>
+  </data>
+  <data name="UrlUserGuide" xml:space="preserve">
+    <value>~site/huong-dan-sua-dung-dich-vu.html</value>
+  </data>
+  <data name="DocumentPartner" xml:space="preserve">
+    <value>Tài liệu dành cho cổ đông</value>
+  </data>
+  <data name="OldRelate" xml:space="preserve">
+    <value>Tin cũ liên quan</value>
+  </data>
+  <data name="ShareholdersMeeting" xml:space="preserve">
+    <value>Đại hội cổ đông</value>
+  </data>
+  <data name="UrlDocumentPartner" xml:space="preserve">
+    <value>~site/tai-lieu-danh-cho-co-dong.html</value>
+  </data>
+  <data name="UrlShareholderMeeting" xml:space="preserve">
+    <value>~site/dai-hoi-co-dong.html</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Địa chỉ</value>
+  </data>
+  <data name="Bank" xml:space="preserve">
+    <value>Ngân hàng</value>
+  </data>
+  <data name="OpenTime" xml:space="preserve">
+    <value>Thời gian phục vụ</value>
+  </data>
+  <data name="Order" xml:space="preserve">
+    <value>Số thứ tự</value>
+  </data>
+  <data name="LegalDocuments" xml:space="preserve">
+    <value>Tài liệu quy phạm pháp luật</value>
+  </data>
+  <data name="UrlDocumentLegal" xml:space="preserve">
+    <value>~site/tai-lieu/tai-lieu-van-ban-phap-quy.html</value>
+  </data>
+  <data name="DocumentsGroup" xml:space="preserve">
+    <value>Nhóm tài liệu</value>
+  </data>
+  <data name="DocumentsOther" xml:space="preserve">
+    <value>Tài liệu khác</value>
+  </data>
+  <data name="ListCustomer-Partner" xml:space="preserve">
+    <value>../../Lists/Khch%20hng%20%20i%20tc/AllItems.aspx</value>
+  </data>
+  <data name="ListDocumentsGroup" xml:space="preserve">
+    <value>../../Lists/Nhm%20ti%20liu/AllItems.aspx</value>
+  </data>
+  <data name="ListDocumentsLegal" xml:space="preserve">
+    <value>../../Ti%20liu%20vn%20bn%20php%20quy/Forms/AllItems.aspx</value>
+  </data>
+  <data name="ListDocumentsOther" xml:space="preserve">
+    <value>../../Ti%20liu%20khc/Forms/AllItems.aspx</value>
+  </data>
+  <data name="ListDocumentsPartner" xml:space="preserve">
+    <value>../../Ti%20liu%20dnh%20cho%20c%20ng/Forms/AllItems.aspx</value>
+  </data>
+  <data name="ListProductService" xml:space="preserve">
+    <value>../../Lists/Sn%20phm%20dch%20v/AllItems.aspx</value>
+  </data>
+  <data name="ListProductServiceGroup" xml:space="preserve">
+    <value>../../Lists/Nhm%20sn%20phm%20dch%20v/AllItems.aspx</value>
+  </data>
+  <data name="ListShareholderMeeting" xml:space="preserve">
+    <value>../../Lists/i hi c ng/AllItems.aspx</value>
+  </data>
+  <data name="ProductServiceGroup" xml:space="preserve">
+    <value>Nhóm sản phẩm dịch vụ</value>
+  </data>
+  <data name="UrlTermsAndConditionOfUse" xml:space="preserve">
+    <value>~site/dieu-khoan-sua-dung.html</value>
+  </data>
+  <data name="CareerPage" xml:space="preserve">
+    <value>Cơ hội nghề nghiệp</value>
+  </data>
+  <data name="ContactInfor" xml:space="preserve">
+    <value>Thông tin liên hệ</value>
+  </data>
+  <data name="HR" xml:space="preserve">
+    <value>Chính sách nhân sự</value>
+  </data>
+  <data name="UrlCareer" xml:space="preserve">
+    <value>~site/tuyen-dung/co-hoi-nghe-nghiep.html</value>
+  </data>
+  <data name="UrlContactInfor" xml:space="preserve">
+    <value>~site/tuyen-dung/thong-tin-lien-he.html</value>
+  </data>
+  <data name="UrlHR" xml:space="preserve">
+    <value>~site/tuyen-dung/chinh-sach-nhan-su.html</value>
+  </data>
+  <data name="CareerInfor" xml:space="preserve">
+    <value>Thông tin tuyển dụng</value>
+  </data>
+  <data name="CareerResult" xml:space="preserve">
+    <value>Kết quả tuyển dụng</value>
+  </data>
+  <data name="CVDocument" xml:space="preserve">
+    <value>Tải mẫu thông tin ứng viên ứng tuyển</value>
+  </data>
+  <data name="UrlCareerInfor" xml:space="preserve">
+    <value>~site/tuyen-dung/co-hoi-nghe-nghiep/thong-tin-tuyen-dung.html</value>
+  </data>
+  <data name="UrlCareerResult" xml:space="preserve">
+    <value>~site/tuyen-dung/co-hoi-nghe-nghiep/ket-qua-tuyen-dung.html</value>
+  </data>
+  <data name="UrlCVDocument" xml:space="preserve">
+    <value>~site/tuyen-dung/co-hoi-nghe-nghiep/tai-mau-thong-tin-ung-vien-ung-tuyen.html</value>
+  </data>
+  <data name="ExecutiveBoard" xml:space="preserve">
+    <value>Ban kiểm soát</value>
+  </data>
+  <data name="ExecutiveCommittee" xml:space="preserve">
+    <value>Ban điều hành</value>
+  </data>
+  <data name="GeneralAssembly" xml:space="preserve">
+    <value>Hội đồng quản trị</value>
+  </data>
+  <data name="Organization" xml:space="preserve">
+    <value>Cơ cấu tổ chức</value>
+  </data>
+  <data name="OrganizationChart" xml:space="preserve">
+    <value>Sơ đồ tổ chức</value>
+  </data>
+  <data name="UrlExecutiveBoard" xml:space="preserve">
+    <value>~site/co-cau-to-chuc/ban-kiem-soat.html</value>
+  </data>
+  <data name="UrlExecutiveCommittee" xml:space="preserve">
+    <value>~site/co-cau-to-chuc/ban-dieu-hanh.html</value>
+  </data>
+  <data name="UrlGeneralAssembly" xml:space="preserve">
+    <value>~site/co-cau-to-chuc/hoi-dong-quan-tri.html</value>
+  </data>
+  <data name="UrlOrganizationChart" xml:space="preserve">
+    <value>~site/co-cau-to-chuc/so-do-to-chuc.html</value>
+  </data>
+  <data name="BankFinace" xml:space="preserve">
+    <value>Ngân hàng &amp; Công ty Tài chính</value>
+  </data>
+  <data name="BusinessesServiceProviders" xml:space="preserve">
+    <value>Doanh nghiệp &amp; Nhà cung cấp dịch vụ</value>
+  </data>
+  <data name="IndividualCustomers" xml:space="preserve">
+    <value>Khách hàng cá nhân</value>
+  </data>
+  <data name="IntermediaryPaymentCompany" xml:space="preserve">
+    <value>Công ty trung gian thanh toán</value>
+  </data>
+  <data name="UrlContact" xml:space="preserve">
+    <value>~site/lien-he.html</value>
+  </data>
+  <data name="UrlBankFinace" xml:space="preserve">
+    <value>~site/san-pham-dich-vu/dich-vu-chuyen-mach-tai-chinh-va-bu-tru-dien-tu-the-noi-dia/-dich-vu-chuyen-mach-the-cho-atm/Thong-tin-san-pham-dich-vu-1-1.html</value>
+  </data>
+  <data name="UrlBusinessesServiceProviders" xml:space="preserve">
+    <value>~site/san-pham-dich-vu/danh-cho-doanh-nghiep-va-nha-cung-cap-dich-vu/dich-vu-cong-thanh-toan-truc-tuyen/Thong-tin-san-pham-dich-vu-2-10.html</value>
+  </data>
+  <data name="UrlIndividualCustomers" xml:space="preserve">
+    <value>~site/san-pham-dich-vu/danh-cho-khach-hang-ca-nhan/dich-vu-tai-atm-pos/Thong-tin-san-pham-dich-vu-4-13.html</value>
+  </data>
+  <data name="UrlIntermediaryPaymentCompany" xml:space="preserve">
+    <value>~site/san-pham-dich-vu/danh-cho-cong-ty-trung-gian-thanh-toan/danh-cho-cong-ty-trung-gian-thanh-toan/Thong-tin-san-pham-dich-vu-3-18.html</value>
+  </data>
+  <data name="LanguageUrl" xml:space="preserve">
+    <value>~site/en-us</value>
+  </data>
+  <data name="MilestonesAchievements" xml:space="preserve">
+    <value>Các mốc lịch sử, thành tựu</value>
+  </data>
+  <data name="DownloadCandidateInformation Form" xml:space="preserve">
+    <value>Tải mẫu thông tin ứng viên ứng tuyển</value>
+  </data>
+  <data name="OtherNews" xml:space="preserve">
+    <value>Tin tức khác</value>
+  </data>
+  <data name="RecruitmentInformation" xml:space="preserve">
+    <value>Thông tin tuyển dụng</value>
+  </data>
+  <data name="RecruitmentResults" xml:space="preserve">
+    <value>Kết quả tuyển dụng</value>
+  </data>
+  <data name="CustomersAndPartners" xml:space="preserve">
+    <value>Khách hàng - Đối tác</value>
+  </data>
+  <data name="ListAbountUS" xml:space="preserve">
+    <value>~site/Lists/V Napas/AllItems.aspx</value>
+  </data>
+  <data name="Contact" xml:space="preserve">
+    <value>Liên hệ</value>
+  </data>
+  <data name="Content" xml:space="preserve">
+    <value>Nội dung ý kiến</value>
+  </data>
+  <data name="FullName" xml:space="preserve">
+    <value>Họ tên</value>
+  </data>
+  <data name="Mobile" xml:space="preserve">
+    <value>Số điện thoại</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Tiêu đề</value>
+  </data>
+  <data name="Another" xml:space="preserve">
+    <value>GIẢI TRÍ – DU LỊCH – TIÊU DÙNG – KHÁC</value>
+  </data>
+  <data name="Communication" xml:space="preserve">
+    <value>VIỄN THÔNG</value>
+  </data>
+  <data name="Digital" xml:space="preserve">
+    <value>NỘI DUNG SỐ</value>
+  </data>
+  <data name="ElectronicWallet" xml:space="preserve">
+    <value>VÍ ĐIỆN TỬ - TIỆN ÍCH</value>
+  </data>
+  <data name="Ensurance" xml:space="preserve">
+    <value>BẢO HIỂM</value>
+  </data>
+  <data name="Game" xml:space="preserve">
+    <value>GAME</value>
+  </data>
+  <data name="Retail" xml:space="preserve">
+    <value>BÁN LẺ</value>
+  </data>
+  <data name="Tranformer" xml:space="preserve">
+    <value>VẬN TẢI – HÀNG KHÔNG</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Tìm kiếm</value>
+  </data>
+</root>

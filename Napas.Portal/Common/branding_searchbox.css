@@ -1,0 +1,271 @@
+/* Search Box CSS */
+/* Ryan Keller - Rackspace Hosting */
+
+/* outer containing div that holds search box*/
+#searchInputBox {
+	
+	padding:3px; /* padding added for visibility of bg color */
+}
+
+/* div with border around entire search box - default state*/
+.ms-srch-sb-border {
+	
+	border:1px solid blue;
+}
+
+/* input box for typing search query */
+.ms-srch-sb > input {
+	
+}
+
+/* <a> tag containing the "go" button */
+.ms-srch-sb > .ms-srch-sb-searchLink {
+	
+}
+
+/* Hover state for border around search box */
+.ms-srch-sb-border:hover {
+	border:1px solid fuchsia;
+}
+
+/* Hover state for "go" image" */
+.ms-srch-sb-searchLink:hover {
+	
+}
+
+/* Focused state - this style is applied dynamically when you click in the search box to type */
+.ms-srch-sb-borderFocused {
+	
+	border:1px solid yellow;
+}
+
+/* Focused state for the input */
+.ms-srch-sb > input:focus {
+	
+}
+
+/* Swap "go" image - this line hides the OOTB image */
+.ms-srch-sb > .ms-srch-sb-searchLink img {
+	display:none;
+}
+
+/* Add in custom "go" image - applied as background image to the <a> tag */
+.ms-srch-sb > .ms-srch-sb-searchLink {
+	background-image:url('customGo.png');
+	background-repeat:no-repeat;
+	background-position:0 0;
+}
+
+/* Hover state for the "go" image" */
+.ms-srch-sb-searchLink:hover {
+	background-position:0 -20px; /* this example uses a sprite sheet but you could easily use a second hover state image instead */
+}
+#searchInputBox
+{
+margin-bottom:12px;
+float:right;
+}
+.ms-srch-sb
+{
+display:inline-block;
+}
+.ms-core-header .ms-srch-sb
+{
+/* [ReplaceColor(themeColor:"HeaderBackground",opacity:"1")] */ background-color:#fff;
+/* [ReplaceColor(themeColor:"HeaderBackground")] */ background-color:rgba( 255,255,255,0.85 );
+}
+.ms-srch-sb-border
+{
+/* [ReplaceColor(themeColor:"Lines")] */ border:1px solid #ababab;
+}
+.ms-core-header .ms-srch-sb-border
+{
+/* [ReplaceColor(themeColor:"HeaderLines")] */ border:1px solid #ababab;
+}
+.ms-srch-sb-border:hover
+{
+/* [ReplaceColor(themeColor:"StrongLines")] */ border:1px solid #92c0e0;
+}
+.ms-core-header .ms-srch-sb-border:hover
+{
+/* [ReplaceColor(themeColor:"HeaderStrongLines")] */ border:1px solid #92c0e0;
+}
+.ms-srch-sb-borderFocused
+{
+/* [ReplaceColor(themeColor:"AccentLines")] */ border:1px solid #2a8dd4;
+}
+.ms-core-header .ms-srch-sb-borderFocused
+{
+/* [ReplaceColor(themeColor:"HeaderAccentLines")] */ border:1px solid #2a8dd4;
+}
+.ms-srch-sb>input
+{
+display:inline-block;
+border-style:none;
+outline-style:none;
+height:18px;
+margin:0px 0px 0px 5px;
+padding:0px 1px 0px 0px;
+width:200px;
+background-color:transparent;
+}
+.ms-core-header .ms-srch-sb>input
+{
+/* [ReplaceColor(themeColor:"HeaderText")] */ color:#444;
+}
+.ms-srch-sb>input:focus
+{
+border-style:none;
+outline-style:none;
+}
+.ms-srch-sb>input[type=text]::-ms-clear
+{
+display:none;
+}
+.ms-srch-sb-link
+{
+float:left;
+margin-left:10px;
+}
+.ms-srch-sb-navLink,.ms-srch-sb-searchLink
+{
+display:inline-block;
+cursor:pointer;
+vertical-align:top;
+background-color:transparent;
+border:1px solid transparent;
+position:relative;
+overflow:hidden;
+}
+.ms-srch-sb > .ms-srch-sb-searchLink
+{
+margin-left:-1px;
+height:20px;
+width:20px;
+}
+.ms-srch-sb > .ms-srch-sb-navLink
+{
+height:20px;
+width:20px;
+}
+.ms-srch-sb-searchLink:hover,.ms-srch-sb-navLink:hover
+{
+/* [ReplaceColor(themeColor:"ButtonHoverBackground",opacity:"1")] */ background-color:#e6f2fa;
+/* [ReplaceColor(themeColor:"ButtonHoverBackground")] */ background-color:#e6f2fa;
+}
+.ms-srch-sb-searchLink:active,
+.ms-srch-sb-searchLink > img:active,
+.ms-srch-sb-navLink:active,
+.ms-srch-sb-navLink > img:active,
+.ms-srch-sb-navLink-menuOpen,
+.ms-srch-sb-navLink-menuOpen:hover
+{
+/* [ReplaceColor(themeColor:"ButtonPressedBackground",opacity:"1")] */ background-color:#92c0e0;
+/* [ReplaceColor(themeColor:"ButtonPressedBackground")] */ background-color:#92c0e0;
+}
+.ms-srch-sb-searchImg
+{
+left:-35px;
+top:-57px;
+position:absolute;
+}
+.ms-srch-sb-searchImg:hover
+{
+left:-1px;
+top:-69px;
+}
+.ms-srch-sb-navImg
+{
+left:-35px;
+top:-35px;
+position:absolute;
+}
+.ms-srch-sb-navImg:hover,.ms-srch-sb-navLink-menuOpen > .ms-srch-sb-navImg
+{
+left:-57px;
+top:-35px;
+}
+.ms-core-header .ms-srch-sb-prompt.ms-srch-sb-prompt
+{
+/* [ReplaceColor(themeColor:"HeaderSubtleText")] */ color:#777;
+}
+.ms-qSuggest-container
+{
+border:inherit;
+padding:5px 0px;
+margin:-1px 0px 0px -1px;
+visibility:hidden;
+position:absolute;
+/* [ReplaceColor(themeColor:"BackgroundOverlay",opacity:"1")] */ background-color:#fff;
+z-index:1000;
+}
+.ms-qSuggest-list
+{
+cursor:default;
+margin:0px;
+overflow:hidden;
+padding:0px;
+white-space:nowrap;
+text-overflow:ellipsis;
+}
+.ms-qSuggest-listItem
+{
+margin:0px;
+padding:7px 10px;
+}
+.ms-qSuggest-hListItem{
+/* [ReplaceColor(themeColor:"HoverBackground",opacity:"1")] */ background-color:#cde6f7;
+/* [ReplaceColor(themeColor:"HoverBackground")] */ background-color:rgba( 205,230,247,0.5 );
+margin:0px;
+padding:7px 10px;
+}
+.ms-qSuggest-personalResultTitle
+{
+padding:7px 10px;
+margin:0;
+/* [ReplaceColor(themeColor:"SubtleEmphasisText")] */ color:#666;
+}
+.ms-qSuggest-listSeparator
+{
+/* [ReplaceColor(themeColor:"SubtleLines")] */ border-top:1px solid #c6c6c6;
+margin:7px 0px;
+}
+a:active.ms-skip,
+a:focus.ms-skip,
+a:focus.ms-acc-button,
+a:active.ms-acc-button
+{
+position:absolute;
+top:2px;
+background-color:#fff;
+border:1px solid #000;
+color:#000;
+padding:2px 4px;
+z-index:12;
+height:auto;
+width:auto;
+}
+#pageStatusBar[class],
+.ms-status-msg
+{
+position:static;
+margin-bottom:15px;
+padding:7px 10px;
+border-width:1px;
+border-style:solid;
+color:#444;
+}
+.ms-status-blue
+{
+background-color:#f0f0f0 !important;
+border-color:#c6c6c6 !important;
+}
+.ms-status-blue a:link,
+.ms-status-blue a:visited
+{
+color:#125ab2 !important;
+}
+.ms-srch-sbLarge-searchImg
+{
+	max-width:200px !important;
+}

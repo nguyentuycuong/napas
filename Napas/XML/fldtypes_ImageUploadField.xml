@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<!-- This file should be deployed to TEMPLATE\XML, and not under a sub-folder under that location. -->
+<!-- The rendering template user controls should also be deployed to TEMPLATE\CONTROLTEMPLATES, and not under a sub-folder. -->
+
+<FieldTypes>
+	<FieldType>
+		<Field Name="TypeName">ImageUpload</Field>
+		<Field Name="ParentType">URL</Field>
+		<Field Name="TypeDisplayName">Image Upload</Field>
+		<Field Name="TypeShortDescription">Image Upload and Display</Field>
+		<Field Name="UserCreatable">TRUE</Field>
+		<Field Name="ShowOnListCreate">TRUE</Field>
+		<Field Name="ShowOnSurveyCreate">TRUE</Field>
+		<Field Name="ShowOnDocumentLibraryCreate">TRUE</Field>
+		<Field Name="ShowOnColumnTemplateCreate">TRUE</Field>
+		<Field Name="FieldTypeClass">Napas.SharePoint.ImageUploadFieldType, $SharePoint.Project.AssemblyFullName$</Field>
+		<Field Name="FieldEditorUserControl">/_controltemplates/15/ImageUploadFieldEditor.ascx</Field>
+		<PropertySchema>
+			<Fields>
+				<Field Name="UploadImagesTo"
+						DisplayName="UploadImagesTo"
+						MaxLength="255"
+						DisplaySize="100"
+						Type="Text"
+						Hidden="TRUE">
+					<Default>Images</Default>
+				</Field>
+			</Fields>
+		</PropertySchema>
+	</FieldType>
+</FieldTypes>

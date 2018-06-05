@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SharePointSiteUrl>http://spdev/</SharePointSiteUrl>
+    <ProjectView>ProjectFiles</ProjectView>
+  </PropertyGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{C1CDDADD-2546-481F-9697-4EA41081F2FC}">
+        <ProjectItemStore Id="{c9f9cdaa-faab-49ba-9f78-cbd6118094be}">
+          <DisplayName>Status</DisplayName>
+          <HistoryList>Workflow History</HistoryList>
+          <HistoryListGuid>{13bd684a-a7c8-42dc-a973-bca42833482a}</HistoryListGuid>
+          <TaskList>Workflow Tasks</TaskList>
+          <TaskListGuid>{de7eb3c9-922b-42af-914b-76c3fb5ef329}</TaskListGuid>
+          <AutoAssociate>true</AutoAssociate>
+          <ManualStart>false</ManualStart>
+          <ListURL>http://spdev/Lists/Tin%20tc/AllItems.aspx</ListURL>
+          <TargetList>Tin tức</TargetList>
+          <TargetListGuid>{11ad7b15-2b12-425a-a31b-26256bacef19}</TargetListGuid>
+          <StartOnCreate>false</StartOnCreate>
+          <StartOnChange>false</StartOnChange>
+        </ProjectItemStore>
+        <ProjectItemStore Id="{ae473786-5e89-4234-8174-3211650e32ee}">
+          <DisplayName>ff</DisplayName>
+          <HistoryList>Workflow History</HistoryList>
+          <HistoryListGuid>{13bd684a-a7c8-42dc-a973-bca42833482a}</HistoryListGuid>
+          <TaskList>Workflow Tasks</TaskList>
+          <TaskListGuid>{de7eb3c9-922b-42af-914b-76c3fb5ef329}</TaskListGuid>
+          <AutoAssociate>true</AutoAssociate>
+          <ManualStart>true</ManualStart>
+          <ListURL>http://spdev/Lists/Danh%20sch%20lin%20h/AllItems.aspx</ListURL>
+          <TargetList>Danh sách liên hệ</TargetList>
+          <TargetListGuid>{03387f5c-26c8-4aa6-98b6-f94dff2e286d}</TargetListGuid>
+          <StartOnCreate>true</StartOnCreate>
+          <StartOnChange>false</StartOnChange>
+        </ProjectItemStore>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

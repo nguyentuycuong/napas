@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="64cd9edf-5f25-47d8-abfd-db69e4678f72" solutionId="64cd9edf-5f25-47d8-abfd-db69e4678f72" resetWebServer="false" sharePointProductVersion="15.0" name="Napas" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="d3828e49-d291-427c-9855-71b037fb56c9" />
+  </features>
+  <projectItems>
+    <projectItemReference itemId="8a5d0444-beeb-4380-a06c-b4dbc70f0ff3" />
+    <projectItemReference itemId="bc3fd384-ee64-40e9-a5de-212e6bc15f8b" />
+    <projectItemReference itemId="31001a1f-5e1f-4dec-8934-81595fbcd1e6" />
+    <projectItemReference itemId="86db33aa-b202-44cc-b160-0cfd59b6ddcb" />
+  </projectItems>
+</package>

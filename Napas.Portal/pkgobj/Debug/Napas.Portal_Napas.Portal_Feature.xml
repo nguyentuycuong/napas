@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" AlwaysForceInstall="TRUE" Id="063b9e66-8a9f-448c-a83d-e1ee8c8988f1" ReceiverAssembly="Napas.Portal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a18f64d60256f0cd" ReceiverClass="Napas.Portal.Features.Napas.Portal.NapasEventReceiver" Scope="Web" Title="Napas.Portal Feature">
+  <ElementManifests>
+    <ElementManifest Location="Resources\Elements.xml" />
+    <ElementFile Location="Resources\UserControls\Views\News\NewsCategory.ascx" />
+    <ElementFile Location="Resources\UserControls\Views\News\NewsDetails.ascx" />
+    <ElementFile Location="Resources\UserControls\Views\News\NewsHome.ascx" />
+    <ElementFile Location="Resources\UserControls\Views\News\NewsLeftMenu.ascx" />
+    <ElementFile Location="Resources\UserControls\Views\Global\Home.ascx" />
+    <ElementFile Location="Resources\UserControls\Views\Global\Admin.ascx" />
+    <ElementFile Location="Resources\UserControls\Views\ShareholderMeeting\ShareHolderMeeting.ascx" />
+    <ElementFile Location="Resources\UserControls\Views\ShareholderMeeting\ShareHolderMeetingdetails.ascx" />
+    <ElementFile Location="Resources\UserControls\Views\DocumentPartner\DocumentPartner.ascx" />
+    <ElementFile Location="Resources\UserControls\Views\Documents\OtherDocuments.ascx" />
+    <ElementFile Location="Resources\UserControls\Views\Documents\LegalDocuments.ascx" />
+    <ElementFile Location="Resources\UserControls\Views\About\About.ascx" />
+    <ElementFile Location="Resources\UserControls\Views\About\OrganizationalStructure.ascx" />
+    <ElementFile Location="Resources\UserControls\Views\Global\App.js" />
+    <ElementFile Location="Resources\UserControls\Views\TermOfUse\TermOfUse.ascx" />
+    <ElementFile Location="Resources\UserControls\Views\Recruitment\ContactInfor.ascx" />
+    <ElementFile Location="Resources\UserControls\Views\Recruitment\HumanResource.ascx" />
+    <ElementFile Location="Resources\UserControls\Views\Recruitment\Career.ascx" />
+    <ElementFile Location="Resources\UserControls\Views\Recruitment\CareerResult.ascx" />
+    <ElementFile Location="Resources\UserControls\Views\Recruitment\CVDocument.ascx" />
+    <ElementFile Location="Resources\UserControls\Views\Contacts\ContactGeneral.ascx" />
+    <ElementFile Location="Resources\UserControls\Views\About\OrganizationChart.ascx" />
+    <ElementFile Location="Resources\UserControls\Views\About\OrganizationBoardAssembly.ascx" />
+    <ElementFile Location="Resources\UserControls\Views\About\OrganizationBoardCommittee.ascx" />
+    <ElementFile Location="Resources\UserControls\Views\About\OrganizationBoardExecutive.ascx" />
+    <ElementFile Location="Resources\UserControls\Views\About\Milestones.ascx" />
+    <ElementFile Location="Resources\UserControls\Views\Global\Search.ascx" />
+    <ElementFile Location="Resources\UserControls\Views\ProductsServices\ProductsServicesHomeX.ascx" />
+  </ElementManifests>
+</Feature>

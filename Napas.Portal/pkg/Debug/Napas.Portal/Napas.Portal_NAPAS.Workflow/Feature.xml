@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Id="145417bc-1e79-4ce6-8650-21b2b573a200" Scope="Site" Title="Napas.Portal Feature1">
+  <ElementManifests>
+    <ElementManifest Location="NAPAS_Workflow\Elements.xml" />
+  </ElementManifests>
+</Feature>

@@ -1,0 +1,548 @@
+﻿<rewrite>
+  <rules>
+    <rule name="Trang chủ" stopProcessing="true">
+      <match url="^trang-chu.html$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="default.aspx" />
+    </rule>
+    <rule name="Tin tức - 1" enabled="true" stopProcessing="true">
+      <match url="^tin-tuc.html$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="news.aspx" />
+    </rule>
+    <rule name="Tin tức - 2" stopProcessing="true">
+      <match url="^tin-tuc/([^/]+)-([^/]+)/trang-([0-9]*)/?.html$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="news.aspx?title={R:1}&amp;catId={R:2}&amp;page={R:3}" />
+    </rule>
+    <rule name="Tin tức - 3" stopProcessing="true">
+      <match url="^tin-tuc/([^/]+)/([^/]+)-([^/]+)-([^/]+)/?.html$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="newsdetails.aspx?cat={R:1}&amp;title={R:2}&amp;catId={R:3}&amp;id={R:4}" />
+    </rule>
+    <rule name="News - 1" stopProcessing="true">
+      <match url="^en-us/news.html$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="en-us/news.aspx" />
+    </rule>
+    <rule name="News - 2" stopProcessing="true">
+      <match url="^en-us/news/([^/]+)-([^/]+)/page-([0-9])/?.html$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="en-us/news.aspx?title={R:1}&amp;catId={R:2}&amp;page={R:3}" />
+    </rule>
+    <rule name="News - 3" stopProcessing="true">
+      <match url="^en-us/news/([^/]+)/([^/]+)-([^/]+)/?.html$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="en-us/newsdetails.aspx?cat={R:1}&amp;title={R:2}&amp;id={R:3}" />
+    </rule>
+    <rule name="Products services - 1" stopProcessing="true">
+      <match url="^san-pham-dich-vu/([^/]+)/([^/]+)/([^/]+)-([^/]+)-([^/]+)/?.html$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="productsservices.aspx?catName={R:1}&amp;serviceName={R:2}&amp;type={R:3}&amp;catId={R:4}&amp;serviceId={R:5}" />
+    </rule>
+    <rule name="Products services - 1109" enabled="true" stopProcessing="true">
+      <match url="^en-us/for customers/([^/]+)/([^/]+)-([^/]+)-([^/]+)/?.html$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="en-us/productsservices.aspx?catName={R:1}&amp;serviceName={R:2}&amp;catId={R:3}&amp;serviceId={R:4}" />
+    </rule>
+    <rule name="Products sevices - 0" stopProcessing="true">
+      <match url="^san-pham-dich-vu.htm$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="productsservices_home.aspx" />
+    </rule>
+    <rule name="User guide - 0" stopProcessing="true">
+      <match url="^huong-dan-sua-dung-dich-vu.html$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="user_guide.aspx" />
+    </rule>
+    <rule name="User guide - 1" stopProcessing="true">
+      <match url="^huong-dan-sua-dung-dich-vu/([^/]+)/([^/]+)-([^/]+)-([^/]+)/?.html$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="user_guide.aspx?catTitle={R:1}&amp;title={R:2}&amp;catId={R:3}&amp;serviceId={R:4}" />
+    </rule>
+    <rule name="Dai hoi co dong - 0" stopProcessing="true">
+      <match url="^dai-hoi-co-dong.html$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="shareholders-meeting.aspx" />
+    </rule>
+    <rule name="Dai hoi co dong - 1" enabled="false" stopProcessing="true">
+      <match url="^dai-hoi-co-dong/([^/]+)-([^/]+)/?.html$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="shareholders-meeting-details.aspx?title={R:1}&amp;id={R:2}" />
+    </rule>
+    <rule name="Dai hoi co dong - 2" stopProcessing="true">
+      <match url="^en-us/shareholders-meeting.html$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="en-us/shareholders-meeting.aspx" />
+    </rule>
+    <rule name="Dai hoi co dong - 3" stopProcessing="true">
+      <match url="^en-us/shareholder-meeting/([^/]+)-([^/]+)/?.html$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="en-us/shareholders-meeting-details.aspx?title={R:1}&amp;id={R:2}" />
+    </rule>
+    <rule name="Document for shareholder - 0" stopProcessing="true">
+      <match url="^tai-lieu-danh-cho-co-dong.html$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="documents-for-shareholders.aspx" />
+    </rule>
+    <rule name="Documents - 0" stopProcessing="true">
+      <match url="^tai-lieu/tai-lieu-van-ban-phap-quy.html$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="tai-lieu-van-ban-phap-quy.aspx" />
+    </rule>
+    <rule name="Documents - 1" stopProcessing="true">
+      <match url="^tai-lieu/([^/]+)-([^/]+)/?.html$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="other-document.aspx?title={R:1}&amp;catId={R:2}" />
+    </rule>
+    <rule name="Documents - 11" stopProcessing="true">
+      <match url="^en-us/documentation/([^/]+)-([^/]+)/?.html$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="en-us/other-document.aspx?title={R:1}&amp;catId={R:2}" />
+    </rule>
+    <rule name="Documents - 01" stopProcessing="true">
+      <match url="^en-us/documentation/legal normative documents.html$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="en-us/tai-lieu-van-ban-phap-quy.aspx" />
+    </rule>
+    <rule name="About - 0" enabled="true" stopProcessing="true">
+      <match url="^gioi-thieu.html$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="about.aspx" />
+    </rule>
+    <rule name="About - 1" stopProcessing="true">
+      <match url="^gioi-thieu/([^/]+)([^/]+)/?.html$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="about.aspx?title={R:1}&amp;Id={R:2}" />
+    </rule>
+    <rule name="Term of use - 0" stopProcessing="true">
+      <match url="^dieu-khoan-sua-dung.html$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="term-of-use.aspx" />
+    </rule>
+    <rule name="Term of use - 1" stopProcessing="true">
+      <match url="^dieu-khoan-sua-dung/([^/]+)-([^/]+)/?.html$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="term-of-use.aspx?titile={R:1}&amp;id={R:2}" />
+    </rule>
+    <rule name="Term of use - 2" stopProcessing="true">
+      <match url="^en-us/term-of-use.html$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="en-us/term-of-use.aspx" />
+    </rule>
+    <rule name="Term of use - 3" stopProcessing="true">
+      <match url="^en-us/term-of-use/([^/]+)([^/]+)/?.html$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="en-us/term-of-use.aspx?title={R:1}&amp;id={R:2}" />
+    </rule>
+    <rule name="Document for shareholder - 1" stopProcessing="true">
+      <match url="^en-us/document-partner.html$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="en-us/documents-for-shareholders.aspx" />
+    </rule>
+    <rule name="career - 0" stopProcessing="true">
+      <match url="^tuyen-dung/co-hoi-nghe-nghiep.html$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="career.aspx" />
+    </rule>
+    <rule name="career - 00" stopProcessing="true">
+      <match url="^tuyen-dung/co-hoi-nghe-nghiep/thong-tin-tuyen-dung.html$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="career.aspx" />
+    </rule>
+    <rule name="career - 000" stopProcessing="true">
+      <match url="^tuyen-dung/co-hoi-nghe-nghiep/ket-qua-tuyen-dung.html$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="careerresult.aspx" />
+    </rule>
+    <rule name="career - 0000" stopProcessing="true">
+      <match url="^tuyen-dung/co-hoi-nghe-nghiep/tai-mau-thong-tin-ung-vien-ung-tuyen.html$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="cvdocument.aspx" />
+    </rule>
+    <rule name="career - 1" stopProcessing="true">
+      <match url="^en-us/recruitment/career.html$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="en-us/career.aspx" />
+    </rule>
+    <rule name="career - 11" stopProcessing="true">
+      <match url="^en-us/recruitment/human-resource/application-information.html$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="en-us/career.aspx" />
+    </rule>
+    <rule name="career - 111" stopProcessing="true">
+      <match url="^en-us/recruitment/human-resource/recruitment-results.html$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="en-us/careerresult.aspx" />
+    </rule>
+    <rule name="career - 1111" stopProcessing="true">
+      <match url="^en-us/recruitment/human-resource/curriculum-document.html$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="en-us/cvdocument.aspx" />
+    </rule>
+    <rule name="Contact Infor - 0" stopProcessing="true">
+      <match url="^tuyen-dung/thong-tin-lien-he.html$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="contactinfor.aspx" />
+    </rule>
+    <rule name="Contact Infor - 1" stopProcessing="true">
+      <match url="^en-us/recruitment/contactinfor.html$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="en-us/contactinfor.aspx" />
+    </rule>
+    <rule name="Human Resource - 0" stopProcessing="true">
+      <match url="^tuyen-dung/chinh-sach-nhan-su/?.html$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="humanresource.aspx" />
+    </rule>
+    <rule name="Human Resource - 1" stopProcessing="true">
+      <match url="^en-us/recruitment/human-resource/?.html$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="en-us/humanresource.aspx" />
+    </rule>
+    <rule name="Contact - 0" stopProcessing="true">
+      <match url="^lien-he.html$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="lien-he-chung.aspx" />
+    </rule>
+    <rule name="OrganizationChart - 0" stopProcessing="true">
+      <match url="^co-cau-to-chuc/so-do-to-chuc/?.html$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="organizationchart.aspx" />
+    </rule>
+    <rule name="OrganizationChart - 1" stopProcessing="true">
+      <match url="^en-us/organization/organization-chart/?.html$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="en-us/organizationchart.aspx" />
+    </rule>
+    <rule name="GeneralAssembly - 0" stopProcessing="true">
+      <match url="^co-cau-to-chuc/hoi-dong-quan-tri/?.html$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="organizationboardassembly.aspx" />
+    </rule>
+    <rule name="GeneralAssembly - 1" stopProcessing="true">
+      <match url="^en-us/organization/general-assembly/?.html$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="en-us/organizationboardassembly.aspx" />
+    </rule>
+    <rule name="ExecutiveBoard - 0" stopProcessing="true">
+      <match url="^co-cau-to-chuc/ban-kiem-soat/?.html$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="organizationboardexecutive.aspx" />
+    </rule>
+    <rule name="ExecutiveBoard - 1" stopProcessing="true">
+      <match url="^en-us/organization/executive-board/?.html$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="en-us/organizationboardexecutive.aspx" />
+    </rule>
+    <rule name="ExecutiveCommittee - 0" stopProcessing="true">
+      <match url="^co-cau-to-chuc/ban-dieu-hanh/?.html$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="organizationboardcommittee.aspx" />
+    </rule>
+    <rule name="ExecutiveCommittee - 1" stopProcessing="true">
+      <match url="^en-us/organization/executive-committee/?.html$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="en-us/organizationboardcommittee.aspx" />
+    </rule>
+    <rule name="Contact - 1" stopProcessing="true">
+      <match url="^lien-he/([^/]+)-([^/]+)/?.html$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="lien-he-chung.aspx?titile={R:1}&amp;Id={R:2}" />
+    </rule>
+    <rule name="Contact - 22" stopProcessing="true">
+      <match url="^en-us/contact/([^/]+)-([^/]+)/?.html$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="en-us/lien-he-chung.aspx?titile={R:1}&amp;Id={R:2}" />
+    </rule>
+    <rule name="Ve Napas" stopProcessing="true">
+      <match url="^ve-napas/([^/]+)/([^/]+)/?$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="about.aspx?title={R:1}&amp;id={R:2}" />
+    </rule>
+    <rule name="Cac moc lich su thanh tuu" enabled="false" stopProcessing="true">
+      <match url="^ve-napa/cac-moc-lich-su-thanh-tuu$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="milestones.aspx" />
+    </rule>
+    <rule name="Tin tuc - details" stopProcessing="true">
+      <match url="^tin-tuc/([^/]+)/([^/]+)/([^/]+)/([^/]+)/?$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="newsdetails.aspx?cat={R:1}&amp;title={R:2}&amp;catId={R:3}&amp;id={R:4}" />
+    </rule>
+    <rule name="Ve NAPAS - details" stopProcessing="true">
+      <match url="^ve-napas/([^/]+)/([^/]+)/?$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="about.aspx?title={R:1}&amp;id={R:2}" />
+    </rule>
+    <rule name="Danh cho khach hang - details" stopProcessing="true">
+      <match url="^san-pham-dich-vu/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/?$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="productsservices.aspx?catName={R:1}&amp;serviceName={R:2}&amp;type={R:3}&amp;catId={R:4}&amp;serviceId={R:5}" />
+    </rule>
+    <rule name="RewriteUserFriendlyURL1" enabled="false" stopProcessing="true">
+      <match url="^danh-cho-co-dong/dai-hoi-co-dong/([^/]+)/([^/]+)/?$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="shareholders-meeting-details.aspx?title={R:1}&amp;id={R:2}" />
+    </rule>
+    <rule name="Dai Hoi Co Dong" stopProcessing="true">
+      <match url="^danh-cho-co-dong/([^/]+)?$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="shareholders-meeting.aspx?category={R:1}" />
+    </rule>
+    <rule name="Dai hoi co dong - details" stopProcessing="true">
+      <match url="^danh-cho-co-dong/([^/]+)/([^/]+)/([^/]+)/?$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="shareholders-meeting-details.aspx?category={R:1}&amp;title={R:2}&amp;id={R:3}" />
+    </rule>
+    <rule name="Contact - 2" stopProcessing="true">
+      <match url="^en-us/contact.html$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="en-us/lien-he-chung.aspx" />
+    </rule>
+    <rule name="RewriteUserFriendlyURL2" enabled="false" stopProcessing="true">
+      <match url="^en-us/documentation/legal normative documents.html$" />
+      <conditions>
+        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+      </conditions>
+      <action type="Rewrite" url="en-us/tai-lieu-van-ban-phap-quy.aspx" />
+    </rule>
+  </rules>
+  <outboundRules>
+    <rule name="Ve Napas" preCondition="ResponseIsHtml1" enabled="false">
+      <match filterByTags="A, Form, Img" pattern="^(.*/)about\.aspx\?title=([^=&amp;]+)&amp;(?:amp;)?id=([^=&amp;]+)$" />
+      <action type="Rewrite" value="{R:1}ve-napas/{R:2}/{R:3}/" />
+    </rule>
+    <rule name="Cac moc lich su thanh tuu" preCondition="ResponseIsHtml1" enabled="false" stopProcessing="true">
+      <match filterByTags="A" pattern="^(.*)milestones\.aspx$" />
+      <action type="Rewrite" value="{R:1}/cac-moc-lich-su-thanh-tuu" />
+    </rule>
+    <rule name="Tin tuc - details" preCondition="ResponseIsHtml1" enabled="false">
+      <match filterByTags="A, Form, Img" pattern="^(.*/)newsdetails\.aspx\?cat=([^=&amp;]+)&amp;(?:amp;)?title=([^=&amp;]+)&amp;(?:amp;)?catId=([^=&amp;]+)&amp;(?:amp;)?id=([^=&amp;]+)$" />
+      <action type="Rewrite" value="{R:1}tin-tuc/{R:2}/{R:3}/{R:4}/{R:5}/" />
+    </rule>
+    <rule name="Ve NAPAS - details" preCondition="IsHTML" enabled="false">
+      <match filterByTags="A, Form, Img" pattern="^(.*/)about.aspx\?title=([^=&amp;]+)&amp;(?:amp;)?id=([^=&amp;]+)$" />
+      <action type="Rewrite" value="{R:1}ve-napas/{R:2}/{R:3}/" />
+    </rule>
+    <rule name="Danh cho khach hang - details" preCondition="ResponseIsHtml1" enabled="false">
+      <match filterByTags="A, Form, Img" pattern="^(.*/)productsservices\.aspx\?catName=([^=&amp;]+)&amp;(?:amp;)?serviceName=([^=&amp;]+)&amp;(?:amp;)?type=([^=&amp;]+)&amp;(?:amp;)?catId=([^=&amp;]+)&amp;(?:amp;)?serviceId=([^=&amp;]+)$" />
+      <action type="Rewrite" value="{R:1}san-pham-dich-vu/{R:2}/{R:3}/{R:4}/{R:5}/{R:6}/" />
+    </rule>
+    <rule name="Dai Hoi Co Dong" preCondition="ResponseIsHtml1" enabled="false">
+      <match filterByTags="A, Form, Img" pattern="^(.*/)shareholders-meeting\.aspx\?category=([^=&amp;]+)$" />
+      <action type="Rewrite" value="{R:1}danh-cho-co-dong/{R:2}" />
+    </rule>
+    <rule name="Dai hoi co dong - details" preCondition="ResponseIsHtml1" enabled="false">
+      <match filterByTags="A, Form, Img" pattern="^(.*/)shareholders-meeting-details\.aspx\?category=([^=&amp;]+)&amp;(?:amp;)?title=([^=&amp;]+)&amp;(?:amp;)?id=([^=&amp;]+)$" />
+      <action type="Rewrite" value="{R:1}danh-cho-co-dong/{R:2}/{R:3}/{R:4}/" />
+    </rule>
+    <preConditions>
+      <preCondition name="IsHTML">
+        <add input="{RESPONSE_CONTENT_TYPE}" pattern="^text/html" />
+      </preCondition>
+      <preCondition name="ResponseIsHtml1">
+        <add input="{RESPONSE_CONTENT_TYPE}" pattern="^text/html" />
+      </preCondition>
+    </preConditions>
+  </outboundRules>
+</rewrite>
+
+
+<!--codeblog.shawson.co.uk/iis7-urlrewrite-outbound-links-with-compression-enabled/-->
+
+<!--On the machine running the web site, from the command line run:
+reg add HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\InetStp\Rewrite /v LogRewrittenUrlEnabled /t REG_DWORD /d 0
+You may need to follow this up with an iisreset
+Add the following to the top of your system.webServer section of your web.config file to disable the unsupported static compression while leaving dynamic unharmed;
+<urlCompression doStaticCompression="false" doDynamicCompression=”true” dynamicCompressionBeforeCache=”false” />
+
+The final step, is probably not needed- but! Open up your IIS management console- Click on the top level item, from the IIS segment open the “Modules” component. From within here on the right hand side bar, click “View ordered List…” and make sure RewriteModule appears in the list BELOW the DynamicCompressionModule. For me, this was already the case- my RewriteModule appeared at the very bottom, but this may not be the case for you.
+
+Enable sp session
+
+Enable-SPSessionStateService -DefaultProvision
+
+<img src="<%#string.IsNullOrEmpty(Eval("ImageUrl"))? "/PublishingImages/logo.png":  Eval("ImageUrl").ToString().Replace("http://issuev3-uat", "")%>" /> 
+-->

@@ -1,0 +1,5 @@
+C:\Projects\Camlex\Camlex.NET\bin\Debug\Camlex.NET.dll
+C:\Projects\Camlex\Camlex.NET\bin\Debug\Camlex.NET.pdb
+C:\Projects\Camlex\Camlex.NET\obj\Debug\Camlex.NET.dll
+C:\Projects\Camlex\Camlex.NET\obj\Debug\Camlex.NET.pdb
+C:\Projects\Camlex\Camlex.NET\obj\Debug\Camlex.NET.csprojResolveAssemblyReference.cache

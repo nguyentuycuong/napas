@@ -1,0 +1,549 @@
+﻿<%-- SPG:
+
+This HTML file has been associated with a SharePoint Master Page (.master file) carrying the same name.  While the files remain associated, you will not be allowed to edit the .master file, and any rename, move, or deletion operations will be reciprocated.
+
+To build the master page directly from this HTML file, simply edit the page as you normally would.  Use the Snippet Generator at http://portalqa/cdms/_layouts/15/ComponentHome.aspx?Url=http%3A%2F%2Fportalqa%2Fcdms%2F%5Fcatalogs%2Fmasterpage%2Fcss%2Fcdms%5Fmp%2Emaster to create and customize useful SharePoint entities, then copy and paste them as HTML snippets into your HTML code.   All updates to this file will automatically sync to the associated Master Page.
+
+--%>
+
+<%@ Master Language="C#" %>
+
+<%@ Register TagPrefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Register TagPrefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Register TagPrefix="wssucmui" TagName="MUISelector" Src="~/_controltemplates/15/MUISelector.ascx" %>
+<%@ Register TagPrefix="wssucw" TagName="Welcome" Src="~/_controltemplates/15/Welcome.ascx" %>
+<%@ Register TagPrefix="PublishingRibbon" TagName="PublishingRibbon" Src="~/_controltemplates/15/Ribbon.ascx" %>
+<%@ Register Src="~/_controltemplates/15/CustomePermissionControl.ascx" TagPrefix="PublishingRibbon" TagName="CustomePermissionControl" %>
+
+<!DOCTYPE html >
+<SharePoint:SPHtmlTag runat="server" id="SPHtmlTag" dir="&lt;%$Resources:wss,multipages_direction_dir_value%&gt;">
+    <PublishingRibbon:CustomePermissionControl runat="server" id="CustomePermissionControl" />
+    <head runat="server">
+        <meta http-equiv="X-UA-Compatible" content="IE=10" />
+        <meta name="GENERATOR" content="Microsoft SharePoint" />
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Expires" content="0" />
+        <%--<SharePoint:SPPinnedSiteTile runat="server" TileUrl="/_layouts/15/images/SharePointMetroAppTile.png" TileColor="#0072C6" />
+        <SharePoint:RobotsMetaTag runat="server" />--%>
+        <SharePoint:PageTitle runat="server">
+    <asp:ContentPlaceHolder id="PlaceHolderPageTitle" runat="server" />
+        </SharePoint:PageTitle>
+        <SharePoint:StartScript runat="server" />
+        <SharePoint:CssLink runat="server" Version="15" />
+
+        <SharePoint:CacheManifestLink runat="server" />
+        <SharePoint:ScriptLink Language="javascript" Name="core.js" OnDemand="true" runat="server" Localizable="false" />
+        <SharePoint:ScriptLink Language="javascript" Name="menu.js" OnDemand="true" runat="server" Localizable="false" />
+        <SharePoint:ScriptLink Language="javascript" Name="callout.js" OnDemand="true" runat="server" Localizable="false" />
+        <SharePoint:ScriptLink Language="javascript" Name="sharing.js" OnDemand="true" runat="server" Localizable="false" />
+        <SharePoint:ScriptLink Language="javascript" Name="suitelinks.js" OnDemand="true" runat="server" Localizable="false" />
+        <SharePoint:CustomJSUrl runat="server" />
+        <SharePoint:SoapDiscoveryLink runat="server" />
+        <SharePoint:AjaxDelta ID="DeltaPlaceHolderAdditionalPageHead" Container="false" runat="server">
+            <asp:ContentPlaceHolder ID="PlaceHolderAdditionalPageHead" runat="server" />
+            <SharePoint:DelegateControl runat="server" ControlId="AdditionalPageHead" AllowMultipleControls="true" />
+        </SharePoint:AjaxDelta>
+        <%--<SharePoint:SPShortcutIcon runat="server" IconUrl="/_layouts/15/images/favicon.ico?rev=23" />--%>
+
+        <SharePoint:CssRegistration Name="Themable/corev15.css" runat="server" />
+        <SharePoint:ScriptLink runat="server" ID="ScriptLink1" Language="javascript" Name="~sitecollection/_catalogs/masterpage/napas_theme/js/jquery.min.js" />
+        <SharePoint:ScriptLink runat="server" ID="ScriptLink2" Language="javascript" Name="~sitecollection/_catalogs/masterpage/napas_theme/js/jquery.SPServices-2014.02.min.js" />
+        <SharePoint:CssRegistration Name="&lt;% $SPUrl:~sitecollection/_catalogs/masterpage/napas_theme/css/main_Admin.css %&gt;" runat="server" After="SharepointCssFile" />
+        
+        <%--<SharePoint:CssRegistration Name="&lt;% $SPUrl:~sitecollection/_catalogs/masterpage/napas_theme/css/main.css %&gt;" runat="server" After="SharepointCssFile" />--%>
+       <%-- <SharePoint:CssRegistration Name="&lt;% $SPUrl:~sitecollection/_catalogs/masterpage/napas_theme/css/napas_content.css %&gt;" runat="server" After="SharepointCssFile" />--%>
+        
+        <SharePoint:CssRegistration Name="&lt;% $SPUrl:~sitecollection/_catalogs/masterpage/napas_theme/css/font-awesome.min.css %&gt;" runat="server" After="SharepointCssFile" />
+        <SharePoint:CssRegistration Name="&lt;% $SPUrl:~sitecollection/_catalogs/masterpage/napas_theme/css/thanh.css %&gt;" runat="server" After="SharepointCssFile" />
+        
+
+    </head>
+    <body onhashchange="if (typeof(_spBodyOnHashChange) != 'undefined') _spBodyOnHashChange();">
+        <SharePoint:SharePointForm onsubmit="if (typeof(_spFormOnSubmitWrapper) != 'undefined') {return _spFormOnSubmitWrapper();} else {return true;}" runat="server">
+            <SharePoint:ImageLink runat="server" />
+            <SharePoint:SPNoScript runat="server" />
+            <SharePoint:SPClientIDGenerator runat="server" ServerControlID="DeltaPlaceHolderMain;DeltaPlaceHolderPageTitleInTitleArea;DeltaPlaceHolderUtilityContent" />
+
+            <WebPartPages:SPWebPartManager runat="Server" />
+            <asp:ScriptManager ID="ScriptManager" runat="server" EnablePageMethods="false" EnablePartialRendering="true" EnableScriptGlobalization="false" EnableScriptLocalization="true" />
+            <SharePoint:AjaxDelta ID="DeltaDelegateControls" runat="server">
+                <SharePoint:DelegateControl runat="server" ControlId="GlobalNavigation" />
+                <SharePoint:DelegateControl ControlId="GlobalSiteLink3" Scope="Farm" runat="server" Visible="false" />
+            </SharePoint:AjaxDelta>
+            <div id="TurnOnAccessibility" style="display: none" class="s4-notdlg noindex">
+                <a id="linkTurnOnAcc" href="#" class="ms-TurnOnAcc" onclick="SetIsAccessibilityFeatureEnabled(true);UpdateAccessibilityUI();document.getElementById('linkTurnOffAcc').focus();return false;">
+                    <SharePoint:EncodedLiteral runat="server" Text="&lt;%$Resources:wss,master_turnonaccessibility%&gt;" EncodeMethod="HtmlEncode" />
+                </a>
+            </div>
+            <div id="TurnOffAccessibility" style="display: none" class="s4-notdlg noindex">
+                <a id="linkTurnOffAcc" href="#" class="ms-TurnOffAcc" onclick="SetIsAccessibilityFeatureEnabled(false);UpdateAccessibilityUI();document.getElementById('linkTurnOnAcc').focus();return false;">
+                    <SharePoint:EncodedLiteral runat="server" Text="&lt;%$Resources:wss,master_turnoffaccessibility%&gt;" EncodeMethod="HtmlEncode" />
+                </a>
+            </div>
+            <div class="s4-notdlg s4-skipribbonshortcut noindex">
+                <a href="javascript:;" onclick="document.getElementById('startNavigation').focus();" class="ms-SkiptoNavigation" accesskey="&lt;%$Resources:wss,skipribbon_accesskey%&gt;" runat="server">
+                    <SharePoint:EncodedLiteral runat="server" Text="&lt;%$Resources:wss,skipRibbonCommandsLink%&gt;" EncodeMethod="HtmlEncode" />
+                </a>
+            </div>
+            <div class="s4-notdlg noindex">
+                <a href="javascript:;" onclick="document.getElementById('mainContent').focus();" class="ms-SkiptoMainContent" accesskey="&lt;%$Resources:wss,maincontent_accesskey%&gt;" runat="server">
+                    <SharePoint:EncodedLiteral runat="server" Text="&lt;%$Resources:wss,mainContentLink%&gt;" EncodeMethod="HtmlEncode" />
+                </a>
+            </div>
+            <div id="TurnOffAnimation" style="display: none;" class="s4-notdlg noindex">
+                <a id="linkTurnOffAnimation" href="#" class="ms-accessible ms-acc-button" onclick="ToggleAnimationStatus();return false;">
+                    <SharePoint:EncodedLiteral runat="server" Text="&lt;%$Resources:wss,master_disableanimation%&gt;" EncodeMethod="HtmlEncode" />
+                </a>
+            </div>
+            <div id="TurnOnAnimation" style="display: none;" class="s4-notdlg noindex">
+                <a id="linkTurnOnAnimation" href="#" class="ms-accessible ms-acc-button" onclick="ToggleAnimationStatus();return false;">
+                    <SharePoint:EncodedLiteral runat="server" Text="&lt;%$Resources:wss,master_enableanimation%&gt;" EncodeMethod="HtmlEncode" />
+                </a>
+            </div>
+            <a id="HiddenAnchor" href="javascript:;" style="display: none;"></a>
+
+            <div id="ms-hcTest">
+            </div>
+            <div id="ms-designer-ribbon">
+                <PublishingRibbon:PublishingRibbon runat="server" />
+
+            </div>
+            <SharePoint:SPSecurityTrimmedControl runat="server" AuthenticationRestrictions="AnonymousUsersOnly">
+                <wssucw:Welcome runat="server" EnableViewState="false" />
+            </SharePoint:SPSecurityTrimmedControl>
+
+            <div id="s4-workspace" class="s4-nosetwidth">
+                <div id="s4-bodyContainer">
+                    <div id="s4-titlerow" class="ms-dialogHidden s4-titlerowhidetitle">
+                        <!--Custom Header-->
+                        <div id="header">
+                            <div class="top_header">
+                                <div class="left_topH" style="padding-left: 20px !important">
+                                    <SharePoint:SPLinkButton runat="server" NavigateUrl="../../" ID="SPLinkButton">
+                                        <SharePoint:SiteLogoImage name="onetidHeadbnnr0" ID="SiteLogoImage"
+                                            LogoImageUrl="<% $SPUrl:~sitecollection/_catalogs/masterpage/napas_theme/images/logo.png %>" runat="server"></SharePoint:SiteLogoImage>
+                                    </SharePoint:SPLinkButton>
+                                </div>
+                                <div class="left_topTitle">
+                                    <span>
+                                        <asp:Literal runat="server" Text="<%$Resources:napas.resource,OneConnectAllPayment%>" /></span>
+
+                                </div>
+                                <div class="right_topH">
+                                    <div class="ms-tableCell ms-verticalAlignTop">
+                                        <SharePoint:AjaxDelta ID="DeltaPlaceHolderSearchArea" BlockElement="true" CssClass="ms-mpSearchBox ms-floatRight" runat="server">
+
+                                            <asp:ContentPlaceHolder ID="PlaceHolderSearchArea" runat="server">
+                                                <div id="searchInputBox">
+                                                    <SharePoint:DelegateControl runat="server" ControlId="SmallSearchInputBox" />
+
+                                                </div>
+                                            </asp:ContentPlaceHolder>
+
+                                        </SharePoint:AjaxDelta>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="masterNavMenu">
+                                <ul>
+                                    <li id="menuParentHome">
+                                        <SharePoint:SPLinkButton runat="server" NavigateUrl="<%$Resources:napas.resource,UrlHomeBackEnd%>" ID="SPLinkButton1">
+                                            <asp:Literal runat="server" Text="<%$Resources:napas.resource,Home%>" />
+                                        </SharePoint:SPLinkButton>
+
+                                    </li>
+
+                                    <li id="menuMyWS">
+                                        <SharePoint:SPLinkButton NavigateUrl="<%$Resources:napas.resource,ListAbountUS%>" runat="server">
+                                            <asp:Literal runat="server" Text="<%$Resources:napas.resource,AboutUs%>" /><span></span>
+                                        </SharePoint:SPLinkButton>
+                                    </li>
+
+                                    <li id="menuDeptWS">
+                                        <SharePoint:SPLinkButton NavigateUrl='<%$Resources:napas.resource,ListNews%>' runat="server">
+                                            <asp:Literal runat="server" Text="<%$Resources:napas.resource,News%>" /><span></span>
+                                        </SharePoint:SPLinkButton>
+                                        <ul>
+                                            <li>
+                                                <SharePoint:SPLinkButton NavigateUrl='<%$Resources:napas.resource,ListNews%>' runat="server">
+                                                    <asp:Literal runat="server" Text="<%$Resources:napas.resource,News%>" /><span></span>
+                                                </SharePoint:SPLinkButton>
+                                            </li>
+                                            <li>
+                                                <SharePoint:SPLinkButton NavigateUrl='<%$Resources:napas.resource,ListNewsCategory%>' runat="server">
+                                                    <asp:Literal runat="server" Text="<%$Resources:napas.resource,NewsCategory%>" /><span></span>
+                                                </SharePoint:SPLinkButton>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li id="menuCorpServices">
+                                        <SharePoint:SPLinkButton runat="server" NavigateUrl='<%$Resources:napas.resource,ListProductService%>'>
+                                            <asp:Literal runat="server" Text="<%$Resources:napas.resource,Products_Services%>" /><span></span><span></span>
+                                        </SharePoint:SPLinkButton>
+                                        <ul>
+                                            <li>
+                                                <SharePoint:SPLinkButton runat="server" NavigateUrl='<%$Resources:napas.resource,ListProductService%>'>
+                                                    <asp:Literal runat="server" Text="<%$Resources:napas.resource,Products_Services%>" /><span></span><span></span>
+                                                </SharePoint:SPLinkButton>
+                                            </li>
+                                            <li>
+                                                <SharePoint:SPLinkButton runat="server" NavigateUrl='<%$Resources:napas.resource,ListProductServiceGroup%>'>
+                                                    <asp:Literal runat="server" Text="<%$Resources:napas.resource,ProductServiceGroup%>" /><span></span><span></span>
+                                                </SharePoint:SPLinkButton>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    
+                                    <li>
+                                        <SharePoint:SPLinkButton runat="server" NavigateUrl='<%$Resources:napas.resource,ListDocumentsPartner%>'>
+                                            <asp:Literal runat="server" Text="<%$Resources:napas.resource,ForPartners%>" /><span></span><span></span>
+                                        </SharePoint:SPLinkButton>
+                                        <ul>
+                                            <li>
+                                                <SharePoint:SPLinkButton runat="server" NavigateUrl='<%$Resources:napas.resource,ListShareholderMeeting%>'>
+                                                    <asp:Literal runat="server" Text="<%$Resources:napas.resource,ShareholdersMeeting%>" /><span></span><span></span>
+                                                </SharePoint:SPLinkButton>
+                                            </li>
+                                            <li>
+                                                <SharePoint:SPLinkButton runat="server" NavigateUrl='<%$Resources:napas.resource,ListDocumentsPartner%>'>
+                                                    <asp:Literal runat="server" Text="<%$Resources:napas.resource,DocumentPartner%>" /><span></span><span></span>
+                                                </SharePoint:SPLinkButton>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    
+                                    <li>
+                                        <SharePoint:SPLinkButton runat="server" NavigateUrl='#'>
+                                            <asp:Literal runat="server" Text="<%$Resources:napas.resource,Documents%>" /><span></span><span></span>
+                                        </SharePoint:SPLinkButton>
+                                        <ul>
+                                            <li>
+                                                <SharePoint:SPLinkButton runat="server" NavigateUrl='<%$Resources:napas.resource,ListDocumentsPartner%>'>
+                                                    <asp:Literal runat="server" Text="<%$Resources:napas.resource,DocumentPartner%>" /><span></span><span></span>
+                                                </SharePoint:SPLinkButton>
+                                            </li>
+                                            <li>
+                                                <SharePoint:SPLinkButton runat="server" NavigateUrl='<%$Resources:napas.resource,ListDocumentsLegal%>'>
+                                                    <asp:Literal runat="server" Text="<%$Resources:napas.resource,LegalDocuments%>" /><span></span><span></span>
+                                                </SharePoint:SPLinkButton>
+                                            </li>
+                                            <li>
+                                                <SharePoint:SPLinkButton runat="server" NavigateUrl='<%$Resources:napas.resource,ListDocumentsOther%>'>
+                                                    <asp:Literal runat="server" Text="<%$Resources:napas.resource,DocumentsOther%>" /><span></span><span></span>
+                                                </SharePoint:SPLinkButton>
+                                            </li>
+                                            <li>
+                                                <SharePoint:SPLinkButton runat="server" NavigateUrl='<%$Resources:napas.resource,ListDocumentsGroup%>'>
+                                                    <asp:Literal runat="server" Text="<%$Resources:napas.resource,DocumentsGroup%>" /><span></span><span></span>
+                                                </SharePoint:SPLinkButton>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <SharePoint:SPLinkButton runat="server" NavigateUrl='<%$Resources:napas.resource,ListCustomer-Partner%>'>
+                                            <asp:Literal runat="server" Text="<%$Resources:napas.resource,CustomersAndPartners%>" /><span></span><span></span>
+                                        </SharePoint:SPLinkButton>
+                                    </li>
+                                     <%--<li>
+                                        <SharePoint:SPLinkButton runat="server" NavigateUrl='../../Lists/iu khon s dng/AllItems.aspx'>
+                                            <asp:Literal runat="server" Text="Điều khoản" /><span></span><span></span>
+                                        </SharePoint:SPLinkButton>
+                                    </li>--%>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--End Custom Header-->
+                        <div id="titleAreaBox" class="ms-noList ms-table ms-core-tableNoSpace" style="display: none;">
+                            <div id="titleAreaRow" class="ms-tableRow">
+                                <div id="siteIcon" class="ms-tableCell ms-verticalAlignTop">
+
+                                    <SharePoint:AjaxDelta ID="DeltaSiteLogo" BlockElement="true" runat="server">
+                                        <SharePoint:SPSimpleSiteLink CssClass="ms-siteicon-a" runat="server" ID="onetidProjectPropertyTitleGraphic">
+                            <SharePoint:SiteLogoImage CssClass="ms-siteicon-img" name="onetidHeadbnnr0" id="onetidHeadbnnr2" LogoImageUrl="/_layouts/15/images/siteIcon.png?rev=23" runat="server">
+                            
+                            </SharePoint:SiteLogoImage>
+                                        </SharePoint:SPSimpleSiteLink>
+                                    </SharePoint:AjaxDelta>
+
+                                </div>
+                                <div class="ms-breadcrumb-box ms-tableCell ms-verticalAlignTop">
+                                    <div class="ms-breadcrumb-top">
+                                        <div class="ms-breadcrumb-dropdownBox" style="display: none;">
+                                            <SharePoint:AjaxDelta ID="DeltaBreadcrumbDropdown" runat="server">
+                                                <SharePoint:PopoutMenu Visible="false" runat="server" ID="GlobalBreadCrumbNavPopout" IconUrl="/_layouts/15/images/spcommon.png?rev=23" IconAlt="&lt;%$Resources:wss,master_breadcrumbIconAlt%&gt;" ThemeKey="v15breadcrumb" IconOffsetX="215" IconOffsetY="120" IconWidth="16" IconHeight="16" AnchorCss="ms-breadcrumb-anchor" AnchorOpenCss="ms-breadcrumb-anchor-open" MenuCss="ms-breadcrumb-menu ms-noList">
+                                                    <div class="ms-breadcrumb-top">
+                                                        <asp:Label runat="server" CssClass="ms-breadcrumb-header" Text="&lt;%$Resources:wss,master_breadcrumbHeader%&gt;" />
+                                                    </div>
+                                                    <asp:ContentPlaceHolder ID="PlaceHolderTitleBreadcrumb" runat="server">
+                                                        <SharePoint:ListSiteMapPath runat="server" SiteMapProviders="SPSiteMapProvider,SPContentMapProvider" RenderCurrentNodeAsLink="false" PathSeparator="" CssClass="ms-breadcrumb" NodeStyle-CssClass="ms-breadcrumbNode" CurrentNodeStyle-CssClass="ms-breadcrumbCurrentNode" RootNodeStyle-CssClass="ms-breadcrumbRootNode" NodeImageOffsetX="0" NodeImageOffsetY="289" NodeImageWidth="16" NodeImageHeight="16" NodeImageUrl="/_layouts/15/images/fgimg.png?rev=23" RTLNodeImageOffsetX="0" RTLNodeImageOffsetY="312" RTLNodeImageWidth="16" RTLNodeImageHeight="16" RTLNodeImageUrl="/_layouts/15/images/fgimg.png?rev=23" HideInteriorRootNodes="true" SkipLinkText="" />
+                                                    </asp:ContentPlaceHolder>
+                                                </SharePoint:PopoutMenu>
+                                            </SharePoint:AjaxDelta>
+                                        </div>
+                                        <SharePoint:AjaxDelta ID="DeltaTopNavigation" BlockElement="true" CssClass="ms-displayInline" runat="server">
+                                            <SharePoint:DelegateControl runat="server" ControlId="TopNavigationDataSource" ID="topNavigationDelegate">
+                                                <Template_Controls>
+                                                    <asp:SiteMapDataSource ShowStartingNode="False" SiteMapProvider="SPNavigationProvider" ID="topSiteMap" runat="server" StartingNodeUrl="sid:1002" />
+                                                </Template_Controls>
+                                            </SharePoint:DelegateControl>
+                                            <a name="startNavigation"></a>
+                                            <asp:ContentPlaceHolder ID="PlaceHolderTopNavBar" runat="server">
+                                                <SharePoint:AspMenu ID="TopNavigationMenu" runat="server" EnableViewState="false" DataSourceID="topSiteMap" AccessKey="&lt;%$Resources:wss,navigation_accesskey%&gt;" UseSimpleRendering="true" UseSeparateCSS="false" Orientation="Horizontal" StaticDisplayLevels="2" AdjustForShowStartingNode="true" MaximumDynamicDisplayLevels="2" SkipLinkText="" />
+
+                                            </asp:ContentPlaceHolder>
+                                        </SharePoint:AjaxDelta>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="contentRow">
+                        <div id="sideNavBox" class="ms-dialogHidden ms-forceWrap ms-noList">
+                            <SharePoint:AjaxDelta ID="DeltaPlaceHolderLeftNavBar" BlockElement="true" CssClass="ms-core-navigation" role="navigation" runat="server">
+                                <asp:ContentPlaceHolder ID="PlaceHolderLeftNavBar" runat="server">
+                                    <a id="startNavigation" name="startNavigation" tabindex="-1"></a>
+                                    <asp:ContentPlaceHolder ID="PlaceHolderLeftNavBarTop" runat="server" />
+                                    <asp:ContentPlaceHolder ID="PlaceHolderQuickLaunchTop" runat="server" />
+                                    <asp:ContentPlaceHolder ID="PlaceHolderLeftNavBarDataSource" runat="server" />
+                                    <asp:ContentPlaceHolder ID="PlaceHolderCalendarNavigator" runat="server" />
+                                    <asp:ContentPlaceHolder ID="PlaceHolderLeftActions" runat="server" />
+                                    <div class="ms-core-sideNavBox-removeLeftMargin">
+                                        <SharePoint:SPNavigationManager ID="QuickLaunchNavigationManager" runat="server" QuickLaunchControlId="V4QuickLaunchMenu" ContainedControl="QuickLaunch" EnableViewState="false">
+                                            <SharePoint:DelegateControl runat="server" ControlId="QuickLaunchDataSource">
+                                                <Template_Controls>
+                                                    <asp:SiteMapDataSource SiteMapProvider="SPNavigationProvider" ShowStartingNode="False" ID="QuickLaunchSiteMap" StartingNodeUrl="sid:1025" runat="server" />
+                                                </Template_Controls>
+                                            </SharePoint:DelegateControl>
+                                            <SharePoint:AspMenu ID="V4QuickLaunchMenu" runat="server" EnableViewState="false" DataSourceID="QuickLaunchSiteMap" UseSimpleRendering="true" Orientation="Vertical" StaticDisplayLevels="3" AdjustForShowStartingNode="true" MaximumDynamicDisplayLevels="0" SkipLinkText="" />
+                                        </SharePoint:SPNavigationManager>
+                                        <SharePoint:SPNavigationManager ID="TreeViewNavigationManagerV4" runat="server" ContainedControl="TreeView" CssClass="ms-tv-box">
+                                            <SharePoint:SPLinkButton runat="server" NavigateUrl="~site/_layouts/15/viewlsts.aspx" ID="idNavLinkSiteHierarchyV4" Text="&lt;%$Resources:wss,treeview_header%&gt;" AccessKey="&lt;%$Resources:wss,quiklnch_allcontent_AK%&gt;" CssClass="ms-tv-header" />
+                                            <SharePoint:DelegateControl runat="server" ControlId="TreeViewAndDataSource">
+                                                <Template_Controls>
+                                                    <SharePoint:SPHierarchyDataSourceControl runat="server" ID="TreeViewDataSourceV4" RootContextObject="Web" IncludeDiscussionFolders="true" />
+                                                    <SharePoint:SPRememberScroll runat="server" ID="TreeViewRememberScrollV4" onscroll="javascript:_spRecordScrollPositions(this);" Style="overflow: auto;">
+                                                        <SharePoint:SPTreeView ID="WebTreeViewV4" runat="server" ShowLines="false" DataSourceID="TreeViewDataSourceV4" ExpandDepth="0" SelectedNodeStyle-CssClass="ms-tv-selected" NodeStyle-CssClass="ms-tv-item" SkipLinkText="" NodeIndent="12" ExpandImageUrl="/_layouts/15/images/tvclosed.png?rev=23" ExpandImageUrlRtl="/_layouts/15/images/tvclosedrtl.png?rev=23" CollapseImageUrl="/_layouts/15/images/tvopen.png?rev=23" CollapseImageUrlRtl="/_layouts/15/images/tvopenrtl.png?rev=23" NoExpandImageUrl="/_layouts/15/images/tvblank.gif?rev=23">
+                                                        </SharePoint:SPTreeView>
+                                                    </SharePoint:SPRememberScroll>
+                                                </Template_Controls>
+                                            </SharePoint:DelegateControl>
+                                        </SharePoint:SPNavigationManager>
+                                        <asp:ContentPlaceHolder ID="PlaceHolderQuickLaunchBottom" runat="server">
+                                            <div class="ms-core-listMenu-verticalBox">
+                                                <SharePoint:ClusteredSPLinkButton runat="server" ID="idNavLinkViewAll" PermissionMode="All" PermissionsString="AddAndCustomizePages,ManagePermissions,ManageLists" NavigateUrl="~site/_layouts/15/viewlsts.aspx" Text="&lt;%$Resources:wss,AllSiteContentMore%&gt;" AccessKey="&lt;%$Resources:wss,quiklnch_allcontent_AK%&gt;" CssClass="ms-core-listMenu-item ms-core-listMenu-heading" />
+                                                <%--<SharePoint:ClusteredSPLinkButton runat="server" id="ClusteredSPLinkButton1" PermissionsString="ViewFormPages" PermissionMode="Any" PermissionsString="AddAndCustomizePages, ManageLists,Manage Permissions" NavigateUrl="~site/_layouts/15/viewlsts.aspx" Text="&lt;%$Resources:wss,AllSiteContentMore%&gt;" accesskey="&lt;%$Resources:wss,quiklnch_allcontent_AK%&gt;" CssClass="ms-core-listMenu-item ms-core-listMenu-heading" />--%>
+                                            </div>
+                                        </asp:ContentPlaceHolder>
+                                    </div>
+                                </asp:ContentPlaceHolder>
+                            </SharePoint:AjaxDelta>
+                        </div>
+                        <div id="contentBox" aria-live="polite" aria-relevant="all">
+                            <div id="notificationArea" class="ms-notif-box">
+                            </div>
+                            <h1 id="pageTitle" class="ms-core-pageTitle">
+                                <SharePoint:AjaxDelta ID="DeltaPlaceHolderPageTitleInTitleArea" runat="server">
+                                    <asp:ContentPlaceHolder ID="PlaceHolderPageTitleInTitleArea" runat="server">
+                                        <SharePoint:SPTitleBreadcrumb runat="server" RenderCurrentNodeAsLink="true" SiteMapProvider="SPContentMapProvider" CentralAdminSiteMapProvider="SPXmlAdminContentMapProvider">
+
+                                            <PathSeparatorTemplate>
+                                                <SharePoint:ClusteredDirectionalSeparatorArrow runat="server" />
+                                            </PathSeparatorTemplate>
+                                        </SharePoint:SPTitleBreadcrumb>
+                                    </asp:ContentPlaceHolder>
+                                </SharePoint:AjaxDelta>
+                                <SharePoint:AjaxDelta BlockElement="true" ID="DeltaPlaceHolderPageDescription" CssClass="ms-displayInlineBlock ms-normalWrap" runat="server">
+                                    <a href="javascript:;" id="ms-pageDescriptionDiv" style="display: none">
+                                        <span id="ms-pageDescriptionImage"></span>
+                                    </a>
+                                    <span class="ms-accessible" id="ms-pageDescription">
+                                        <asp:ContentPlaceHolder ID="PlaceHolderPageDescription" runat="server" />
+                                    </span>
+                                    <SharePoint:ScriptBlock runat="server">
+                                        _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout");
+                                    </SharePoint:ScriptBlock>
+                                </SharePoint:AjaxDelta>
+                            </h1>
+                            <SharePoint:AjaxDelta ID="DeltaPlaceHolderMain" BlockElement="true" IsMainContent="true" runat="server">
+                                <a id="mainContent" name="mainContent" tabindex="-1"></a>
+                                <asp:ContentPlaceHolder ID="PlaceHolderMain" runat="server">
+                                    <div class="DefaultContentBlock" style="border: medium black solid; background: yellow; color: black;">
+                                        This area will be filled in by content you create in your page layouts.
+                                    </div>
+                                </asp:ContentPlaceHolder>
+                            </SharePoint:AjaxDelta>
+                        </div>
+                        <SharePoint:AjaxDelta ID="DeltaFormDigest" BlockElement="true" runat="server">
+                            <asp:ContentPlaceHolder ID="PlaceHolderFormDigest" runat="server">
+                                <SharePoint:FormDigest runat="server" />
+                            </asp:ContentPlaceHolder>
+                        </SharePoint:AjaxDelta>
+                        <div class="ms-hide">
+                            <asp:ContentPlaceHolder ID="PlaceHolderSiteName" runat="server" Visible="false" />
+                            <asp:ContentPlaceHolder ID="PlaceHolderHorizontalNav" runat="server" Visible="false" />
+                            <asp:ContentPlaceHolder ID="PlaceHolderPageImage" runat="server" Visible="false" />
+                            <asp:ContentPlaceHolder ID="PlaceHolderTitleLeftBorder" runat="server" Visible="false" />
+                            <asp:ContentPlaceHolder ID="PlaceHolderMiniConsole" runat="server" Visible="false" />
+                            <asp:ContentPlaceHolder ID="PlaceHolderTitleRightMargin" runat="server" Visible="false" />
+                            <asp:ContentPlaceHolder ID="PlaceHolderTitleAreaSeparator" runat="server" Visible="false" />
+                            <asp:ContentPlaceHolder ID="PlaceHolderNavSpacer" runat="server" Visible="false" />
+                            <asp:ContentPlaceHolder ID="PlaceHolderLeftNavBarBorder" runat="server" Visible="false" />
+                            <asp:ContentPlaceHolder ID="PlaceHolderBodyLeftBorder" runat="server" Visible="false" />
+                            <asp:ContentPlaceHolder ID="PlaceHolderBodyRightMargin" runat="server" Visible="false" />
+                            <asp:ContentPlaceHolder ID="PlaceHolderBodyAreaClass" runat="server" Visible="false" />
+                            <asp:ContentPlaceHolder ID="PlaceHolderTitleAreaClass" runat="server" Visible="false" />
+                            <asp:ContentPlaceHolder ID="PlaceHolderGlobalNavigation" runat="server" Visible="false" />
+                            <asp:ContentPlaceHolder ID="PlaceHolderGlobalNavigationSiteMap" runat="server" Visible="false" />
+                            <asp:ContentPlaceHolder ID="WSSDesignConsole" runat="server" Visible="false" />
+                        </div>
+                    </div>
+                    <div id="footer">
+                        <div class="left">
+                            <p>
+                                <strong>CÔNG TY CỔ PHẦN THANH TOÁN QUỐC GIA VIỆT NAM (NAPAS). </strong>
+                                <br />
+                                National Payment Corpration of Vietnam
+                        <br />
+                                Tel: 08 4 3936 1818
+                            </p>
+                        </div>
+                        <div class="right">
+                            <p>
+                                © Copyright 2017 NAPAS , All rights reserved
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <SharePoint:ScriptBlock runat="server">
+                var g_Workspace = "s4-workspace";
+            </SharePoint:ScriptBlock>
+            <SharePoint:SPSecurityTrimmedControl ID="SPSecurityTrimmedControlSiteSettingsHide" runat="server" PermissionMode="Any" PermissionsString="ViewPages">
+                <style type="text/css">
+                    #siteactiontd {
+                        display: none;
+                    }
+                </style>
+            </SharePoint:SPSecurityTrimmedControl>
+
+            <SharePoint:SPSecurityTrimmedControl ID="SPSecurityTrimmedControlSiteSettings" runat="server" PermissionsString="ManagePermissions,AddAndCustomizePages,CreateGroups,ViewUsageData">
+                <style type="text/css">
+                    #siteactiontd {
+                        display: inline-block;
+                    }
+                </style>
+            </SharePoint:SPSecurityTrimmedControl>
+
+        </SharePoint:SharePointForm>
+        <SharePoint:AjaxDelta ID="DeltaPlaceHolderUtilityContent" runat="server">
+            <asp:ContentPlaceHolder ID="PlaceHolderUtilityContent" runat="server" />
+        </SharePoint:AjaxDelta>
+        <asp:ContentPlaceHolder ID="SPNavigation" Visible="False" runat="server" />
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                //alert(_spPageContextInfo.pageListId);
+                if (_spPageContextInfo.pageListId != null) {
+                    $.ajax({
+                        url: _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists(guid'" + _spPageContextInfo.pageListId.replace('{', '').replace('}', '') + "')",
+                        method: "GET",
+                        headers: { "Accept": "application/json; odata=verbose" },
+                        success: function (data) {
+                            CustomForm(data.d.Title);
+                        },
+                        error: function (data) {
+                            console.log(data);
+                        }
+                    });
+                }
+            });
+
+            function CustomForm(listName) {
+                switch (listName) {                    
+                    case "Production and Services":
+                        $().SPServices.SPCascadeDropdowns({
+                            relationshipList: "Production and Services",
+                            relationshipListParentColumn: "ProductionAndService",
+                            relationshipListChildColumn: "Title",
+                            listName: $().SPServices.SPListNameFromUrl(),
+                            parentColumn: "Category",
+                            childColumn: "Product service",
+                            debug: true
+                        });
+                        break;                    
+                    case "Tài liệu dành cho cổ đông":
+                        $().SPServices.SPFilterDropdown({
+                            relationshipList: "Nhóm tài liệu",
+                            relationshipListColumn: "Title",
+                            columnName: "Phân loại",
+                            CAMLQuery: "<Or><Eq><FieldRef Name='DocumentType' /><Value Type='Choice'>Tài liệu dành cho cổ đông</Value></Eq><Eq><FieldRef Name='DocumentType' /><Value Type='Choice'>Tài liệu dành cho cổ đông</Value></Eq></Or>",
+                            listName: _spPageContextInfo.pageListId,
+                            completefunc: null,
+                            debug: false
+                        });
+                        break;
+                    case "Tài liệu văn bản pháp quy":
+                        $().SPServices.SPFilterDropdown({
+                            relationshipList: "Nhóm tài liệu",
+                            relationshipListColumn: "Title",
+                            columnName: "Phân loại",
+                            CAMLQuery: "<Or><Eq><FieldRef Name='DocumentType' /><Value Type='Choice'>Tài liệu văn bản pháp quy</Value></Eq><Eq><FieldRef Name='DocumentType' /><Value Type='Choice'>Tài liệu văn bản pháp quy</Value></Eq></Or>",
+                            listName: _spPageContextInfo.pageListId,
+                            completefunc: null,
+                            debug: false
+                        });
+                        break;
+                    case "Tài liệu khác":
+                        $().SPServices.SPFilterDropdown({
+                            relationshipList: "Nhóm tài liệu",
+                            relationshipListColumn: "Title",
+                            columnName: "Phân loại",
+                            CAMLQuery: "<Or><Eq><FieldRef Name='DocumentType' /><Value Type='Choice'>Tài liệu khác</Value></Eq><Eq><FieldRef Name='DocumentType' /><Value Type='Choice'>Tài liệu khác</Value></Eq></Or>",
+                            listName: _spPageContextInfo.pageListId,
+                            completefunc: null,
+                            debug: false
+                        });
+                        break;
+                    case "Partner's documents":
+                        $().SPServices.SPFilterDropdown({
+                            relationshipList: "Document group",
+                            relationshipListColumn: "Title",
+                            columnName: "Document type",
+                            CAMLQuery: "<Or><Eq><FieldRef Name='DocumentType' /><Value Type='Choice'>Documents for partners</Value></Eq><Eq><FieldRef Name='DocumentType' /><Value Type='Choice'>Documents for partners</Value></Eq></Or>",
+                            listName: _spPageContextInfo.pageListId,
+                            completefunc: null,
+                            debug: false
+                        });
+                        break;
+                    case "Legen's documents":
+                        $().SPServices.SPFilterDropdown({
+                            relationshipList: "Document group",
+                            relationshipListColumn: "Title",
+                            columnName: "Document type",
+                            CAMLQuery: "<Or><Eq><FieldRef Name='DocumentType' /><Value Type='Choice'>Legal documents</Value></Eq><Eq><FieldRef Name='DocumentType' /><Value Type='Choice'>Legal documents</Value></Eq></Or>",
+                            listName: _spPageContextInfo.pageListId,
+                            completefunc: null,
+                            debug: false
+                        });
+                        break;
+                    case "Documents other":
+                        $().SPServices.SPFilterDropdown({
+                            relationshipList: "Document group",
+                            relationshipListColumn: "Title",
+                            columnName: "Document type",
+                            CAMLQuery: "<Or><Eq><FieldRef Name='DocumentType' /><Value Type='Choice'>Other Documents</Value></Eq><Eq><FieldRef Name='DocumentType' /><Value Type='Choice'>Other Documents</Value></Eq></Or>",
+                            listName: _spPageContextInfo.pageListId,
+                            completefunc: null,
+                            debug: false
+                        });
+                        break;
+                    default:
+                }
+            }
+        </script>
+    </body>
+</SharePoint:SPHtmlTag>

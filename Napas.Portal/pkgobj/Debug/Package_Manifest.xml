@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="cac8fc6c-6a12-44a9-8019-c51fd774fd70" SharePointProductVersion="15.0">
+  <Assemblies>
+    <Assembly Location="Napas.Portal.dll" DeploymentTarget="GlobalAssemblyCache">
+      <SafeControls>
+        <SafeControl Assembly="Napas.Portal" Namespace="Napas.Portal.Core.WebParts" TypeName="*" />
+        <SafeControl Assembly="$SharePoint.Project.AssemblyFullName$" Namespace="Napas.Portal.Core.WebParts" TypeName="*" />
+        <SafeControl Assembly="$SharePoint.Project.AssemblyFullName$" Namespace="Napas.Portal.Core.WebControls" TypeName="*" />
+        <SafeControl Assembly="$SharePoint.Project.AssemblyFullName$" Namespace="Napas.Portal.DelegateControl" TypeName="*" />
+        <SafeControl Assembly="$SharePoint.Project.AssemblyFullName$" Namespace="NAPAS.Portal.Common.Framework.Core.WebParts" TypeName="*" />
+      </SafeControls>
+    </Assembly>
+    <Assembly Location="Camlex.NET.dll" DeploymentTarget="GlobalAssemblyCache">
+      <SafeControls>
+        <SafeControl Assembly="Camlex.NET.dll" Namespace="CamlexNET" TypeName="*" />
+      </SafeControls>
+    </Assembly>
+  </Assemblies>
+  <ApplicationResourceFiles>
+    <App_GlobalResourceFile Location="Napas.Portal\Resources\Napas.en.resx" />
+    <App_GlobalResourceFile Location="Napas.Portal\Resources\Napas.vi.resx" />
+  </ApplicationResourceFiles>
+  <TemplateFiles>
+    <TemplateFile Location="ControlTemplates\Napas.Portal\Footer.ascx" />
+    <TemplateFile Location="ControlTemplates\Napas.Portal\MenuTop.ascx" />
+  </TemplateFiles>
+  <FeatureManifests>
+    <FeatureManifest Location="Napas.Portal_Napas.Portal\Feature.xml" />
+    <FeatureManifest Location="Napas.Portal_NAPAS.Workflow\Feature.xml" />
+  </FeatureManifests>
+</Solution>

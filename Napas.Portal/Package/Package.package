@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="cac8fc6c-6a12-44a9-8019-c51fd774fd70" solutionId="cac8fc6c-6a12-44a9-8019-c51fd774fd70" resetWebServer="false" sharePointProductVersion="15.0" name="Napas.Portal" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <assemblies>
+    <projectOutputAssembly location="Camlex.NET.dll" deploymentTarget="GlobalAssemblyCache" projectPath="..\Camlex\Camlex.NET\Camlex.NET.csproj">
+      <safeControls>
+        <safeControl assemblyName="Camlex.NET.dll" namespaceName="CamlexNET" typeName="*" isSafeAgainstScript="false" />
+      </safeControls>
+    </projectOutputAssembly>
+  </assemblies>
+  <features>
+    <featureReference itemId="52525835-0314-4114-9ae1-6e2ff0ba050f" />
+    <featureReference itemId="744e667b-7d49-4bc2-ac11-d609af75acc1" />
+  </features>
+  <projectItems>
+    <projectItemReference itemId="f09cea96-1111-4a16-8904-3a5e35f63c8e" />
+  </projectItems>
+</package>

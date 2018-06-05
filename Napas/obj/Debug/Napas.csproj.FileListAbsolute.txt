@@ -1,0 +1,4 @@
+C:\Projects\Napas\bin\Debug\Napas.dll
+C:\Projects\Napas\bin\Debug\Napas.pdb
+C:\Projects\Napas\obj\Debug\Napas.dll
+C:\Projects\Napas\obj\Debug\Napas.pdb

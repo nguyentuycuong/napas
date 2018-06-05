@@ -1,0 +1,96 @@
+﻿<%@ Master Language="C#" %>
+
+<%@ Register TagPrefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Register TagPrefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Register TagPrefix="wssuc" TagName="MenuTop" Src="~/_controltemplates/15/Napas.Portal/MenuTop.ascx" %>
+<%@ Register TagPrefix="wssuc" TagName="Footer" Src="~/_controltemplates/15/Napas.Portal/Footer.ascx" %>
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=10" />
+    <meta charset="utf-8" />
+    <meta name="GENERATOR" content="Microsoft SharePoint" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Expires" content="0" />
+
+    <SharePoint:PageTitle runat="server">
+            <asp:ContentPlaceHolder id="PlaceHolderPageTitle" runat="server"><SharePoint:ProjectProperty Property="Title" runat="server" /></asp:ContentPlaceHolder>
+    </SharePoint:PageTitle>
+
+    <!-- ===== STARTER: SP Scripts and CSS  =========================================================================================== -->
+    <SharePoint:StartScript runat="server" />
+    <SharePoint:CssLink runat="server" Version="15" />
+    <SharePoint:CacheManifestLink runat="server" />
+    <SharePoint:PageRenderMode runat="server" RenderModeType="Standard" />
+    <SharePoint:CustomJSUrl runat="server" />
+    <SharePoint:SoapDiscoveryLink runat="server" />
+
+    <!-- ===== Custom js ============================================================================================================== -->
+    
+    <SharePoint:ScriptLink runat="server" ID="ScriptLink1" Language="javascript" Name="~sitecollection/_catalogs/masterpage/napas_theme/js/jquery.min.js" />
+    <SharePoint:ScriptLink runat="server" ID="ScriptLink2" Language="javascript" Name="~sitecollection/_catalogs/masterpage/napas_theme/js/bootstrap.js" />
+    <SharePoint:ScriptLink runat="server" ID="ScriptLink3" Language="javascript" Name="~sitecollection/_catalogs/masterpage/napas_theme/js/owl.carousel.min.js" />
+    <SharePoint:ScriptLink runat="server" ID="ScriptLink4" Language="javascript" Name="~sitecollection/_catalogs/masterpage/napas_theme/js/jquery.bxslider.js" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/metisMenu/2.7.0/metisMenu.min.js"></script>
+    <script src="/_catalogs/masterpage/napas_theme/js/main.js"></script>
+    <%--<SharePoint:ScriptLink runat="server" ID="ScriptLink6" Language="javascript" Name="~sitecollection/_catalogs/masterpage/napas_theme/js/main.js" />--%>
+    <SharePoint:ScriptLink runat="server" ID="ScriptLink7" Language="javascript" Name="~sitecollection/_catalogs/masterpage/napas_theme/js/paginga.jquery.js" />
+
+
+    <!-- ===== STARTER: Custom CSS  =================================================================================================== -->
+
+    <!-- Online Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora|Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,400i,700,700i" rel="stylesheet">
+    <!-- Vender -->
+    <SharePoint:CssRegistration Name="&lt;% $SPUrl:~sitecollection/_catalogs/masterpage/napas_theme/css/font-awesome.min.css %&gt;" runat="server" After="SharepointCssFile" />
+    <SharePoint:CssRegistration Name="&lt;% $SPUrl:~sitecollection/_catalogs/masterpage/napas_theme/css/bootstrap.min.css %&gt;" runat="server" After="SharepointCssFile" />
+    <SharePoint:CssRegistration Name="&lt;% $SPUrl:~sitecollection/_catalogs/masterpage/napas_theme/css/normalize.min.css %&gt;" runat="server" After="SharepointCssFile" />
+    <SharePoint:CssRegistration Name="&lt;% $SPUrl:~sitecollection/_catalogs/masterpage/napas_theme/css/jquery.bxslider.css %&gt;" runat="server" After="SharepointCssFile" />
+    <SharePoint:CssRegistration Name="&lt;% $SPUrl:~sitecollection/_catalogs/masterpage/napas_theme/css/owl.carousel.min.css %&gt;" runat="server" After="SharepointCssFile" />
+    <!-- Main CSS (SCSS Compile) -->
+    <SharePoint:CssRegistration Name="&lt;% $SPUrl:~sitecollection/_catalogs/masterpage/napas_theme/css/main.css %&gt;" runat="server" After="SharepointCssFile" />
+    <SharePoint:CssRegistration Name="&lt;% $SPUrl:~sitecollection/_catalogs/masterpage/napas_theme/css/thanh.css %&gt;" runat="server" After="SharepointCssFile" />
+    <SharePoint:SPShortcutIcon runat="server" IconUrl="/_catalogs/masterpage/napas_theme/images/favicon.ico" />
+</head>
+
+<body>
+    <SharePoint:SharePointForm runat="server">
+        <div class="page ">
+            <WebPartPages:SPWebPartManager runat="server" />
+            <asp:ScriptManager ID="ScriptManager" runat="server" EnablePageMethods="false" EnablePartialRendering="true" EnableScriptGlobalization="false" EnableScriptLocalization="true" />
+
+            <!--menu-->
+            <wssuc:MenuTop runat="server" EnableViewState="true" />
+
+            <!--intro-banner-->
+            <%--<section class="intro-banner intro-banner-service"></section>--%>
+            <!--middle-->
+            <asp:ContentPlaceHolder ID="PlaceHolderMain" runat="server" />
+            <asp:ContentPlaceHolder ID="PlaceHolderPageDescription" runat="server" />
+            <SharePoint:AjaxDelta ID="DeltaPlaceHolderPageTitleInTitleArea" runat="server">
+                <asp:ContentPlaceHolder ID="PlaceHolderPageTitleInTitleArea" runat="server">
+                    <SharePoint:SPTitleBreadcrumb runat="server" RenderCurrentNodeAsLink="true" SiteMapProvider="SPContentMapProvider" CentralAdminSiteMapProvider="SPXmlAdminContentMapProvider">
+                        <PathSeparatorTemplate>
+                            <SharePoint:ClusteredDirectionalSeparatorArrow runat="server" />
+                        </PathSeparatorTemplate>
+                    </SharePoint:SPTitleBreadcrumb>
+                </asp:ContentPlaceHolder>
+                <asp:ContentPlaceHolder ID="PlaceHolderTitleBreadcrumb" runat="server" Visible="False">
+                    <SharePoint:ListSiteMapPath Visible="False" runat="server" SiteMapProviders="SPSiteMapProvider,SPContentMapProvider" RenderCurrentNodeAsLink="false" PathSeparator="" CssClass="ms-breadcrumb" NodeStyle-CssClass="ms-breadcrumbNode" CurrentNodeStyle-CssClass="ms-breadcrumbCurrentNode" RootNodeStyle-CssClass="ms-breadcrumbRootNode" NodeImageOffsetX="0" NodeImageOffsetY="289" NodeImageWidth="16" NodeImageHeight="16" NodeImageUrl="/_layouts/15/images/fgimg.png?rev=23" RTLNodeImageOffsetX="0" RTLNodeImageOffsetY="312" RTLNodeImageWidth="16" RTLNodeImageHeight="16" RTLNodeImageUrl="/_layouts/15/images/fgimg.png?rev=23" HideInteriorRootNodes="true" SkipLinkText="" />
+                </asp:ContentPlaceHolder>
+                <asp:ContentPlaceHolder ID="PlaceHolderAdditionalPageHead" runat="server" Visible="False" />
+            </SharePoint:AjaxDelta>
+            <!--footer-->
+            <wssuc:Footer runat="server" EnableViewState="true" />
+        </div>
+        
+    </SharePoint:SharePointForm>
+    <!-- ===== STARTER: Adds extra stuff like another form for Survey management ====================================================== -->
+    <asp:ContentPlaceHolder ID="PlaceHolderUtilityContent" runat="server" />
+    <asp:ContentPlaceHolder id="PlaceHolderOutnerContent" runat="server"></asp:ContentPlaceHolder>
+</body>
+</html>

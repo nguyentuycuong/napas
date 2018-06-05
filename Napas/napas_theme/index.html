@@ -1,0 +1,549 @@
+﻿<%@ Master Language="C#" %>
+
+<%@ Register TagPrefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Register TagPrefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Register TagPrefix="wssucmui" TagName="MUISelector" Src="~/_controltemplates/15/MUISelector.ascx" %>
+<%@ Register TagPrefix="wssucw" TagName="Welcome" Src="~/_controltemplates/15/Welcome.ascx" %>
+<%@ Register TagPrefix="PublishingRibbon" TagName="PublishingRibbon" Src="~/_controltemplates/15/Ribbon.ascx" %>
+
+<!DOCTYPE html>
+ 
+<SharePoint:SPHtmlTag runat="server" id="SPHtmlTag" dir="&lt;%$Resources:wss,multipages_direction_dir_value%&gt;">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="congnd91">
+        <sharepoint:sppinnedsitetile runat="server" tileurl="/_layouts/15/images/SharePointMetroAppTile.png" tilecolor="#0072C6" />
+        <sharepoint:robotsmetatag runat="server" />
+        <sharepoint:pagetitle runat="server">
+            <asp:ContentPlaceHolder id="PlaceHolderPageTitle" runat="server" />
+        </sharepoint:pagetitle>
+        <sharepoint:startscript runat="server" />
+        <sharepoint:csslink runat="server" version="15" />
+
+        <sharepoint:cachemanifestlink runat="server" />
+        <sharepoint:scriptlink language="javascript" name="core.js" ondemand="true" runat="server" localizable="false" />
+        <sharepoint:scriptlink language="javascript" name="menu.js" ondemand="true" runat="server" localizable="false" />
+        <sharepoint:scriptlink language="javascript" name="callout.js" ondemand="true" runat="server" localizable="false" />
+        <sharepoint:scriptlink language="javascript" name="sharing.js" ondemand="true" runat="server" localizable="false" />
+        <sharepoint:scriptlink language="javascript" name="suitelinks.js" ondemand="true" runat="server" localizable="false" />
+        <sharepoint:customjsurl runat="server" />
+        <sharepoint:soapdiscoverylink runat="server" />
+        <SharePoint:AjaxDelta ID="DeltaPlaceHolderAdditionalPageHead" Container="false" runat="server">
+            <asp:ContentPlaceHolder ID="PlaceHolderAdditionalPageHead" runat="server" />
+            <sharepoint:delegatecontrol runat="server" controlid="AdditionalPageHead" allowmultiplecontrols="true" />
+        </SharePoint:AjaxDelta>
+        <sharepoint:spshortcuticon runat="server" iconurl="/_layouts/15/images/favicon.ico?rev=23" />
+
+        <title></title>
+        <!-- Online Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lora|Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,400i,700,700i" rel="stylesheet">
+        <!-- Vender -->
+        <link href="/_catalogs/masterpage/napas_theme/css/font-awesome.min.css" rel="stylesheet" />
+        <link href="/_catalogs/masterpage/napas_theme/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="/_catalogs/masterpage/napas_theme/css/normalize.min.css" rel="stylesheet" />
+        <link href="/_catalogs/masterpage/napas_theme/css/jquery.bxslider.css" rel="stylesheet" />
+        <link href="/_catalogs/masterpage/napas_theme/css/owl.carousel.min.css" rel="stylesheet" />
+        <!-- Main CSS (SCSS Compile) -->
+        <link href="/_catalogs/masterpage/napas_theme/css/main.css" rel="stylesheet" />
+        <!-- JavaScripts -->
+        <!--<script src="js/modernizr.js"></script>-->
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <sharepoint:imagelink runat="server" />
+        <sharepoint:spnoscript runat="server" />
+        <sharepoint:spclientidgenerator runat="server" servercontrolid="DeltaPlaceHolderMain;DeltaPlaceHolderPageTitleInTitleArea;DeltaPlaceHolderUtilityContent" />
+
+        <webpartpages:spwebpartmanager runat="Server" />
+        <asp:ScriptManager ID="ScriptManager" runat="server" EnablePageMethods="false" EnablePartialRendering="true" EnableScriptGlobalization="false" EnableScriptLocalization="true" />
+        <SharePoint:AjaxDelta ID="DeltaDelegateControls" runat="server">
+            <sharepoint:delegatecontrol runat="server" controlid="GlobalNavigation" />
+            <sharepoint:delegatecontrol controlid="GlobalSiteLink3" scope="Farm" runat="server" visible="false" />
+        </SharePoint:AjaxDelta>
+        <div id="TurnOnAccessibility" style="display: none" class="s4-notdlg noindex">
+            <a id="linkTurnOnAcc" href="#" class="ms-TurnOnAcc" onclick="SetIsAccessibilityFeatureEnabled(true);UpdateAccessibilityUI();document.getElementById('linkTurnOffAcc').focus();return false;">
+                <sharepoint:encodedliteral runat="server" text="&lt;%$Resources:wss,master_turnonaccessibility%&gt;" encodemethod="HtmlEncode" />
+            </a>
+        </div>
+        <div id="TurnOffAccessibility" style="display: none" class="s4-notdlg noindex">
+            <a id="linkTurnOffAcc" href="#" class="ms-TurnOffAcc" onclick="SetIsAccessibilityFeatureEnabled(false);UpdateAccessibilityUI();document.getElementById('linkTurnOnAcc').focus();return false;">
+                <sharepoint:encodedliteral runat="server" text="&lt;%$Resources:wss,master_turnoffaccessibility%&gt;" encodemethod="HtmlEncode" />
+            </a>
+        </div>
+        <div class="s4-notdlg s4-skipribbonshortcut noindex">
+            <a href="javascript:;" onclick="document.getElementById('startNavigation').focus();" class="ms-SkiptoNavigation" accesskey="&lt;%$Resources:wss,skipribbon_accesskey%&gt;" runat="server">
+                <sharepoint:encodedliteral runat="server" text="&lt;%$Resources:wss,skipRibbonCommandsLink%&gt;" encodemethod="HtmlEncode" />
+            </a>
+        </div>
+        <div class="s4-notdlg noindex">
+            <a href="javascript:;" onclick="document.getElementById('mainContent').focus();" class="ms-SkiptoMainContent" accesskey="&lt;%$Resources:wss,maincontent_accesskey%&gt;" runat="server">
+                <sharepoint:encodedliteral runat="server" text="&lt;%$Resources:wss,mainContentLink%&gt;" encodemethod="HtmlEncode" />
+            </a>
+        </div>
+        <div id="TurnOffAnimation" style="display: none;" class="s4-notdlg noindex">
+            <a id="linkTurnOffAnimation" href="#" class="ms-accessible ms-acc-button" onclick="ToggleAnimationStatus();return false;">
+                <sharepoint:encodedliteral runat="server" text="&lt;%$Resources:wss,master_disableanimation%&gt;" encodemethod="HtmlEncode" />
+            </a>
+        </div>
+        <div id="TurnOnAnimation" style="display: none;" class="s4-notdlg noindex">
+            <a id="linkTurnOnAnimation" href="#" class="ms-accessible ms-acc-button" onclick="ToggleAnimationStatus();return false;">
+                <sharepoint:encodedliteral runat="server" text="&lt;%$Resources:wss,master_enableanimation%&gt;" encodemethod="HtmlEncode" />
+            </a>
+        </div>
+        <a id="HiddenAnchor" href="javascript:;" style="display: none;"></a>
+
+        <div id="ms-hcTest">
+        </div>
+        <div id="ms-designer-ribbon">
+            <publishingribbon:publishingribbon runat="server" />
+
+        </div>
+        <sharepoint:spsecuritytrimmedcontrol runat="server" authenticationrestrictions="AnonymousUsersOnly">
+            <wssucw:welcome runat="server" enableviewstate="false" />
+        </sharepoint:spsecuritytrimmedcontrol>
+
+        <!--preload-->
+        <div class="loader" id="page-loader">
+            <div class="loading-wrapper">
+                <p>Loading<span>.</span><span>.</span><span>.</span></p>
+            </div>
+        </div>
+        <!--menu mobile-->
+        <nav class="menu-res hidden-lg hidden-md ">
+            <div class="menu-res-inner">
+                <ul>
+                    <li>
+                        <a href="gioi-thieu--gioi-thieu-chung.html"> Về Napas </a>
+                    </li>
+                    <li>
+                        <a href="tin-tuc.html">
+                            Tin tức
+
+                        </a>
+                    </li>
+                    <li class="menu-item-has-children">
+                        <a href="#">
+                            Sản phẩm dịch vụ
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="#">  Dịch vụ chuyển mạch tài chính và bù trừ điện tử thẻ nội địa</a>
+                            </li>
+                            <li>
+                                <a href="#">Dịch vụ kết nối và chuyển mạch thẻ quốc tế</a>
+                            </li>
+                            <li>
+                                <a href="#"> Dịch vụ giá trị gia tăng cho ngân hàng và doanh nghiệp</a>
+                            </li>
+                            <li>
+                                <a href="#">Dịch vụ chuyển mạch tài chính và bù trừ điện tử cho TGTT</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children">
+                        <a href="#">Dành cho khách hàng <span></span></a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="danh-cho-khach-hang--dia-diem-dat-may-atm.html">Địa điểm đặt máy ATM</a>
+                            </li>
+                            <li>
+                                <a href="danh-cho-khach-hang--mua-sam-truc-tuyen.html">Mua sắm trực tuyến</a>
+                            </li>
+                            <li>
+                                <a href="danh-cho-khach-hang--chuong-trinh-khuyen-mai.html">Chương trình khuyến mại</a>
+                            </li>
+                            <li>
+                                <a href="danh-cho-khach-hang--the-noi-dia.html">Thẻ nội địa</a>
+                            </li>
+                            <li>
+                                <a href="#">Sản phẩm dịch vụ</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children">
+                        <a href="#">Dành cho cổ đông<span></span></a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="danh-cho-co-dong--dai-hoi-co-dong.html">Đại hội đồng cổ đông</a>
+                            </li>
+                            <li>
+                                <a href="danh-cho-co-dong--tai-lieu-danh-cho-co-dong.html">Tài liệu dành cho cổ đông</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+        <div class="page ">
+            <!-- header-->
+            <header class="header">
+                <div class="container">
+                    <a href="index.html" class="logo">
+                        <SharePoint:SiteLogoImage name="onetidHeadbnnr0" ID="SiteLogoImage"
+                                                  LogoImageUrl="<% $SPUrl:~sitecollection/_catalogs/masterpage/napas_theme/images/logo.png %>" runat="server"></SharePoint:SiteLogoImage>
+
+                    </a>
+                    <div class="header-right">
+                        <p class="hotline hidden-xs">
+                            08 4 3936 1818
+                        </p>
+                        <div class="search">
+                            <input type="text" placeholder="" />
+                            <button>
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                        <div class="language">
+                            <span class="en"></span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!--menu-->
+            <nav class="menu ">
+                <div class="container">
+                    <div class="menu-icon hidden-lg hidden-md">
+                        <i class="fa fa-navicon"></i>
+                        <span>MENU</span>
+                    </div>
+                    <ul class="hidden-sm hidden-xs">
+                        <li>
+                            <a href="gioi-thieu--gioi-thieu-chung.html"> Về Napas  <span></span></a>
+                        </li>
+                        <li>
+                            <a href="tin-tuc.html"> Tin tức  <span></span></a>
+                        </li>
+                        <li>
+                            <a href="#"> Sản phẩm dịch vụ  <span></span></a>
+                            <div class="mega-menu">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-3 col-sm-3">
+                                            <div class="sub-item">
+                                                <a href="#">
+                                                    <img alt="" src="/_catalogs/masterpage/napas_theme/m_icon9.png" />
+                                                    <h4>
+                                                        Dịch vụ chuyển mạch tài chính
+                                                        và bù trừ điện tử thẻ nội địa
+                                                    </h4>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-sm-3">
+                                            <div class="sub-item">
+                                                <a href="#">
+                                                    <img alt="" src="/_catalogs/masterpage/napas_theme/m_icon10.png" />
+                                                    <h4>
+                                                        Dịch vụ kết nối và
+                                                        chuyển mạch thẻ quốc tế
+                                                    </h4>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-sm-3">
+                                            <div class="sub-item">
+                                                <a href="#">
+                                                    <img alt="" src="/_catalogs/masterpage/napas_theme/m_icon11.png" />
+                                                    <h4>
+                                                        Dịch vụ giá trị gia tăng cho
+                                                        ngân hàng và doanh nghiệp
+                                                    </h4>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-sm-3">
+                                            <div class="sub-item">
+                                                <a href="#">
+                                                    <img alt="" src="/_catalogs/masterpage/napas_theme/m_icon12.png" />
+                                                    <h4>
+                                                        Dịch vụ chuyển mạch tài chính
+                                                        và bù trừ điện tử cho TGTT
+                                                    </h4>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </li>
+                        <li>
+                            <a href="#"> Dành cho khách hàng  <span></span></a>
+                            <div class="mega-menu">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-3 col-sm-3">
+                                            <div class="sub-item">
+                                                <a href="danh-cho-khach-hang--dia-diem-dat-may-atm.html">
+                                                    <img alt="" src="/_catalogs/masterpage/napas_theme/m_icon3.png" />
+                                                    <h4>Địa điểm đặt máy ATM</h4>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-sm-3">
+                                            <div class="sub-item">
+                                                <a href="danh-cho-khach-hang--mua-sam-truc-tuyen.html">
+                                                    <img alt="" src="/_catalogs/masterpage/napas_theme/m_icon4.png" />
+                                                    <h4>Mua sắm trực tuyến </h4>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-sm-3">
+                                            <div class="sub-item">
+                                                <a href="danh-cho-khach-hang--chuong-trinh-khuyen-mai.html">
+                                                    <img alt="" src="/_catalogs/masterpage/napas_theme/m_icon5.png" />
+                                                    <h4>Chương trình khuyến mại </h4>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-sm-3">
+                                            <div class="sub-item">
+                                                <a href="danh-cho-khach-hang--the-noi-dia.html">
+                                                    <img alt="" src="/_catalogs/masterpage/napas_theme/m_icon7.png" />
+                                                    <h4>Thẻ nội địa </h4>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <div class="col-md-3 col-sm-3">
+                                            <div class="sub-item">
+                                                <a href="#">
+                                                    <img alt="" src="/_catalogs/masterpage/napas_theme/m_icon8.png" />
+                                                    <h4>Sản phẩm dịch vụ</h4>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"> Dành cho cổ đông </a>
+                            <div class="mega-menu">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-3 col-sm-3">
+                                            <div class="sub-item">
+                                                <a href="danh-cho-co-dong--dai-hoi-co-dong.html">
+                                                    <img alt="" src="/_catalogs/masterpage/napas_theme/m_icon1.png" />
+                                                    <h4>Đại hội đồng cổ đông</h4>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-sm-3">
+                                            <div class="sub-item">
+                                                <a href="danh-cho-co-dong--tai-lieu-danh-cho-co-dong.html">
+                                                    <img alt="" src="/_catalogs/masterpage/napas_theme/m_icon2.png" />
+                                                    <h4>Tài liệu dành cho cổ đông </h4>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!--intro-banner-->
+            <section class="intro-banner intro-banner-news"></section>
+            <!--middle-->
+            <section class="middle">
+                <div class="middle-inner">
+                    <div class="container">
+                        <div class="sitemap">
+                            <a href="#" class="home">
+                                <i class="fa fa-home"></i>
+                            </a>
+                            <a href="#"> Tin tức </a>
+                            <span>|</span>
+                            <a href="#" class="current">Tin Napas</a>
+                        </div>
+                        <div class="cols">
+                            <div class="colleft">
+                                <ul id="menu" class="menuleft">
+                                    <li class="active">
+                                        <a href="#"> <i class="fa fa-angle-right"></i> Tin Napas</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-angle-right"></i>   Tin thị trường</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-angle-right"></i>  Thông cáo báo chí</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="colright">
+                                <div class="row">
+                                    <div id="sideNavBox" class="ms-dialogHidden ms-forceWrap ms-noList">
+                                        <SharePoint:AjaxDelta ID="DeltaPlaceHolderLeftNavBar" BlockElement="true" CssClass="ms-core-navigation" role="navigation" runat="server">
+                                            <asp:ContentPlaceHolder ID="PlaceHolderLeftNavBar" runat="server">
+                                                <a id="startNavigation" name="startNavigation" tabindex="-1"></a>
+                                                <asp:ContentPlaceHolder ID="PlaceHolderLeftNavBarTop" runat="server" />
+                                                <asp:ContentPlaceHolder ID="PlaceHolderQuickLaunchTop" runat="server" />
+                                                <asp:ContentPlaceHolder ID="PlaceHolderLeftNavBarDataSource" runat="server" />
+                                                <asp:ContentPlaceHolder ID="PlaceHolderCalendarNavigator" runat="server" />
+                                                <asp:ContentPlaceHolder ID="PlaceHolderLeftActions" runat="server" />
+                                                <div class="ms-core-sideNavBox-removeLeftMargin">
+                                                    <SharePoint:SPNavigationManager ID="QuickLaunchNavigationManager" runat="server" QuickLaunchControlId="V4QuickLaunchMenu" ContainedControl="QuickLaunch" EnableViewState="false">
+                                                        <sharepoint:delegatecontrol runat="server" controlid="QuickLaunchDataSource">
+                                                            <template_controls>
+                                                                <asp:SiteMapDataSource SiteMapProvider="SPNavigationProvider" ShowStartingNode="False" ID="QuickLaunchSiteMap" StartingNodeUrl="sid:1025" runat="server" />
+                                                            </template_controls>
+                                                        </sharepoint:delegatecontrol>
+                                                        <SharePoint:AspMenu ID="V4QuickLaunchMenu" runat="server" EnableViewState="false" DataSourceID="QuickLaunchSiteMap" UseSimpleRendering="true" Orientation="Vertical" StaticDisplayLevels="3" AdjustForShowStartingNode="true" MaximumDynamicDisplayLevels="0" SkipLinkText="" />
+                                                    </SharePoint:SPNavigationManager>
+                                                    <SharePoint:SPNavigationManager ID="TreeViewNavigationManagerV4" runat="server" ContainedControl="TreeView" CssClass="ms-tv-box">
+                                                        <SharePoint:SPLinkButton runat="server" NavigateUrl="~site/_layouts/15/viewlsts.aspx" ID="idNavLinkSiteHierarchyV4" Text="&lt;%$Resources:wss,treeview_header%&gt;" AccessKey="&lt;%$Resources:wss,quiklnch_allcontent_AK%&gt;" CssClass="ms-tv-header" />
+                                                        <sharepoint:delegatecontrol runat="server" controlid="TreeViewAndDataSource">
+                                                            <template_controls>
+                                                                <SharePoint:SPHierarchyDataSourceControl runat="server" ID="TreeViewDataSourceV4" RootContextObject="Web" IncludeDiscussionFolders="true" />
+                                                                <SharePoint:SPRememberScroll runat="server" ID="TreeViewRememberScrollV4" onscroll="javascript:_spRecordScrollPositions(this);" Style="overflow: auto;">
+                                                                    <SharePoint:SPTreeView ID="WebTreeViewV4" runat="server" ShowLines="false" DataSourceID="TreeViewDataSourceV4" ExpandDepth="0" SelectedNodeStyle-CssClass="ms-tv-selected" NodeStyle-CssClass="ms-tv-item" SkipLinkText="" NodeIndent="12" ExpandImageUrl="/_layouts/15/images/tvclosed.png?rev=23" ExpandImageUrlRtl="/_layouts/15/images/tvclosedrtl.png?rev=23" CollapseImageUrl="/_layouts/15/images/tvopen.png?rev=23" CollapseImageUrlRtl="/_layouts/15/images/tvopenrtl.png?rev=23" NoExpandImageUrl="/_layouts/15/images/tvblank.gif?rev=23">
+                                                                    </SharePoint:SPTreeView>
+                                                                </SharePoint:SPRememberScroll>
+                                                            </template_controls>
+                                                        </sharepoint:delegatecontrol>
+                                                    </SharePoint:SPNavigationManager>
+                                                    <asp:ContentPlaceHolder ID="PlaceHolderQuickLaunchBottom" runat="server">
+                                                        <div class="ms-core-listMenu-verticalBox">
+                                                            <SharePoint:ClusteredSPLinkButton runat="server" ID="idNavLinkViewAll" PermissionMode="All" PermissionsString="AddAndCustomizePages,ManagePermissions,ManageLists" NavigateUrl="~site/_layouts/15/viewlsts.aspx" Text="&lt;%$Resources:wss,AllSiteContentMore%&gt;" AccessKey="&lt;%$Resources:wss,quiklnch_allcontent_AK%&gt;" CssClass="ms-core-listMenu-item ms-core-listMenu-heading" />
+                                                            <%--<SharePoint:ClusteredSPLinkButton runat="server" id="ClusteredSPLinkButton1" PermissionsString="ViewFormPages" PermissionMode="Any" PermissionsString="AddAndCustomizePages, ManageLists,Manage Permissions" NavigateUrl="~site/_layouts/15/viewlsts.aspx" Text="&lt;%$Resources:wss,AllSiteContentMore%&gt;" accesskey="&lt;%$Resources:wss,quiklnch_allcontent_AK%&gt;" CssClass="ms-core-listMenu-item ms-core-listMenu-heading" />--%>
+                                                        </div>
+                                                    </asp:ContentPlaceHolder>
+                                                </div>
+                                            </asp:ContentPlaceHolder>
+                                        </SharePoint:AjaxDelta>
+                                    </div>
+                                    <div id="contentBox" aria-live="polite" aria-relevant="all">
+                                        <div id="notificationArea" class="ms-notif-box">
+                                        </div>
+                                        <h1 id="pageTitle" class="ms-core-pageTitle">
+                                            <SharePoint:AjaxDelta ID="DeltaPlaceHolderPageTitleInTitleArea" runat="server">
+                                                <asp:ContentPlaceHolder ID="PlaceHolderPageTitleInTitleArea" runat="server">
+                                                    <sharepoint:sptitlebreadcrumb runat="server" rendercurrentnodeaslink="true" sitemapprovider="SPContentMapProvider" centraladminsitemapprovider="SPXmlAdminContentMapProvider">
+
+                                                        <pathseparatortemplate>
+                                                            <sharepoint:clustereddirectionalseparatorarrow runat="server" />
+                                                        </pathseparatortemplate>
+                                                    </sharepoint:sptitlebreadcrumb>
+                                                </asp:ContentPlaceHolder>
+                                            </SharePoint:AjaxDelta>
+                                            <SharePoint:AjaxDelta BlockElement="true" ID="DeltaPlaceHolderPageDescription" CssClass="ms-displayInlineBlock ms-normalWrap" runat="server">
+                                                <a href="javascript:;" id="ms-pageDescriptionDiv" style="display: none">
+                                                    <span id="ms-pageDescriptionImage"></span>
+                                                </a>
+                                                <span class="ms-accessible" id="ms-pageDescription">
+                                                    <asp:ContentPlaceHolder ID="PlaceHolderPageDescription" runat="server" />
+                                                </span>
+                                                <sharepoint:scriptblock runat="server">
+                                                    _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout");
+                                                </sharepoint:scriptblock>
+                                            </SharePoint:AjaxDelta>
+                                        </h1>
+                                        <SharePoint:AjaxDelta ID="DeltaPlaceHolderMain" BlockElement="true" IsMainContent="true" runat="server">
+                                            <a id="mainContent" name="mainContent" tabindex="-1"></a>
+                                            <asp:ContentPlaceHolder ID="PlaceHolderMain" runat="server">
+                                                <div class="DefaultContentBlock" style="border: medium black solid; background: yellow; color: black;">
+                                                    This area will be filled in by content you create in your page layouts.
+                                                </div>
+                                            </asp:ContentPlaceHolder>
+                                        </SharePoint:AjaxDelta>
+                                    </div>
+                                    <SharePoint:AjaxDelta ID="DeltaFormDigest" BlockElement="true" runat="server">
+                                        <asp:ContentPlaceHolder ID="PlaceHolderFormDigest" runat="server">
+                                            <sharepoint:formdigest runat="server" />
+                                        </asp:ContentPlaceHolder>
+                                    </SharePoint:AjaxDelta>
+                                    <div class="ms-hide">
+                                        <asp:ContentPlaceHolder ID="PlaceHolderSiteName" runat="server" Visible="false" />
+                                        <asp:ContentPlaceHolder ID="PlaceHolderHorizontalNav" runat="server" Visible="false" />
+                                        <asp:ContentPlaceHolder ID="PlaceHolderPageImage" runat="server" Visible="false" />
+                                        <asp:ContentPlaceHolder ID="PlaceHolderTitleLeftBorder" runat="server" Visible="false" />
+                                        <asp:ContentPlaceHolder ID="PlaceHolderMiniConsole" runat="server" Visible="false" />
+                                        <asp:ContentPlaceHolder ID="PlaceHolderTitleRightMargin" runat="server" Visible="false" />
+                                        <asp:ContentPlaceHolder ID="PlaceHolderTitleAreaSeparator" runat="server" Visible="false" />
+                                        <asp:ContentPlaceHolder ID="PlaceHolderNavSpacer" runat="server" Visible="false" />
+                                        <asp:ContentPlaceHolder ID="PlaceHolderLeftNavBarBorder" runat="server" Visible="false" />
+                                        <asp:ContentPlaceHolder ID="PlaceHolderBodyLeftBorder" runat="server" Visible="false" />
+                                        <asp:ContentPlaceHolder ID="PlaceHolderBodyRightMargin" runat="server" Visible="false" />
+                                        <asp:ContentPlaceHolder ID="PlaceHolderBodyAreaClass" runat="server" Visible="false" />
+                                        <asp:ContentPlaceHolder ID="PlaceHolderTitleAreaClass" runat="server" Visible="false" />
+                                        <asp:ContentPlaceHolder ID="PlaceHolderGlobalNavigation" runat="server" Visible="false" />
+                                        <asp:ContentPlaceHolder ID="PlaceHolderGlobalNavigationSiteMap" runat="server" Visible="false" />
+                                        <asp:ContentPlaceHolder ID="WSSDesignConsole" runat="server" Visible="false" />
+                                    </div>
+                                </div>
+                                <div class="paging">
+                                    <a href="#">
+                                        <i class="fa fa-angle-left"></i>
+                                    </a>
+                                    <a href="#" class="current">1</a>
+                                    <a href="#">2</a>
+                                    <a href="#">...</a>
+                                    <a href="#">10</a>
+                                    <a href="#"><i class="fa fa-angle-right"></i></a>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--footer-->
+            <footer class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-2 col-sm-2 col-xs-12">
+                            <div class="logo-footer">
+                                <a href="#">
+                                    <img alt="" src="/_catalogs/masterpage/napas_theme/logo_white.png" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-7 col-md-offset-1 col-sm-8 col-xs-12">
+                            <div class="nav-footer">
+                                <ul>
+                                    <li><a href="#">HDSD dịch vụ </a></li>
+                                    <li><a href="#">Tài liệu</a></li>
+                                    <li><a href="tuyen-dung--co-hoi-nghe-nghiep--chinh-sach-nhan-su.html">Tuyển dụng </a></li>
+                                    <li><a href="dieu-khoan-su-dung--website.html">Điều khoản sử dụng</a></li>
+                                    <li><a href="#">Hotline 24/7</a></li>
+                                </ul>
+                            </div>
+                            <div class="company">
+                                <h2>Công ty cổ phần thanh toán quốc gia việt nam (Napas). </h2>
+                                <p>National Payment Corpration of Vietnam</p>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-2 col-xs-12">
+                            <div class="social">
+                                <a href="#"><i class="fa fa-facebook-square"></i></a>
+                                <a href="#"><i class="fa fa-youtube-square"></i></a>
+                                <a href="#"><i class="fa fa-envelope-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div> 
+
+        <!--scrip file-->
+        <script src="/_catalogs/masterpage/napas_theme/js/jquery.min.js"></script>
+        <script src="/_catalogs/masterpage/napas_theme/js/bootstrap.js"></script>
+        <script src="/_catalogs/masterpage/napas_theme/js/owl.carousel.min.js"></script>
+        <script src="/_catalogs/masterpage/napas_theme/js/jquery.bxslider.js"></script>
+        <script src="/_catalogs/masterpage/napas_theme/js/metisMenu.js"></script>
+        <script src="/_catalogs/masterpage/napas_theme/js/main.js"></script>
+    </body>
+</SharePoint:SPHtmlTag>
+

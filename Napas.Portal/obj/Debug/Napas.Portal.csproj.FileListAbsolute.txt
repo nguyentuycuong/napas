@@ -1,0 +1,12 @@
+G:\CuongNT\Projects sample\MyFirstProject\Napas.Portal\obj\Debug\Napas.Portal.csprojResolveAssemblyReference.cache
+G:\CuongNT\Projects sample\MyFirstProject\Napas.Portal\bin\Debug\Napas.Portal.dll
+G:\CuongNT\Projects sample\MyFirstProject\Napas.Portal\bin\Debug\Napas.Portal.pdb
+G:\CuongNT\Projects sample\MyFirstProject\Napas.Portal\bin\Debug\Camlex.NET.dll
+G:\CuongNT\Projects sample\MyFirstProject\Napas.Portal\bin\Debug\Camlex.NET.pdb
+G:\CuongNT\Projects sample\MyFirstProject\Napas.Portal\obj\Debug\Napas.Portal.dll
+G:\CuongNT\Projects sample\MyFirstProject\Napas.Portal\obj\Debug\Napas.Portal.pdb
+C:\Projects\Napas.Portal\bin\Debug\Napas.Portal.dll
+C:\Projects\Napas.Portal\bin\Debug\Napas.Portal.pdb
+C:\Projects\Napas.Portal\obj\Debug\Napas.Portal.csprojResolveAssemblyReference.cache
+C:\Projects\Napas.Portal\obj\Debug\Napas.Portal.dll
+C:\Projects\Napas.Portal\obj\Debug\Napas.Portal.pdb

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="64cd9edf-5f25-47d8-abfd-db69e4678f72" SharePointProductVersion="15.0">
+  <ApplicationResourceFiles>
+    <App_GlobalResourceFile Location="Napas\napas_theme\resources\napas.resource.en.resx" />
+    <App_GlobalResourceFile Location="Napas\napas_theme\resources\napas.resource.vi.resx" />
+  </ApplicationResourceFiles>
+  <Assemblies>
+    <Assembly Location="Napas.dll" DeploymentTarget="GlobalAssemblyCache" />
+  </Assemblies>
+  <TemplateFiles>
+    <TemplateFile Location="Layouts\Napas.SharePoint\ImageUploadField.js" />
+    <TemplateFile Location="Layouts\Napas.SharePoint\UploadImage.aspx" />
+    <TemplateFile Location="CONTROLTEMPLATES\CustomePermissionControl.ascx" />
+    <TemplateFile Location="CONTROLTEMPLATES\ImageUploadFieldControl.ascx" />
+    <TemplateFile Location="CONTROLTEMPLATES\ImageUploadFieldEditor.ascx" />
+    <TemplateFile Location="XML\fldtypes_ImageUploadField.xml" />
+    <TemplateFile Location="LAYOUTS\XSL\fldtypes_ImageUploadField.xsl" />
+  </TemplateFiles>
+  <FeatureManifests>
+    <FeatureManifest Location="Napas_napas.theme\Feature.xml" />
+  </FeatureManifests>
+</Solution>
